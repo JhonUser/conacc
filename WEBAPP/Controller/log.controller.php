@@ -1,6 +1,6 @@
 <?php
   require_once("../Model/conexion.php");
-  require_once("../Model/validar.log.class.php");
+  require_once("../Model/log.class.php");
   include 'comentado.php';
 
 

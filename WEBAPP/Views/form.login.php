@@ -9,7 +9,7 @@
   </nav>
 <div class="espacio_form">
 
- <form action="../Controller/login.controller.php" method="post">
+ <form action="../Controller/log.controller.php" method="post">
 
     <br>
     <label for="nom" id="icono" ><i class="icon-user"></i></label>
