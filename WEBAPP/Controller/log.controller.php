@@ -11,13 +11,14 @@
       $inyeccion = "'or'1'='1";
 
           try {
-            $datos = login::valida($name);
+            $datos = login::validar($name);
 
             if (password_verify($pass,$datos["usu_pass"])) {
                 session_start();
                 $_SESSION["codigo"]  = $datos[0];
                 $_SESSION["nombre"]  = $datos[1];
-                $_SESSION["rol"]     = $datos[4];
+                $_SESSION["rol"]     = $datos[3]; 
+                $_SESSION["nom_rol"] = $datos[4];
                 header("location: ../Views/dashboard.php");
               }
               elseif ($name == $inyeccion or $pass == $inyeccion) {
