@@ -1,5 +1,5 @@
 <?php
-		include '../Controller/validar.inicio.class.php';
+		include '../Model/inicio.class.php';
 		inicio::session();
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
 		 <link rel="stylesheet" type="text/css" href="styles/estilos.css">
 	</head>
 	<body>
-	
+
 		<?php
 			include 'section.inicio.php';
 			inicio::pagina();

@@ -1,6 +1,6 @@
 <div class="espacio_form">
 <h5>Iniciar Sesion</h5>
- <form action="validar.php" method="post">
+ <form action="../Controller/login.controller.php" method="post">
 
     <hr><br>
     <label for="nom" id="icono" ><i class="icon-user"></i></label>
@@ -12,7 +12,7 @@
     <hr>
     <p>Si no tiene cuenta, <a href="#">haga clic aquí </a>para realizar un registro.</p>
     <br>
-    <button class="btn waves-effect waves-center  teal" type="submit" name="inicio">Iniciar Sesion</button>
+    <button class="btn waves-effect waves-center  teal" type="submit" name="sesion_vigilante">Iniciar Sesion</button>
     <button class="btn waves-effect waves-light grey darken-1" type="reset" name="limpiar">Limpiar</button>
 
  </form>

@@ -6,9 +6,10 @@
 
     if (isset($_POST["sesion_vigilante"])) {
 
-
+      $name = $_POST["nombre"];
+      $pass = $_POST["contrasena"];
           try {
-       login::valida($name,$pass);
+            login::valida($name,$pass);
 
 
           }
