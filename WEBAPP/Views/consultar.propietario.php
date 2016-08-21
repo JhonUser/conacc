@@ -31,7 +31,7 @@
     							<td>".$propietario["propie_email"]. "</td>
                   <td>".$propietario["propie_cargo"]. "</td>
                   <td>".$propietario["propie_centro"]."</td>
-                  <td><a href='#". $propietario["propie_cod"] . "'>Modificar</a></td>
+                  <td><a href='modificar.propietario.php?codigo=". $propietario["propie_cod"] . "'>Modificar</a></td>
   				      </tr>";
               }
               ?>
