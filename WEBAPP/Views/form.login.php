@@ -11,12 +11,12 @@
 
  <form action="../Controller/login.controller.php" method="post">
 
-    <hr><br>
+    <br>
     <label for="nom" id="icono" ><i class="icon-user"></i></label>
       <input type="text" name="nombre" id="nom" placeholder="Usuario" required/>
     <label for="contra" id="icono"><i class="icon-shield"></i></label>
       <input type="password" name="contrasena" id="contra" placeholder="Contraseña" required/>
-    <input type="checkbox" id="admin" />
+    <br><br><input type="checkbox" id="admin" />
       <label for="admin">Iniciar como Administrador</label>
     <hr>
     <p>Si no tiene cuenta, <a href="#">haga clic aquí </a>para realizar un registro.</p>
