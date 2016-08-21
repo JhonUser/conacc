@@ -1,34 +1,11 @@
 <?php
-require_once("../Model/conexion.php");
-require_once("../Model/tipoproducto.class.php");
-$tipo_produ = Gestion_Tipoproducto::ConsultarTodo();
+  require_once '../Model/conexion.php';
+  require_once '../Model/tipoproducto.class.php';
+  $tipo_produ = Gestion_Tipoproducto::ConsultarTodo();
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('#datatable').DataTable( {
-            "language": {
-                "url": "https://cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json"
-            }
-        } );
-    } );
-  </script>
-
-  <title></title>
-</head>
-<body>
+<div class="container">
   <h1>Gestion de tipo de producto</h1>
-  <a href="registro.tipoproducto.php">Volver</a>
-  <!--Aqui va a ir la tabla-->
-
+  <a href="dashboard.php?seccion=r_t_producto">Volver</a>
     <table id="datatable">
       <thead>
         <tr>
@@ -57,6 +34,4 @@ $tipo_produ = Gestion_Tipoproducto::ConsultarTodo();
          ?>
       </tbody>
     </table>
-
-</body>
-</html>
+</div>
