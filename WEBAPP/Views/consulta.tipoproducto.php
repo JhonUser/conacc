@@ -4,8 +4,9 @@
   $tipo_produ = Gestion_Tipoproducto::ConsultarTodo();
 ?>
 <div class="container">
+
   <h1>Gestion de tipo de producto</h1>
-  <a href="dashboard.php?seccion=r_t_producto">Volver</a>
+  <a href="registro.tipoproducto.php">Volver</a>
     <table id="datatable">
       <thead>
         <tr>

@@ -40,10 +40,15 @@
         case 'c_t_producto':
           include 'consulta.tipoproducto.php';
           break;
+        case 'tipopro_cod':
+          include 'modifico_tipoproducto.php';
+          break;
         case 'cerrarsession':
           include("../Controller/cerrarsession.php");
           break;
+
         default:
+
       break;
     }
   }
