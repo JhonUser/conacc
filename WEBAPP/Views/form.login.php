@@ -1,5 +1,14 @@
+<section id="log">
+  <nav>
+    <div class="nav-wrapper grey darken-3">
+      <ul>
+
+        <li><a href="#">Ayuda</a></li>
+     </ul>
+    </div>
+  </nav>
 <div class="espacio_form">
-<h5>Iniciar Sesion</h5>
+
  <form action="../Controller/login.controller.php" method="post">
 
     <hr><br>
@@ -12,8 +21,10 @@
     <hr>
     <p>Si no tiene cuenta, <a href="#">haga clic aquí </a>para realizar un registro.</p>
     <br>
-    <button class="btn waves-effect waves-center  teal" type="submit" name="sesion_vigilante">Iniciar Sesion</button>
+    <button class="btn waves-effect waves-center indigo" type="submit" name="sesion">Iniciar Sesion</button>
     <button class="btn waves-effect waves-light grey darken-1" type="reset" name="limpiar">Limpiar</button>
 
  </form>
 </div>
+
+</section>

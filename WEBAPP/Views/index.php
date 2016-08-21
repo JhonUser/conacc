@@ -14,7 +14,6 @@
     <body>
 
       <?php
-        include 'nav.index.php';
         include 'form.login.php';
         ?>
 

@@ -1,28 +1,17 @@
 <?php
 
   class login{
-
-
-    public static function valida($name,$pass){
+    public static function valida($name){
       try {
 
         $pdo=Conexion::Abrirbd();
-
-        $verificar="SELECT * FROM usuario WHERE usu_nick=?";
-
-        $mostrar=$pdo->prepare($verificar);
+        $consul = "SELECT usuario.usu_cod, usuario.usu_nom, usuario.usu_nick, usuario.usu_pass, rol.rol_cod, rol.rol_nombre FROM usuario
+                   INNER JOIN rol ON rol.rol_cod = usuario.rol_cod WHERE usuario.usu_nick = ?";
+        $mostrar = $pdo->prepare($consul);
 
         $mostrar->execute(array($name));
-
         $dato=$mostrar->fetch(PDO::FETCH_BOTH);
-
-          /*echo '<script type="text/javascript">
-                  sweetAlert("Oops...", "Something went wrong!", "error"); window.location="../Views/index.php";
-                </script>';*/
-          #echo "<script>alert('Usted esta siendo redireccionado a la pagina principal') window.location='index.php'</script>";
-
-            #echo '<script language="javascript">sweetAlert("Oops...", "Something went wrong!", "error");</script>';
-            return $dato;
+        return $dato;
 
         Conexion::Cerrarbd();
       }

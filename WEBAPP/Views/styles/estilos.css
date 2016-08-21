@@ -2,8 +2,11 @@
   margin-top: 5%;
   margin-left: 37%;
   width: 343px;
-  background-color:#fafafa;
+  background-color: white;
   border: solid 1px #cbc9c9;
+}
+#log{
+  background-color: #d4e157;
 }
 form{
   margin: 20px;
@@ -67,10 +70,7 @@ section{
   opacity: 0.5;
   filter:  alpha(opacity=50);
 }
-nav div ul li a:hover{
-  color: green;
-  background-color: red;
-}
+
 
 
 
