@@ -1,7 +1,7 @@
 <?php
 	class Conexion{
 		private static $bdhost="localhost";
-		private static $bdname="securitysoftware";
+		private static $bdname="conacc";
 		private static $bduser="root";
 		private static $bdpass="";
 

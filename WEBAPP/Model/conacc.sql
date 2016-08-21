@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-06-2016 a las 01:15:44
+-- Tiempo de generación: 21-08-2016 a las 22:14:51
 -- Versión del servidor: 10.1.10-MariaDB
 -- Versión de PHP: 5.5.33
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `securitysoftware`
+-- Base de datos: `conacc`
 --
 
 -- --------------------------------------------------------
@@ -27,9 +27,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `accesorio` (
-  `acce_cod` varchar(40) NOT NULL,
-  `compo_cod` varchar(30) NOT NULL,
-  `regi_cod` varchar(30) NOT NULL,
+  `acce_cod` int(11) NOT NULL,
+  `compo_cod` int(11) NOT NULL,
+  `regi_cod` int(11) NOT NULL,
   `acce_color` varchar(30) NOT NULL,
   `acce_cant` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -41,7 +41,7 @@ CREATE TABLE `accesorio` (
 --
 
 CREATE TABLE `componente` (
-  `compo_cod` varchar(20) NOT NULL,
+  `compo_cod` int(11) NOT NULL,
   `compo_nombre` varchar(30) NOT NULL,
   `compo_cant` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -53,8 +53,8 @@ CREATE TABLE `componente` (
 --
 
 CREATE TABLE `entrada_salida` (
-  `entrasali_cod` varchar(30) NOT NULL,
-  `regi_cod` varchar(30) NOT NULL,
+  `entrasali_cod` int(11) NOT NULL,
+  `regi_cod` int(11) NOT NULL,
   `entrasali_fecha` varchar(10) NOT NULL,
   `entrasali_horaent` varchar(5) NOT NULL,
   `entrasali_horasal` varchar(5) NOT NULL
@@ -67,7 +67,7 @@ CREATE TABLE `entrada_salida` (
 --
 
 CREATE TABLE `marca` (
-  `marca_cod` varchar(40) NOT NULL,
+  `marca_cod` int(11) NOT NULL,
   `marca_nombre` varchar(40) NOT NULL,
   `marca_logo` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -77,8 +77,8 @@ CREATE TABLE `marca` (
 --
 
 INSERT INTO `marca` (`marca_cod`, `marca_nombre`, `marca_logo`) VALUES
-('1', 'acer', 'a'),
-('2', 'sd', '');
+(1, 'acer', 'a'),
+(2, 'sd', '');
 
 -- --------------------------------------------------------
 
@@ -90,6 +90,15 @@ CREATE TABLE `modulo` (
   `modu_cod` varchar(30) NOT NULL,
   `modu_nom` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `modulo`
+--
+
+INSERT INTO `modulo` (`modu_cod`, `modu_nom`) VALUES
+('1', 'Adios'),
+('2', ' Turun'),
+('3', 'Taran');
 
 -- --------------------------------------------------------
 
@@ -104,6 +113,15 @@ CREATE TABLE `permiso` (
   `modulo_permi` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `permiso`
+--
+
+INSERT INTO `permiso` (`rol_cod`, `modu_cod`, `estado_permi`, `modulo_permi`) VALUES
+('1', '1', 'sas', 'ss'),
+('1', '2', 's', 'zs'),
+('2', '2', 'activo', 'no se');
+
 -- --------------------------------------------------------
 
 --
@@ -111,9 +129,9 @@ CREATE TABLE `permiso` (
 --
 
 CREATE TABLE `producto` (
-  `produ_cod` varchar(30) NOT NULL,
-  `tipopro_cod` varchar(30) NOT NULL,
-  `marca_cod` varchar(30) NOT NULL,
+  `produ_cod` int(11) NOT NULL,
+  `tipopro_cod` int(11) NOT NULL,
+  `marca_cod` int(11) NOT NULL,
   `produ_desc` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -122,7 +140,7 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`produ_cod`, `tipopro_cod`, `marca_cod`, `produ_desc`) VALUES
-('1', '1', '1', 'as');
+(1, 1, 1, 'as');
 
 -- --------------------------------------------------------
 
@@ -131,15 +149,15 @@ INSERT INTO `producto` (`produ_cod`, `tipopro_cod`, `marca_cod`, `produ_desc`) V
 --
 
 CREATE TABLE `propietario` (
-  `propie_cod` varchar(30) NOT NULL,
-  `propie_docu` varchar(40) NOT NULL,
-  `propie_nombre` varchar(50) NOT NULL,
-  `propie_apelli` varchar(50) NOT NULL,
-  `propie_tel` varchar(20) NOT NULL,
-  `propie_dire` varchar(40) NOT NULL,
-  `propie_email` varchar(50) NOT NULL,
-  `propie_centro` varchar(50) NOT NULL,
-  `propie_cargo` varchar(30) NOT NULL
+  `propie_cod` int(11) NOT NULL,
+  `propie_docu` varchar(20) NOT NULL,
+  `propie_nombre` varchar(60) NOT NULL,
+  `propie_apelli` varchar(80) NOT NULL,
+  `propie_tel` varchar(15) DEFAULT NULL,
+  `propie_dire` varchar(30) NOT NULL,
+  `propie_email` varchar(80) NOT NULL,
+  `propie_centro` varchar(60) NOT NULL,
+  `propie_cargo` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -149,10 +167,10 @@ CREATE TABLE `propietario` (
 --
 
 CREATE TABLE `registro_producto` (
-  `regi_cod` varchar(30) NOT NULL,
+  `regi_cod` int(11) NOT NULL,
   `usu_cod` int(11) NOT NULL,
-  `produ_cod` varchar(30) NOT NULL,
-  `propie_cod` varchar(40) NOT NULL,
+  `produ_cod` int(11) NOT NULL,
+  `propie_cod` int(11) NOT NULL,
   `regi_serial` varchar(30) NOT NULL,
   `regi_color` varchar(30) NOT NULL,
   `regi_fecha` varchar(10) NOT NULL,
@@ -168,8 +186,17 @@ CREATE TABLE `registro_producto` (
 
 CREATE TABLE `rol` (
   `rol_cod` varchar(30) NOT NULL,
-  `rol_nombre` varchar(50) NOT NULL
+  `rol_nombre` varchar(50) NOT NULL,
+  `rol_desc` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `rol`
+--
+
+INSERT INTO `rol` (`rol_cod`, `rol_nombre`, `rol_desc`) VALUES
+('1', ' Administrador', ' Puede hacer todo'),
+('2', '      Vigilante', '      No puede hacer, todo');
 
 -- --------------------------------------------------------
 
@@ -178,7 +205,7 @@ CREATE TABLE `rol` (
 --
 
 CREATE TABLE `seguimiento` (
-  `segui_cod` varchar(40) NOT NULL,
+  `segui_cod` int(11) NOT NULL,
   `usu_cod` int(11) NOT NULL,
   `segui_modulo` varchar(70) NOT NULL,
   `segui_accion` varchar(20) NOT NULL,
@@ -193,7 +220,7 @@ CREATE TABLE `seguimiento` (
 --
 
 CREATE TABLE `tipo_producto` (
-  `tipopro_cod` varchar(30) NOT NULL,
+  `tipopro_cod` int(11) NOT NULL,
   `tipopro_nombre` varchar(30) NOT NULL,
   `tipopro_desc` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -203,7 +230,8 @@ CREATE TABLE `tipo_producto` (
 --
 
 INSERT INTO `tipo_producto` (`tipopro_cod`, `tipopro_nombre`, `tipopro_desc`) VALUES
-('1', 'Tecnologia', 'Aparatos electronicos');
+(1, 'Tecnologia', 'Aparatos electronicos'),
+(5, 'asha', 'parrasd');
 
 -- --------------------------------------------------------
 
@@ -220,9 +248,17 @@ CREATE TABLE `usuario` (
   `usu_email` varchar(70) NOT NULL,
   `usu_tel` varchar(15) NOT NULL,
   `usu_nick` varchar(50) NOT NULL,
-  `usu_pass` varchar(50) NOT NULL,
+  `usu_pass` varchar(250) NOT NULL,
   `usu_estado` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`usu_cod`, `rol_cod`, `usu_nom`, `usu_ape`, `usu_docu`, `usu_email`, `usu_tel`, `usu_nick`, `usu_pass`, `usu_estado`) VALUES
+(13, '1', 'Jeison', 'Villada Calle', '123456789', 'a@a.com', '123456', 'primero', '$2y$10$pdyc1QjDopBz/QbWMszdUO29hWkFZmJWrZlMYkmoe.9c563WRvCG6', ''),
+(14, '2', 'Jeison', 'Villada Calle', '123456789', 'a@a.com', '123456', 'segundo', '$2y$10$HH2iMZ/1a/nkqsOZUbCiY.js.RLzE.sqpgUJw0vmf.OK5hIdSU2hO', '');
 
 --
 -- Índices para tablas volcadas
@@ -322,20 +358,55 @@ ALTER TABLE `usuario`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `accesorio`
+--
+ALTER TABLE `accesorio`
+  MODIFY `acce_cod` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `componente`
+--
+ALTER TABLE `componente`
+  MODIFY `compo_cod` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `entrada_salida`
+--
+ALTER TABLE `entrada_salida`
+  MODIFY `entrasali_cod` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `marca`
+--
+ALTER TABLE `marca`
+  MODIFY `marca_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT de la tabla `producto`
+--
+ALTER TABLE `producto`
+  MODIFY `produ_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT de la tabla `propietario`
+--
+ALTER TABLE `propietario`
+  MODIFY `propie_cod` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT de la tabla `registro_producto`
 --
 ALTER TABLE `registro_producto`
-  MODIFY `usu_cod` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `regi_cod` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `seguimiento`
 --
 ALTER TABLE `seguimiento`
-  MODIFY `usu_cod` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `segui_cod` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `tipo_producto`
+--
+ALTER TABLE `tipo_producto`
+  MODIFY `tipopro_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `usu_cod` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `usu_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- Restricciones para tablas volcadas
 --
@@ -344,8 +415,8 @@ ALTER TABLE `usuario`
 -- Filtros para la tabla `accesorio`
 --
 ALTER TABLE `accesorio`
-  ADD CONSTRAINT `accesorio_ibfk_1` FOREIGN KEY (`regi_cod`) REFERENCES `registro_producto` (`regi_cod`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `accesorio_ibfk_2` FOREIGN KEY (`compo_cod`) REFERENCES `componente` (`compo_cod`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `accesorio_ibfk_2` FOREIGN KEY (`compo_cod`) REFERENCES `componente` (`compo_cod`),
+  ADD CONSTRAINT `accesorio_ibfk_3` FOREIGN KEY (`regi_cod`) REFERENCES `registro_producto` (`regi_cod`);
 
 --
 -- Filtros para la tabla `entrada_salida`
@@ -364,16 +435,16 @@ ALTER TABLE `permiso`
 -- Filtros para la tabla `producto`
 --
 ALTER TABLE `producto`
-  ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`tipopro_cod`) REFERENCES `tipo_producto` (`tipopro_cod`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`marca_cod`) REFERENCES `marca` (`marca_cod`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`marca_cod`) REFERENCES `marca` (`marca_cod`),
+  ADD CONSTRAINT `producto_ibfk_3` FOREIGN KEY (`tipopro_cod`) REFERENCES `tipo_producto` (`tipopro_cod`);
 
 --
 -- Filtros para la tabla `registro_producto`
 --
 ALTER TABLE `registro_producto`
-  ADD CONSTRAINT `registro_producto_ibfk_1` FOREIGN KEY (`usu_cod`) REFERENCES `usuario` (`usu_cod`),
-  ADD CONSTRAINT `registro_producto_ibfk_2` FOREIGN KEY (`produ_cod`) REFERENCES `producto` (`produ_cod`),
-  ADD CONSTRAINT `registro_producto_ibfk_3` FOREIGN KEY (`propie_cod`) REFERENCES `propietario` (`propie_cod`);
+  ADD CONSTRAINT `registro_producto_ibfk_3` FOREIGN KEY (`propie_cod`) REFERENCES `propietario` (`propie_cod`),
+  ADD CONSTRAINT `registro_producto_ibfk_4` FOREIGN KEY (`usu_cod`) REFERENCES `usuario` (`usu_cod`),
+  ADD CONSTRAINT `registro_producto_ibfk_5` FOREIGN KEY (`produ_cod`) REFERENCES `producto` (`produ_cod`);
 
 --
 -- Filtros para la tabla `seguimiento`
