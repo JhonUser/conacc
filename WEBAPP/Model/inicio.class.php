@@ -18,10 +18,10 @@
       switch ($pagin) {
         case 'producto':
           include("registro.producto.php");
-        break;
+          break;
         case 'usuario':
           include("Registro.usuario.php");
-        break;
+          break;
         case 'propietario':
           include 'registro.propietario.php';
           break;
@@ -31,15 +31,18 @@
         case 'c.propietario':
           include 'consultar.propietario.php';
           break;
-          case 'marca':
-            include 'registro.marca.php';
-            break;
-            case 't_producto':
-              include 'registro.tipoproducto.php';
-              break;
+        case 'r_marca':
+          include 'registro.marca.php';
+          break;
+        case 'r_t_producto':
+          include 'registro.tipoproducto.php';
+          break;
+        case 'c_t_producto':
+          include 'consulta.tipoproducto.php';
+          break;
         case 'cerrarsession':
           include("../Controller/cerrarsession.php");
-        break;
+          break;
         default:
       break;
     }

@@ -36,8 +36,8 @@ $marca=Gestion_Marca::Cargar_marca();
 				<button class="waves-effect waves-light btn "  name="accion" value="create">Guardar</button><br>
 				<?php echo @$_REQUEST["$mensaje"]; ?><br>
 
-				<?php echo "<a href='registro.marca.php' class='waves-effect waves-light btn green'>Registro de marca</a>"; ?>
-				<?php echo "<a href='dashboard.php?seccion=t_producto' class='waves-effect waves-light btn red'>Registro de tipo producto</a>"; ?>
+				<?php echo "<a href='dashboard.php?seccion=r_marca' class='waves-effect waves-light btn green'>Registro de marca</a>"; ?>
+				<?php echo "<a href='dashboard.php?seccion=r_t_producto' class='waves-effect waves-light btn red'>Registro de tipo producto</a>"; ?>
 			</form>
 
 
