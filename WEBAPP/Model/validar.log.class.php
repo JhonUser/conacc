@@ -14,17 +14,7 @@
 
         $mostrar->execute(array($name));
 
-        $dato=$mostrar->fetch(PDO::FETCH_ASSOC);
-
-
-        if (password_verify($pass,$dato["usu_pass"])) {
-            session_start();
-            $_SESSION["nombre"]=$_POST["nombre"];
-            header("location: ../Views/inicio.php");
-          }
-          else {
-            echo "Error";
-          }
+        $dato=$mostrar->fetch(PDO::FETCH_BOTH);
 
           /*echo '<script type="text/javascript">
                   sweetAlert("Oops...", "Something went wrong!", "error"); window.location="../Views/index.php";
@@ -32,7 +22,7 @@
           #echo "<script>alert('Usted esta siendo redireccionado a la pagina principal') window.location='index.php'</script>";
 
             #echo '<script language="javascript">sweetAlert("Oops...", "Something went wrong!", "error");</script>';
-
+            return $dato;
 
         Conexion::Cerrarbd();
       }
