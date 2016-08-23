@@ -1,6 +1,7 @@
 <?php
 	require_once("../Model/conexion.php");
 	require_once("../Model/propietario.class.php");
+
 	$codigo = registro::datos_modificar($_GET["codigo"]);
 
 ?>
