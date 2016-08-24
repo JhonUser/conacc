@@ -17,6 +17,16 @@ class Gestion_rol{
 		Conexion::Cerrarbd();
 
 	}
+	function Seguir($usu, $segui_modulo, $segui_accion, $fecha, $hora){
+		$pdo= Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+		$sql="INSERT INTO seguimiento(usu_cod, segui_modulo, segui_accion, segui_fecha, segui_hora) values(?,?,?,?,?)";
+		$query=$pdo->prepare($sql);
+		$query->execute(array($usu, $segui_modulo, $segui_accion, $fecha, $hora));
+
+		Conexion::Cerrarbd();
+
+	}
 		function Consultar(){
 			$pdo= Conexion::Abrirbd();
 			$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
