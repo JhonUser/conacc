@@ -20,7 +20,7 @@
 
 
 			 <label>Nombre</label>
-				 <input name="nombre"  type="text" class="validate" >
+				 <input name="nombre"  type="text" class="validate" required>
 
 
 
