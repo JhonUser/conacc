@@ -68,39 +68,38 @@ function consultar(){
 		return $result;
 	}
 
-	function consultarP($codigoP){
-		$pdo=conexion::AbrirBD();
-		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+	function consultaP($codigo){
+		$pdo = Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql="SELECT * FROM registro_producto where regi_cod=?";
-		$query=$pdo->prepare($sql);
-		$query->execute(array($codigoP));
+		$sql = "SELECT * FROM registro_producto WHERE regi_cod = ?";
+		$query= $pdo->prepare($sql);
+		$query->execute(array($codigo));
 
-		$result=$query->fetchALL(PDO::FETCH_BOTH);
-
-		Conexion::Cerrarbd();
-		
+		$result = $query->fetch(PDO::FETCH_BOTH);
 		return $result;
+		
+		Conexion::Cerrarbd();
 	}
 
-		function modificar($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta){
+		function modificar($codigo_registro,$codigo_usu,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta){
 			$pdo = Conexion::Abrirbd();
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-			$sql = "UPDATE registro_producto SET usu_cod = ?, produ_cod = ?,propie_cod=?,regi_serial=?,regi_color=?,regi_fecha=?,regi_desc=?,regi_autoalterna WHERE rei_cod = ?";
+			$sql = "UPDATE registro_producto SET usu_cod = ?, produ_cod = ?,propie_cod=?,regi_serial=?,regi_color=?,regi_fecha=?,regi_desc=?,regi_autoalterna=? WHERE regi_cod = ?";
 			$query= $pdo->prepare($sql);
-			$query->execute(array($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta));
+			$query->execute(array($codigo_usu,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$codigo_registro));
 
 			Conexion::Cerrarbd();
 		}
 
-		function eliminar($codigo){
+		function eliminar($codigoA){
 			$pdo = Conexion::Abrirbd();
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-			$sql = "DELETE from  componente where compo_cod=?";
+			$sql = "DELETE from  registro_producto where regi_cod=?";
 			$query= $pdo->prepare($sql);
-			$query->execute(array($codigo));
+			$query->execute(array($codigoA));
 
 			Conexion::Cerrarbd();
 		}

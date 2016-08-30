@@ -50,8 +50,8 @@ $producto=Gestion_producto::consultar();
 					<td>".$produc["regi_desc"]."</td>
 					<td>".$produc["regi_autoalterna"]."</td>
 					<td>
-						<a href='modificar.registro_producto.php?producto=".$produc["usu_cod"]."'>modificar</a>
-						<a href='../Controller/controller.registro.producto.php?codigo_produc=".$produc["usu_cod"]."& action=eliminar' >Eliminar</a>
+						<a href='modificar.registro_producto.php?producto=".$produc["regi_cod"]."'>modificar</a>
+						<a href='../Controller/controller.registro.producto.php?codigo_produc=".$produc["regi_cod"]."& action=eliminar' >Eliminar</a>
 					</td>
 			</tr>";
 			}
