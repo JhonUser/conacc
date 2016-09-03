@@ -54,6 +54,7 @@
 				    </div>
 						<div class="col s7">
 								<button class="waves-effect waves-light btn teal right thin" value="Guardar" name="action">Guardar</button>
+								
 						</div>
 					</div>
 				</form>
