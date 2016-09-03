@@ -1,3 +1,4 @@
+<!-- Jhon T. Gómez -->
 <?php
 
   class login{
@@ -18,7 +19,7 @@
       }
 
       catch (Exception $e) {
-          echo "Error: " . $e->getMessage() . " en la linea: " . $e->getLine() . " , su codigo es: " . $e->getCode();
+          die( "Error: " . $e->getMessage() . " en la linea: " . $e->getLine() . " , su codigo es: " . $e->getCode());
       }
     }
   }

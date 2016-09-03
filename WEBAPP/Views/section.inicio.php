@@ -1,3 +1,4 @@
+<!-- Jhon T. Gómez -->
 <header>
   <nav class="z-depth-0 orange lighten-2">
       <a  href="#!" data-activates="mobile-demo" class="button-collapse">
@@ -25,7 +26,7 @@
 <div class="container">
 
 
-<div class="row">
+<!-- <div class="row">
         <div class="col s12 m7">
           <div class="card">
             <div class="card-image">
@@ -42,7 +43,7 @@
           </div>
         </div>
       </div>
-</div>
+</div> -->
 <!-- <section>
 
     <h5>Facilidad de Uso</h5>
