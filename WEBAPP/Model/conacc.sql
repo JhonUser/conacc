@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-09-2016 a las 23:09:42
--- Versión del servidor: 10.1.9-MariaDB
--- Versión de PHP: 5.5.30
+-- Tiempo de generación: 03-09-2016 a las 04:47:10
+-- Versión del servidor: 10.1.10-MariaDB
+-- Versión de PHP: 5.5.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -110,20 +110,12 @@ INSERT INTO `modulo` (`modu_cod`, `modu_nom`) VALUES
 --
 
 CREATE TABLE `permiso` (
+  `permi_cod` int(11) NOT NULL,
   `rol_cod` varchar(30) NOT NULL,
   `modu_cod` varchar(30) NOT NULL,
   `estado_permi` varchar(30) NOT NULL,
   `modulo_permi` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `permiso`
---
-
-INSERT INTO `permiso` (`rol_cod`, `modu_cod`, `estado_permi`, `modulo_permi`) VALUES
-('1', '1', 'sas', 'ss'),
-('1', '2', 's', 'zs'),
-('2', '2', 'activo', 'no se');
 
 -- --------------------------------------------------------
 
@@ -304,8 +296,9 @@ ALTER TABLE `modulo`
 -- Indices de la tabla `permiso`
 --
 ALTER TABLE `permiso`
-  ADD PRIMARY KEY (`rol_cod`,`modu_cod`),
-  ADD KEY `permi_cod` (`modu_cod`);
+  ADD PRIMARY KEY (`permi_cod`),
+  ADD KEY `rol_cod` (`rol_cod`),
+  ADD KEY `modu_cod` (`modu_cod`);
 
 --
 -- Indices de la tabla `producto`
@@ -381,6 +374,11 @@ ALTER TABLE `entrada_salida`
 ALTER TABLE `marca`
   MODIFY `marca_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
+-- AUTO_INCREMENT de la tabla `permiso`
+--
+ALTER TABLE `permiso`
+  MODIFY `permi_cod` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
@@ -431,8 +429,8 @@ ALTER TABLE `entrada_salida`
 -- Filtros para la tabla `permiso`
 --
 ALTER TABLE `permiso`
-  ADD CONSTRAINT `permiso_ibfk_1` FOREIGN KEY (`rol_cod`) REFERENCES `rol` (`rol_cod`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `permiso_ibfk_2` FOREIGN KEY (`modu_cod`) REFERENCES `modulo` (`modu_cod`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `permiso_ibfk_1` FOREIGN KEY (`rol_cod`) REFERENCES `rol` (`rol_cod`),
+  ADD CONSTRAINT `permiso_ibfk_2` FOREIGN KEY (`modu_cod`) REFERENCES `modulo` (`modu_cod`);
 
 --
 -- Filtros para la tabla `producto`
