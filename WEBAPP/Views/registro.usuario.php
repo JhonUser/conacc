@@ -1,7 +1,7 @@
 <?php require_once("../Model/conexion.php"); require_once("../Model/usuario.class.php"); ?>
 
 <div class="container">
-	<center class="">Registro de Vigilantes y Administradores</center>
+	<center class=""><h5>Registro de Vigilantes y Administradores</h5></center>
 		<div class="row">
 
 		   <form class="col s12" action="../Controller/registro.controller.php" method="post" <?php $rol=Gestion_usuario::cargar_rol(); ?>>
@@ -60,6 +60,8 @@
 	  	</div>
 		</div>
 
-		<div class="container">
+		<div class="roght">
+			<center>
 				<?php include 'consulta.usuario.php'; ?>
+			</center>
 		</div>
