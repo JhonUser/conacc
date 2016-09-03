@@ -1,3 +1,4 @@
+<!-- Jeison V. Calle -->
 <?php
 require_once("../Model/conexion.php");
 require_once("../Model/permiso.class.php");

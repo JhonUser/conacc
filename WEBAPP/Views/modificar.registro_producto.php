@@ -1,3 +1,4 @@
+<!-- Jeison V. Calle -->
 <?php
   require_once("../model/conexion.php");
   require_once("../model/registro.producto.class.php");
@@ -32,9 +33,8 @@
        <input type="text" name="regi_desc" value=" <?php echo $codigoP["regi_desc"]; ?>"/>
 
       <label>registro autoalterna</label>
-        <input type="text" name="regi_autoalterna" value=" <?php echo $codigoP["regi_autoalterna"]; ?>"/>  
+        <input type="text" name="regi_autoalterna" value=" <?php echo $codigoP["regi_autoalterna"]; ?>"/>
 
       <button name="action" value="modificar">Modificar</button>
   </form>
   <button><a href="consulta.registro_producto.php">Volver</a></button>
- 

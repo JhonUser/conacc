@@ -1,3 +1,4 @@
+<!-- Jeison V. Calle -->
 <?php
 require_once("../Model/conexion.php");
 require_once("../Model/tipoproducto.class.php");
@@ -12,7 +13,7 @@ require_once("../Model/tipoproducto.class.php");
 					Gestion_Tipoproducto::Guardar($tipopro_cod, $tipopro_nombre, $tipopro_desc);
 					$mensaje =("Su registro se creo correctamente");
 					echo $mensaje;
-				} 
+				}
 				catch (Exception $e) {
 					$mensaje =("Ha ocurrido un error, el error fue :".$e->getMessage()." en ".$e->getFile()." en la linea ".$e->getLine());
 				}

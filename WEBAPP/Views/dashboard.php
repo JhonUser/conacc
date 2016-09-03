@@ -1,7 +1,5 @@
-<?php
-		include '../Model/inicio.class.php';
-		inicio::session();
-?>
+<!-- Jhon T. Gómez -->
+<?php include '../Model/inicio.class.php'; inicio::session(); ?>
 <!DOCTYPE html>
  <html>
 	 <head>

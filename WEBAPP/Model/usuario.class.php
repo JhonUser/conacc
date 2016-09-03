@@ -1,5 +1,6 @@
+<!-- Andrea T. Villegas -->
 <?php
-//se guarda en la base de datos 
+//se guarda en la base de datos
 class Gestion_usuario{
 	function Guardar($selecion,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrar){
 		$pdo= Conexion::Abrirbd();
@@ -12,7 +13,7 @@ class Gestion_usuario{
 
 		Conexion::Cerrarbd();
 
-	}//se modifica en la base de datos 
+	}//se modifica en la base de datos
 
 	function Modificar($codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrar){
 		$pdo= Conexion::Abrirbd();
@@ -25,7 +26,7 @@ class Gestion_usuario{
 
 		Conexion::Cerrarbd();
 
-	}//se consulta en la base de datos 
+	}//se consulta en la base de datos
 
 	function consultar_usuario(){
 		$pdo= Conexion::Abrirbd();
@@ -40,7 +41,7 @@ class Gestion_usuario{
 		Conexion::Cerrarbd();
 		return $result;
 
-	}//se consulta por codigo en la base de datos 
+	}//se consulta por codigo en la base de datos
 		function Consultarusuariocodigo($codigo){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);

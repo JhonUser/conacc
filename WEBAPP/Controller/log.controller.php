@@ -1,3 +1,4 @@
+<!-- Jhon T. Gómez -->
 <?php
   require_once("../Model/conexion.php");
   require_once("../Model/log.class.php");
@@ -7,6 +8,7 @@
     if (isset($_POST["sesion"])) {
 
       $name = $_POST["nombre"];
+      $EEE = htmlentities(addcslashes(str_replace("123456789",$name)));
       $pass = $_POST["contrasena"];
       $inyeccion = "'or'1'='1";
 
@@ -17,12 +19,12 @@
                 session_start();
                 $_SESSION["codigo"]  = $datos[0];
                 $_SESSION["nombre"]  = $datos[1];
-                $_SESSION["rol"]     = $datos[3]; 
+                $_SESSION["rol"]     = $datos[3];
                 $_SESSION["nom_rol"] = $datos[4];
                 header("location: ../Views/dashboard.php");
               }
               elseif ($name == $inyeccion or $pass == $inyeccion) {
-                echo "No se pase de listo con nosotros.<br>El ataque te lo puedes meter por el culo!";
+                echo "No se pase de listo con nosotros.<br>";
               }
               else {
                 echo "error";

@@ -22,7 +22,7 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 	</script>
 </head>
 <body>
-<table id="myTable">
+<table id="myTable" class="striped">
 	<thead>
 		<tr>
 			<td>Documento</td>
@@ -32,8 +32,8 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 			<td>Correo Electronico</td>
 			<td>Nombre de usuario</td>
 			<td>Accion</td>
-			
-			
+
+
 			</tr>
 	</thead>
 	<tbody>
@@ -49,12 +49,15 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 
 
 							<td>
-								<a href='modificar.usuario.php?codigo_usuario=".$consulta["usu_cod"]."'>modificar</a>
+								<a href='modificar.usuario.php?codigo_usuario=".$consulta["usu_cod"]."'>
+									<img src='images/modificar.png' height='20' width='20'/>
+								</a>
 							</td>
 					</tr>";
 			}
 		?>
 	</tbody>
+
 </table>
 </body>
 </html>

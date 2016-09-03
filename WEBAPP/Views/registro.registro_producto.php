@@ -1,3 +1,4 @@
+<!-- Andrea T. Gómez -->
 <?php
 require_once("../model/conexion.php");
 require_once("../model/registro.producto.class.php");

@@ -49,9 +49,9 @@ Class Gestion_modulo
 		self::$query=$pdo->prepare(self::$sql);
 		self::$query->execute(array($codigo));
 		self::$result=self::$query->fetch(PDO::FETCH_BOTH);
-		
+
 		Conexion::Cerrarbd();
-		
+
 		return self::$result;
 	}
 	public static function Eliminar($codigo_modu)

@@ -1,3 +1,4 @@
+<!-- Jeison V. Calle -->
 <?php
 require_once("../Model/conexion.php");
 require_once("../Model/rol.class.php");
@@ -13,7 +14,7 @@ switch ($action) {
 		$segui_modulo="roles";
 		$segui_accion="guardar";
 		$fecha = date("m.d.y");
-		$hora = date("H:i:s"); 
+		$hora = date("H:i:s");
 		try{
 			Gestion_rol::Guardar($codigo_rol, $nombre_rol, $desc_rol);
 			Gestion_rol::Seguir($usu, $segui_modulo, $segui_accion, $fecha, $hora);

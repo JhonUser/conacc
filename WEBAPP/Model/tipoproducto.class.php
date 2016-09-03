@@ -1,3 +1,4 @@
+
 <?php
 //tipoproducto.class.php
 class Gestion_Tipoproducto{

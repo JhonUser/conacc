@@ -1,10 +1,11 @@
+<!-- Jhon T. Gómez -->
 <?php
   class inicio{
 
      function session(){
        session_start();
      	if (!isset($_SESSION["nombre"])) {
-     		header("location: index.php");
+     		header("location: ../index.php");
     	}
      }
 

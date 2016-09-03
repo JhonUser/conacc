@@ -1,3 +1,4 @@
+<!-- Andrea T. Villegas -->
 <?php
 	require_once("../Model/conexion.php");
 	require_once("../Model/usuario.class.php");
@@ -19,20 +20,16 @@
 
 	<label>Apellido</label>
 	<input type="text" name="apellido" value=" <?php echo $codigo["usu_ape"]; ?>"required/>
-	<br>
-	<br>
+
 	<label>Email</label>
 	<input type="email" name="email" value=" <?php echo $codigo["usu_email"]; ?>"required/>
-	<br>
-	<br>
+
 	<label>Telefono</label>
 	<input type="text" name="telefono" value=" <?php echo $codigo["usu_tel"]; ?>"/>
-	<br>
-	<br>
+
 	<label>Nombre de Usuario</label>
 	<input type="text" name="nombredeusuario" value=" <?php echo $codigo["usu_nick"]; ?>"required/>
-	<br>
-	<br>
+
 	<label>Contraseña</label>
 	<input type="password" name="contrasena" value=" <?php echo $codigo["usu_pass"]; ?>"required/>
 

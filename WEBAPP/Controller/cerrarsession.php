@@ -1,3 +1,4 @@
+<!-- Jhon T. Gómez -->
 <?php
   session_start();
   session_destroy();

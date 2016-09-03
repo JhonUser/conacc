@@ -1,3 +1,4 @@
+<!-- Jeison V. Calle -->
 <?php
 require_once("../Model/conexion.php");
 require_once("../Model/modulo.class.php");
@@ -17,7 +18,7 @@ switch ($accion) {
 	case 'Modificar':
 		 $modu_cod=$_POST["txt_moducod"];
 		 $modu_nom=$_POST["txt_modunom"];
-		try { 
+		try {
 			Gestion_modulo::Modificar($modu_cod, $modu_nom);
 			echo "Modifico con exito";
 			//header("location:../views/consulta.modulo.php");
@@ -34,7 +35,7 @@ switch ($accion) {
       	}catch (Exception $e){
        		 	echo $e;
        		 }
-     	break;			
+     	break;
 }
 header("location:../views/consulta.modulo.php");
 ?>

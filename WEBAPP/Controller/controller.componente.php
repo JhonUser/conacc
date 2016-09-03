@@ -1,3 +1,4 @@
+<!-- Andrea T. Villegas -->
 <?php
 require_once("../model/conexion.php");
 require_once("../model/componente.class.php");
@@ -5,11 +6,11 @@ require_once("../model/componente.class.php");
 $accion=$_REQUEST["action"];
 switch ($accion) {
 	case 'guardar':
-		
+
 		$nombre=$_POST["nombre"];
 		$cantidad=$_POST["cantidad"];
 
-		try{ 
+		try{
 			Gestion_componente::guardar($nombre,$cantidad);
 			echo "<a href='../Views/registro.componente.php'>Volver</a>";
 		}catch(Exception $e){
@@ -21,13 +22,13 @@ echo"<script>alert('guardo con exito'); </script>";
 		break;
 
 	case 'Update':
-		
+
 		$codigoCompo=$_POST["codigo_compo"];
 		$nombreCompo=$_POST["nombre_compo"];
 		$cantidadCompo=$_POST["cantidad_compo"];
 
 
-		try{ 
+		try{
 			Gestion_componente::modificar($codigoCompo,$nombreCompo,$cantidadCompo);
 			echo "modifico con exito";
 		}catch(Exception $e){
@@ -41,7 +42,7 @@ echo"<script>alert('guardo con exito'); </script>";
 		case 'eliminar':
 		$codigoC=$_GET["compo_codi"];
 
-		try{ 
+		try{
 			Gestion_componente::eliminar($codigoC);
 			echo "<script>alert('elimino con exito');</script>";
 			 echo "<a href='../Views/consulta.componente.php'>Volver</a>";
@@ -52,7 +53,7 @@ echo"<script>alert('guardo con exito'); </script>";
 
 
 		break;
-	
+
 }
 
 
