@@ -1,25 +1,59 @@
  <!-- Jhon T. Gómez -->
-
  <div class="container">
-  <h3>Registro de Propietarios</h3>
-   <form action="../Controller/propietario.controller.php" method="post">
-     <label for="ced">CC / T.I</label>
-     <input type="text" name="ced"   required>
-     <label for="nom">Nombre</label>
-     <input type="text" name="nom"   required>
-     <label for="ape">Apellido</label>
-     <input type="text" name="ape"   required>
-     <label for="tel">Telefono</label>
-     <input type="number" name="tel" required>
-     <label for="dir">Direccion</label>
-     <input type="text" name="dir"   required>
-     <label for="ema">Email</label>
-     <input type="email" name="ema"  required>
-     <label for="cen">Centro</label>
-     <input type="text" name="cen"   required>
-     <label for="car">Cargo</label>
-     <input type="text" name="car"   required>
-     <button class="right btn green" name="guardar">Guardar</button>
-   </form>
-  <a href="inicio.php?seccion=c.propietario">ir a consulta</a>
- </div>
+ 	<center class=""><h5>Registro de propietarios</h5></center>
+ 		<div class="row">
+
+ 		   <form class="col s12" action="../Controller/registro.controller.php" method="post">
+ 				  <div class="row">
+            <div class="input-field col s6">
+ 					 		 <i class="material-icons prefix grey-text">credit_card</i>
+ 							 <input id="email" type="number" name="documento" class="validate" required>
+ 							 <label for="email">Cedula</label>
+ 	  				</div>
+ 						<div class="input-field col s6">
+ 				       <i class="material-icons prefix grey-text">account_circle</i>
+ 				       <input id="icon_prefix" type="text" name="nom" class="validate" required>
+ 				       <label for="icon_prefix">Nombre</label>
+ 				    </div>
+ 				    <div class="input-field col s6">
+ 				       <i class="material-icons prefix grey-text">person_outline</i>
+ 				       <input id="icon_telephone" type="text" name="ape" class="validate" required>
+ 				       <label for="icon_telephone">Apellido</label>
+ 				    </div>
+
+ 						<div class="input-field col s6">
+ 							 <i class="material-icons prefix grey-text">phone_android</i>
+ 							 <input id="email" type="number" name="tel" class="validate" required>
+ 							 <label for="email">Telefono</label>
+ 		  			</div>
+            <div class="input-field col s6">
+ 							 <i class="material-icons prefix grey-text">phone_android</i>
+ 							 <input id="email" type="text" name="dir" class="validate" required>
+ 							 <label for="email">Direccion</label>
+ 		  			</div>
+ 						<div class="input-field col s6">
+ 							 <i class="material-icons prefix grey-text">email</i>
+ 							 <input id="email" type="email" name="ema" class="validate" required>
+ 							 <label for="email">Email</label>
+ 						</div>
+            <div class="input-field col s6">
+ 							 <i class="material-icons prefix grey-text">phone_android</i>
+ 							 <input id="email" type="text" name="car" class="validate" required>
+ 							 <label for="email">Cargo</label>
+ 		  			</div>
+            <div class="input-field col s6">
+ 							 <i class="material-icons prefix grey-text">phone_android</i>
+ 							 <input id="email" type="text" name="cen" class="validate" required>
+ 							 <label for="email">Centro</label>
+ 		  			</div>
+
+
+ 				    </div>
+ 						<div class="col s7">
+
+ 								<button class="waves-effect waves-light btn teal right thin" name="guardar">Guardar</button>
+ 					  </div>
+ 					</div>
+ 				</form>
+        <a href="inicio.php?seccion=c.propietario">ir a consulta</a>
+ 	  	</div>
