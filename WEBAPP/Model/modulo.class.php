@@ -63,6 +63,20 @@ Class Gestion_modulo
 		self::$query->execute(array($codigo_modu));
 
 		Conexion::Cerrarbd();
-		}
+	}
+	//Funcion para traer el codigo del modulo
+	function Codigo()
+	{
+		$pdo = Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+		self::$sql = "SELECT modu_cod FROM modulo";
+		self::$query= $pdo->prepare(self::$sql);
+		self::$query->execute();
+
+		self::$result = self::$query->fetchAll(PDO::FETCH_BOTH);
+		Conexion::Cerrarbd();
+		return self::$result;
+	}
 }
 ?>
