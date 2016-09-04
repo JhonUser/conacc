@@ -1,14 +1,8 @@
-<!-- Consulta de registros de propietarios -->
-<?php
-  require '../Model/conexion.php';
-  require '../Model/propietario.class.php';
-  $datos = registro::consultar_propietario();
-?>
+<!-- Jhon T. Gómez -->
 <div class="container">
   <table id="consultar.propietario">
   	<thead>
   		<tr>
-  			<td>Codigo</td>
   			<td>Cedula</td>
   			<td>Nombre</td>
   			<td>Apellido</td>
@@ -20,21 +14,27 @@
       </tr>
   	</thead>
   	<tbody>
-  		<?php
-  			foreach ($datos as $propietario) {
-  				echo "<tr>
-    							<td>".$propietario["propie_docu"].  "</td>
-    							<td>".$propietario["propie_nombre"]."</td>
-    							<td>".$propietario["propie_apelli"]."</td>
-    							<td>".$propietario["propie_tel"].   "</td>
-    							<td>".$propietario["propie_dire"].  "</td>
-    							<td>".$propietario["propie_email"]. "</td>
-                  <td>".$propietario["propie_cargo"]. "</td>
-                  <td>".$propietario["propie_centro"]."</td>
-                  <td><a href='registro.propietario.php?codigo=". $propietario["propie_cod"] . "'>Modificar</a></td>
-  				      </tr>";
-              }
-              ?>
+      <?php require '../Model/conexion.php'; require '../Model/propietario.class.php'; $dato = registro::consultar_propietario(); ?>
+      <?php foreach ($dato as $views): ?>
+        <tr>
+          <td><?php echo $views["prop_doc"]?></td>
+          <td><?php echo $views["prop_nom"]?></td>
+          <td><?php echo $views["prop_ape"]?></td>
+          <td><?php echo $views["prop_tel"]?></td>
+          <td><?php echo $views["prop_dir"]?></td>
+          <td><?php echo $views["prop_ema"]?></td>
+          <td><?php echo $views["prop_car"]?></td>
+          <td><?php echo $views["prop_cen"]?></td>
+          <td>
+            <a href="modificar.propietario.php?cod=<?php echo base64_encode($views['prop_cod']); ?>">
+              <img src="images/modificar.png" height="20"width="20"/>
+            </a>
+            <a href="../Controller/propietario.controller.php?eliminar=yes&cod=<?php echo base64_encode($views['prop_cod']); ?>">
+              <img src="images/eliminar.png" height="20" width="20"/>
+            </a>
+          </td>
+        </tr>
+      <?php endforeach ?>
   	</tbody>
   </table>
 </div>

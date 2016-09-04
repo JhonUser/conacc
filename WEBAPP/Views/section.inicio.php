@@ -1,35 +1,43 @@
 <!-- Jhon T. Gómez -->
 <header>
-  <nav class="z-depth-0 orange lighten-2">
-      <a  href="#!" data-activates="mobile-demo" class="button-collapse">
-        <i class="right"><img src="images/icons/icon.png"/></i>
-      </a>
-      <ul>
-        <select class="right white-text" name="">
-          <option value="option">Configuracion</option>
-          <option value="option">Cerrar sesion</option>
-          <label for="">Session</label>
-        </select>
-      </ul>
-
+  <nav class="z-depth-0 transparent">
+      <a  href="#!" data-activates="mobile-demo" class="button-collapse"><i class="right"><img src="images/icons/icon.png"/></i></a>
       <div class="top-nav nav-wrapper" >
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-          <ul class="side-nav fixed grey darken-4" id="mobile-demo">
-              <li class="active red"><a href="#"></a></li>
-              <li class="active lime lighten-2"><a href="#" ><?php echo "Hola, " . $_SESSION["nombre"]; ?></a></li>
-              <li><a href="#" class="waves-effect active"><i class="material-icons left">home</i>Inicio</a></li>
-              <li><a href="dashboard.php?seccion=rol"><i class="material-icons left">control_point</i>Rol</a></li>
-              <li><a href="dashboard.php?seccion=usuario"><i class="material-icons left">person_add</i>Usuarios</a></li>
-              <li><a href="dashboard.php?seccion=propietario"><i class="material-icons left">person_pin</i>Propietarios</a></li>
-
-              <li><a href="dashboard.php?seccion=producto"><i class="material-icons left">important_devices</i>Productos</a></li>
-              <!-- <li><a href="dashboard.php?seccion=marca">Registro marca</a></li> -->
-
-              <li><a href="../Controller/cerrarsession.php" class="waves-effect"><i class="material-icons left">trending_down</i>Cerrar sesion</a></li>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <ul class="side-nav fixed grey darken-4" id="mobile-demo">
+          <ul class="collapsible" data-collapsible="accordion" >
+            <li class="active lime lighten-2">
+              <a href="#" class="collapsible-header"><?php echo "Bienvenido, " . $_SESSION["nombre"]; ?><i class="material-icons right">keyboard_arrow_down</i></a>
+              <div class="collapsible-body white" >
+                 <a href="../Controller/cerrarsession.php" class="indigo white-text thin 500"><i class="material-icons right white-text">trending_down</i>Cerrar sesion</a>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="waves-effect active" class="collapsible-header"><i class="material-icons left">home</i>Inicio</a>
+              <div class="collapsible-body indigo-text text-lighten-5" style="background-color: #673AB7"><p>Somos un grupo de personas con un objetivo en común, el cual es el optimizar los procesos de registro de usuarios, herramientas, equipos y más cosas, que pueden realizarse a la entrada de una institución, empresa, parqueaderos, y sinnumero de entidades, las cuales podran contar con un servicio completo y acoplado a toda necesidad.</p></div>
+            </li>
+            <li>
+              <a href="dashboard.php?seccion=rol" class="collapsible-header"><i class="material-icons left">control_point</i>Rol</a>
+              <div class="collapsible-body white-text" style="background-color: #FF5722"><p>Nuestro objetivo es brindar agilidad, optimizando los tiempos a personas que hagan uso de nuestro sistema, a la hora de registrar los usuarios, llevando así control del ingreso de sus equipos.</p></div>
+            </li>
+            <li>
+              <a href="dashboard.php?seccion=usuario" class="collapsible-header"><i class="material-icons left">person_add</i>Usuarios</a>
+            </li>
+            <li>
+              <a href="dashboard.php?seccion=propietario" class="collapsible-header"><i class="material-icons left">person_pin</i>Propietarios</a>
+              <div class="collapsible-body white-text" style="background-color: #FF5722"><p>Nuestro objetivo es brindar agilidad, optimizando los tiempos a personas que hagan uso de nuestro sistema, a la hora de registrar los usuarios, llevando así control del ingreso de sus equipos.</p></div>
+            </li>
+            <li>
+              <a href="dashboard.php?seccion=producto" class="collapsible-header"><i class="material-icons left">important_devices</i>Productos</a>
+              <div class="collapsible-body white-text" style="background-color: #FF5722"><p>Nuestro objetivo es brindar agilidad, optimizando los tiempos a personas que hagan uso de nuestro sistema, a la hora de registrar los usuarios, llevando así control del ingreso de sus equipos.</p></div>
+            </li>
+            <li>
+              <a href="dashboard.php?seccion=marca"><i class="material-icons left">branding_watermark</i>Registro marca</a>
+            </li>
           </ul>
+        </ul>
       </div>
   </nav>
-
 </header>
 <div class="container">
 
