@@ -62,7 +62,7 @@ $propietario=Gestion_producto::consultarpropie();
 		<i class="material-icons prefix grey-text">account_circle</i>
 		<input id="icon_prefix" name="registre_fecha" type="date"/>
 		<label for="icon_prefix">registre fecha </label>
-		
+	
 	</div>
 
 	<div class="input-field col s6">
