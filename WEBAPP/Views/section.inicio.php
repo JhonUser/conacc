@@ -5,8 +5,6 @@
         <i class="right"><img src="images/icons/icon.png"/></i>
       </a>
       <ul>
-        <li></li>
-        <li></li>
         <select class="right white-text" name="">
           <option value="option">Configuracion</option>
           <option value="option">Cerrar sesion</option>

@@ -37,5 +37,5 @@ switch ($accion) {
        		 }
      	break;
 }
-header("location:../views/consulta.modulo.php");
+header("location:../Views/dashboard.php?seccion=r_modulo");
 ?>

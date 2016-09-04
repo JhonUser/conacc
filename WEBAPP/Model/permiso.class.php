@@ -44,6 +44,20 @@ class Gestion_permiso{
 		return self::$result;
 
 	}
+	public static function Consultar_nombres(){
+		$pdo= Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+		self::$sql="SELECT permiso.permi_cod, permiso.estado_permi,permiso.modulo_permi, rol.rol_cod, rol.rol_nombre, modulo.modu_cod, modulo.modu_nom from permiso	inner join rol on (permiso.permi_cod=rol.rol_cod) inner join modulo on (permiso.modu_cod = modulo.modu_cod)";
+
+		self::$query=$pdo->prepare(self::$sql);
+		self::$query->execute();
+		self::$result=self::$query->fetchALL(PDO::FETCH_BOTH);
+
+		Conexion::Cerrarbd();
+		return self::$result;
+
+	}
 	function Consultarporcodigo($codigo){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
