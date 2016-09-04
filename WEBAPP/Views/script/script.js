@@ -6,7 +6,7 @@ $(document).ready(function() {
   $('.modal-trigger').leanModal();
   $('#consultar.propietario').DataTable();
   $('.button-collapse').sideNav({
-    menuWidth: 200,
+    menuWidth: 400,
     edge: 'left',
     closeOnClick: true
   });

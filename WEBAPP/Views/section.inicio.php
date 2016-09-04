@@ -1,39 +1,37 @@
 <!-- Jhon T. Gómez -->
 <header>
-  <nav class="z-depth-0 lime">
-
+  <nav class="z-depth-0 orange lighten-2">
+      <a  href="#!" data-activates="mobile-demo" class="button-collapse">
+        <i class="right"><img src="images/icons/icon.png"/></i>
+      </a>
       <ul>
-        <li class="black-text">hhhh</li>
-        <li class="right"><a href="#">Ir a la session</a></li>
-        <li>yyyyy</li>
+        <li></li>
+        <li></li>
+        <select class="right white-text" name="">
+          <option value="option">Configuracion</option>
+          <option value="option">Cerrar sesion</option>
+          <label for="">Session</label>
+        </select>
       </ul>
 
       <div class="top-nav nav-wrapper" >
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-          <ul class="side-nav fixed grey darken-4 thin" id="mobile-demo"><br>
+          <ul class="side-nav fixed grey darken-4" id="mobile-demo">
+              <li class="active red"><a href="#"></a></li>
               <li class="active lime lighten-2"><a href="#" ><?php echo "Hola, " . $_SESSION["nombre"]; ?></a></li>
+              <li><a href="#" class="waves-effect active"><i class="material-icons left">home</i>Inicio</a></li>
+              <li><a href="dashboard.php?seccion=rol"><i class="material-icons left">control_point</i>Rol</a></li>
+              <li><a href="dashboard.php?seccion=usuario"><i class="material-icons left">person_add</i>Usuarios</a></li>
+              <li><a href="dashboard.php?seccion=propietario"><i class="material-icons left">person_pin</i>Propietarios</a></li>
 
-
-              <select class="icons">
-					 	    <option value="" disabled selected><?php echo "Hola, " . $_SESSION["nombre"]; ?></option>
-
-					 		  <option value="" data-icon="images/user.png" class="left circle"></option>
-
-					 		</select>
-
-              <li><a href="#" class="waves-effect active">Inicio</a></li>
-              <li><a href="dashboard.php?seccion=rol">Registro rol</a></li>
-              <li><a href="dashboard.php?seccion=usuario" >Registro usuario</a></li>
-              <li><a href="dashboard.php?seccion=propietario">Registro Propietario</a></li>
-              <li><a href="dashboard.php?seccion=c.propietario">Consultar propietario</a></li>
-              <li><a href="dashboard.php?seccion=producto">Producto</a></li>
+              <li><a href="dashboard.php?seccion=producto"><i class="material-icons left">important_devices</i>Productos</a></li>
               <!-- <li><a href="dashboard.php?seccion=marca">Registro marca</a></li> -->
 
-              <li><a href="../Controller/cerrarsession.php" class="waves-effect">Cerrar sesion</a></li>
+              <li><a href="../Controller/cerrarsession.php" class="waves-effect"><i class="material-icons left">trending_down</i>Cerrar sesion</a></li>
           </ul>
       </div>
+  </nav>
 
-</nav>
 </header>
 <div class="container">
 
