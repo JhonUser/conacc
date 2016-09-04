@@ -1,8 +1,8 @@
-	<!-- Formulario: Guardar rol -->
+	<!-- Formulario: Guardar componente -->
 <div class="container">
 
 <form action="../controller/controller.componente.php" method="post"/>
-	<h1>Registro de rol</h1>
+	<h1>Registro de componente</h1>
 	<label>Nombre del componente</label><br>
 		<input name="nombre" type="text" required/><br>
 	<label>Cantidad de componentes</label><br>

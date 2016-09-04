@@ -5,6 +5,7 @@
 	 <head>
 		 <title>Inicio</title>
 		 <meta name="author" content="@jhon, @andrea, @jeison">
+		 <meta charset="utf-8">
 		 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		 <meta name="keywords" content="Control de acceso, conacc, seguridad">
 		 <link rel="shortcut icon" href="imagenes/logo.jpg">

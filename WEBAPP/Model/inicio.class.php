@@ -38,6 +38,9 @@
         case 'r_t_producto':
           include 'registro.tipoproducto.php';
           break;
+        case 'r_modulo':
+        include 'registro.modulo.php';
+        break;
         case 'c_t_producto':
           include 'consulta.tipoproducto.php';
           break;

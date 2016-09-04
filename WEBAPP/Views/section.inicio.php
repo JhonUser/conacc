@@ -15,7 +15,8 @@
               <li><a href="dashboard.php?seccion=propietario">Registro Propietario</a></li>
               <li><a href="dashboard.php?seccion=c.propietario">Consultar propietario</a></li>
               <li><a href="dashboard.php?seccion=producto">Producto</a></li>
-              <!-- <li><a href="dashboard.php?seccion=marca">Registro marca</a></li> -->
+              <li><a href="dashboard.php?seccion=r_marca">Registro marca</a></li> 
+              <li><a href="dashboard.php?seccion=r_modulo">Registro modulo</a></li>
 
               <li><a href="../Controller/cerrarsession.php" class="waves-effect">Cerrar sesion</a></li>
           </ul>
