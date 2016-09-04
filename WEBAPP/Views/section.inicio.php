@@ -32,7 +32,10 @@
               <div class="collapsible-body white-text" style="background-color: #FF5722"><p>Nuestro objetivo es brindar agilidad, optimizando los tiempos a personas que hagan uso de nuestro sistema, a la hora de registrar los usuarios, llevando así control del ingreso de sus equipos.</p></div>
             </li>
             <li>
-              <a href="dashboard.php?seccion=marca"><i class="material-icons left">branding_watermark</i>Registro marca</a>
+              <a href="dashboard.php?seccion=r_marca"><i class="material-icons left">branding_watermark</i>Marca</a>
+            </li>
+            <li>
+              <a href="dashboard.php?seccion=r_modulo"><i class="material-icons left">view_module</i>Modulo</a>
             </li>
           </ul>
         </ul>

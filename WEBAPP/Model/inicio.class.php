@@ -35,6 +35,9 @@
         case 'r_marca':
           include 'registro.marca.php';
           break;
+        case 'r_modulo':
+          include 'registro.modulo.php';
+          break;
         case 'r_t_producto':
           include 'registro.tipoproducto.php';
           break;
