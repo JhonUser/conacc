@@ -43,7 +43,7 @@
 						</div>
 					  <div class="input-field col s6">
 							 <i class="material-icons prefix">verified_user</i>
-							 <input id="email" type="email" name="nombreusuario" class="validate" required>
+							 <input id="email" type="text" name="nombreusuario" class="validate" required>
 							 <label for="email">Usuario</label>
 						</div>
 					  <div class="input-field col s6">

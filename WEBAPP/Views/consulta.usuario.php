@@ -52,6 +52,7 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 								<a href='modificar.usuario.php?codigo_usuario=".$consulta["usu_cod"]."'>
 									<img src='images/modificar.png' height='20' width='20'/>
 								</a>
+								
 							</td>
 					</tr>";
 			}
