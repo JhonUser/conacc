@@ -16,7 +16,7 @@
 					 		</select>
 					    <label>Administrador y/o Vigilante</label>
 					  </div>
-						
+
 						<div class="input-field col s6">
 				       <i class="material-icons prefix grey-text">account_circle</i>
 				       <input id="icon_prefix" type="text" name="nombre" class="validate" required>
@@ -44,14 +44,10 @@
 						</div>
 					  <div class="input-field col s6">
 							 <i class="material-icons prefix">verified_user</i>
-<<<<<<< HEAD
-							 <input id="email" type="text" name="nombreusuario" class="validate" required>
-=======
 							 <input id="email" type="text" name="nombredeusuario" class="validate" required>
->>>>>>> origin/master
 							 <label for="email">Usuario</label>
 						</div>
-						
+
 					  <div class="input-field col s6">
 							 <i class="material-icons prefix">vpn_key</i>
 							 <input id="email" type="password" name="contrasena" class="validate" required>
