@@ -3,7 +3,7 @@
 require_once("../Model/conexion.php");
 require_once("../Model/usuario.class.php");
 
-$action= base64_decode($_REQUEST["action"]);
+$action= $_REQUEST["action"];
 switch ($action) {
 	case 'Guardar'://funcion para guardar usuario 9 lineas de abajo son para capturar los datos
 		$seleccion=$_POST["seleccion"];

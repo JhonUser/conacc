@@ -1,9 +1,8 @@
- <!-- Jhon T. Gómez -->
+
  <div class="container">
  	<center class=""><h5>Registro de propietarios</h5></center>
  		<div class="row">
-
- 		   <form class="col s12" action="../Controller/registro.controller.php" method="post">
+      <form class="col s12" action="../Controller/propietario.controller.php" method="post">
  				  <div class="row">
             <div class="input-field col s6">
  					 		 <i class="material-icons prefix grey-text">credit_card</i>
@@ -20,8 +19,7 @@
  				       <input id="icon_telephone" type="text" name="ape" class="validate" required>
  				       <label for="icon_telephone">Apellido</label>
  				    </div>
-
- 						<div class="input-field col s6">
+            <div class="input-field col s6">
  							 <i class="material-icons prefix grey-text">phone_android</i>
  							 <input id="email" type="number" name="tel" class="validate" required>
  							 <label for="email">Telefono</label>
@@ -55,5 +53,5 @@
  					  </div>
  					</div>
  				</form>
-        <a href="inicio.php?seccion=c.propietario">ir a consulta</a>
- 	  	</div>
+      <a href="inicio.php?seccion=c.propietario">ir a consulta</a>
+ 	  </div>

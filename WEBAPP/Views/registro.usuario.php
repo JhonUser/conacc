@@ -8,7 +8,7 @@
 				  <div class="row">
 						<div class="input-field col s7">
 							<i class="material-icons prefix teal-text">people</i>
-					 		<select class="icons">
+					 		<select class="icons" name="seleccion">
 					 	    <option value="" disabled selected>Elija Rol de Usuario</option>
 					 			<?php foreach ($rol as $roles): ?>
 					 		  <option value="<?php echo $roles["rol_cod"]?>" data-icon="images/user.png" class="left circle"><?php echo $roles["rol_nombre"]; ?></option>
@@ -43,7 +43,7 @@
 						</div>
 					  <div class="input-field col s6">
 							 <i class="material-icons prefix">verified_user</i>
-							 <input id="email" type="email" name="nombreusuario" class="validate" required>
+							 <input id="email" type="text" name="nombredeusuario" class="validate" required>
 							 <label for="email">Usuario</label>
 						</div>
 					  <div class="input-field col s6">
