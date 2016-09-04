@@ -14,6 +14,7 @@ $propietario=Gestion_producto::consultarpropie();
 	<title></title>
 </head>
 <body>
+	<div class="row">
 	<form action="../Controller/controller.registro.producto.php" method="post"/>
 
 	<label>codigo de usuario</label>
@@ -68,15 +69,16 @@ $propietario=Gestion_producto::consultarpropie();
 	<div class="input-field col s6">
 		<i class="material-icons prefix grey-text">account_circle</i>
 		<textarea name="registre_decrip" type="text"></textarea>
-		<label>registre descripcion</label>
+		<label for="icon_prefix">registre descripcion</label>
 		
 	</div>
 
 	<div class="input-field col s6">
 		<i class="material-icons prefix grey-text">account_circle</i>
-		<input name="registre_autoalerta" type="text"/>
-		<label>registre autoalterna </label>
+		<input id="icon_prefix" name="registre_autoalerta" type="text"/>
+		<label for="icon_prefix">registre autoalterna </label>
 		
+	</div>
 	</div>
 
 		<button name="action" value="Guardar">Guardar</button>
