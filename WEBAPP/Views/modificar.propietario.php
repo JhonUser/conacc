@@ -1,25 +1,23 @@
-<?php
-	require_once("../Model/conexion.php");
-	require_once("../Model/propietario.class.php");
+<!-- Jhon T. Gómez -->
+<?php require_once("../Model/conexion.php"); require_once("../Model/propietario.class.php"); ?>
 
-	$codigo = registro::datos_modificar($_GET["codigo"]);
-
-?>
-
-	<h1>Modificar Propietario</h1>
-	<form action="#" method="post">
-			<input type="hidden" name="codigo" value=" <?php echo $codigo["propie_cod"]; ?>"/>
-		<label>Documento</label>
-			<input type="text" name="documento" value=" <?php echo $codigo["propie_docu"]; ?>" required/>
-		<label>Nombre</label>
-			<input type="text" name="nombre" value=" <?php echo $codigo["propie_nombre"]; ?>"required/>
-		<label>Apellido</label>
-			<input type="text" name="apellido" value=" <?php echo $codigo["propie_apelli"]; ?>"required/>
-		<label>Emai</label>
-			<input type="email" name="text" value=" <?php echo $codigo["propie_tel"]; ?>"required/>
-		<label>Telefono</label>
-			<input type="text" name="telefono" value=" <?php echo $codigo["propie_dire"]; ?>"/>
-		<label>Nombre de </label>
-			<input type="text" name="nombredeusuario" value=" <?php echo $codigo["propie_email"]; ?>"required/>
-		<button value="Modificar" name="action">Modificar</button>
+	<form action="../Controller/propietario.controller.php" method="post" <?php $codigo = registro::datos_modificar(base64_decode($_GET["cod"])); ?>>
+		<input type="hidden" name="cod" value="<?php echo $codigo["prop_cod"]; ?>" required>
+			<label for="ced">CC / T.I</label>
+			<input type="text" name="ced"  id="ced" value="<?php echo $codigo["prop_doc"]; ?>" required>
+			<label for="nom">Nombre</label>
+			<input type="text" name="nom"  id="nom" value="<?php echo $codigo["prop_nom"]; ?>" required>
+			<label for="ape">Apellido</label>
+			<input type="text" name="ape"  id="ape" value="<?php echo $codigo["prop_ape"]; ?>" required>
+			<label for="tel">Telefono</label>
+			<input type="number"name="tel" id="tel" value="<?php echo $codigo["prop_tel"]; ?>" required>
+			<label for="dir">Direccion</label>
+			<input type="text"  name="dir" id="dir" value="<?php echo $codigo["prop_dir"]; ?>" required>
+			<label for="ema">Email</label>
+			<input type="email" name="ema" id="ema" value="<?php echo $codigo["prop_ema"]; ?>" required>
+			<label for="cen">Centro</label>
+			<input type="text"  name="cen" id="cen" value="<?php echo $codigo["prop_cen"]; ?>" required>
+			<label for="car">Cargo</label>
+			<input type="text"  name="car" id="car" value="<?php echo $codigo["prop_car"]; ?>" required>
+		<button class="right btn green" name="modificar" >Guardar</button>
 	</form>
