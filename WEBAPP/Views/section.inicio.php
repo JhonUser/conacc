@@ -1,14 +1,26 @@
 <!-- Jhon T. Gómez -->
 <header>
-  <nav class="z-depth-0 orange lighten-2">
-      <a  href="#!" data-activates="mobile-demo" class="button-collapse">
-        <i class="right"><img src="images/icons/icon.png"/></i>
-      </a>
+  <nav class="z-depth-0 lime">
+
+      <ul>
+        <li class="black-text">hhhh</li>
+        <li class="right"><a href="#">Ir a la session</a></li>
+        <li>yyyyy</li>
+      </ul>
 
       <div class="top-nav nav-wrapper" >
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-          <ul class="side-nav fixed grey darken-4" id="mobile-demo"><br>
+          <ul class="side-nav fixed grey darken-4 thin" id="mobile-demo"><br>
               <li class="active lime lighten-2"><a href="#" ><?php echo "Hola, " . $_SESSION["nombre"]; ?></a></li>
+
+
+              <select class="icons">
+					 	    <option value="" disabled selected><?php echo "Hola, " . $_SESSION["nombre"]; ?></option>
+
+					 		  <option value="" data-icon="images/user.png" class="left circle"></option>
+
+					 		</select>
+
               <li><a href="#" class="waves-effect active">Inicio</a></li>
               <li><a href="dashboard.php?seccion=rol">Registro rol</a></li>
               <li><a href="dashboard.php?seccion=usuario" >Registro usuario</a></li>
@@ -20,8 +32,8 @@
               <li><a href="../Controller/cerrarsession.php" class="waves-effect">Cerrar sesion</a></li>
           </ul>
       </div>
-  </nav>
 
+</nav>
 </header>
 <div class="container">
 
