@@ -14,22 +14,22 @@
             </li>
             <li>
               <a href="#" class="waves-effect active" class="collapsible-header"><i class="material-icons left">home</i>Inicio</a>
-              <div class="collapsible-body indigo-text text-lighten-5" style="background-color: #673AB7"><p>Somos un grupo de personas con un objetivo en común, el cual es el optimizar los procesos de registro de usuarios, herramientas, equipos y más cosas, que pueden realizarse a la entrada de una institución, empresa, parqueaderos, y sinnumero de entidades, las cuales podran contar con un servicio completo y acoplado a toda necesidad.</p></div>
+              <div class="collapsible-body indigo-text text-lighten-5" style="background-color: #673AB7"><p>...</p></div>
             </li>
             <li>
               <a href="dashboard.php?seccion=rol" class="collapsible-header"><i class="material-icons left">control_point</i>Rol</a>
-              <div class="collapsible-body white-text" style="background-color: #FF5722"><p>Nuestro objetivo es brindar agilidad, optimizando los tiempos a personas que hagan uso de nuestro sistema, a la hora de registrar los usuarios, llevando así control del ingreso de sus equipos.</p></div>
+              <div class="collapsible-body white-text" style="background-color: #FF5722"><p>...</p></div>
             </li>
             <li>
               <a href="dashboard.php?seccion=usuario" class="collapsible-header"><i class="material-icons left">person_add</i>Usuarios</a>
             </li>
             <li>
               <a href="dashboard.php?seccion=propietario" class="collapsible-header"><i class="material-icons left">person_pin</i>Propietarios</a>
-              <div class="collapsible-body white-text" style="background-color: #FF5722"><p>Nuestro objetivo es brindar agilidad, optimizando los tiempos a personas que hagan uso de nuestro sistema, a la hora de registrar los usuarios, llevando así control del ingreso de sus equipos.</p></div>
+              <div class="collapsible-body white-text" style="background-color: #FF5722"><p>...</p></div>
             </li>
             <li>
               <a href="dashboard.php?seccion=producto" class="collapsible-header"><i class="material-icons left">important_devices</i>Productos</a>
-              <div class="collapsible-body white-text" style="background-color: #FF5722"><p>Nuestro objetivo es brindar agilidad, optimizando los tiempos a personas que hagan uso de nuestro sistema, a la hora de registrar los usuarios, llevando así control del ingreso de sus equipos.</p></div>
+              <div class="collapsible-body white-text" style="background-color: #FF5722"><p>...</p></div>
             </li>
             <li>
               <a href="dashboard.php?seccion=marca"><i class="material-icons left">branding_watermark</i>Registro marca</a>
