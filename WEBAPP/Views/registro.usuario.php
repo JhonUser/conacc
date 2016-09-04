@@ -16,6 +16,7 @@
 					 		</select>
 					    <label>Administrador y/o Vigilante</label>
 					  </div>
+						
 						<div class="input-field col s6">
 				       <i class="material-icons prefix grey-text">account_circle</i>
 				       <input id="icon_prefix" type="text" name="nombre" class="validate" required>
