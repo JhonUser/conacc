@@ -62,7 +62,7 @@ class Gestion_permiso{
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-		$sql="SELECT * FROM permiso WHERE modu_cod=?";
+		$sql="SELECT * FROM permiso WHERE permi_cod=?";
 
 		$query=$pdo->prepare($sql);
 		$query->execute(array($codigo));
@@ -73,14 +73,15 @@ class Gestion_permiso{
 
 		return $result;
 	}
-	public static function Modificar($rol_cod, $modu_cod, $estado_permi, $modulo_permi)
+	public static function Modificar($permi_cod,$rol_cod, $modu_cod, $estado_permi, $modulo_permi)
 		{
 			$pdo = Conexion::Abrirbd();
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-			self::$sql = "UPDATE permiso SET estado_permi=?,modulo_permi=?  WHERE permi_cod = ?";
+
+			self::$sql = "UPDATE permiso SET rol_cod = ?, modu_cod = ?, estado_permi = ?, modulo_permi = ? WHERE permiso.permi_cod = ?";
 			self::$query= $pdo->prepare(self::$sql);
-			self::$query->execute(array($rol_cod, $estado_permi, $modulo_permi, $modu_cod));
+			self::$query->execute(array($rol_cod, $modu_cod, $estado_permi, $modulo_permi, $permi_cod));
 			Conexion::Cerrarbd();
 		}
 

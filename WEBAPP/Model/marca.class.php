@@ -14,14 +14,14 @@ class Gestion_Marca{
 
 		Conexion::Cerrarbd();
 	}
-	function Modificar($marca_nombre, $marca_logo)
+	function Modificar($marca_cod, $marca_nombre, $marca_logo)
 		{
 			$pdo = Conexion::Abrirbd();
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 			$sql = "UPDATE marca SET marca_nombre = ?, marca_logo = ? WHERE marca_cod = ?";
 			$query= $pdo->prepare($sql);
-			$query->execute(array($marca_nombre, $marca_logo));
+			$query->execute(array($marca_nombre, $marca_logo, $marca_cod));
 			Conexion::Cerrarbd();
 			
 		}

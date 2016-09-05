@@ -18,12 +18,13 @@ switch ($accion) {
 		}
 		break;
 	case 'Modificar':
-		$rol_cod=$_POST["rol_cod"];
-		$modu_cod=$_POST["modu_cod"];
+		$permi_Cod=$_POST["permi_cod"];
+		$rol_cod=$_POST["sele_rol"];
+		$modu_cod=$_POST["sele_modu"];
 		$estado_permi=$_POST["estado_permi"];
 		$modulo_permi=$_POST["modulo_permi"];
 		try {
-			Gestion_permiso::Modificar($rol_cod, $modu_cod, $estado_permi, $modulo_permi);
+			Gestion_permiso::Modificar($rol_cod, $modu_cod, $estado_permi, $modulo_permi, $permi_Cod);
 			echo "Modifico con exito";
 			} catch (Exception $e){
 				echo $e;

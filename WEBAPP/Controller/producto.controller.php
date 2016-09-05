@@ -7,14 +7,14 @@ require_once("../Model/producto.class.php");
 
 	switch ($accion) {
 		case 'create':
-			$produ_cod=$_POST["txt_codpro"];
+			//$produ_cod=$_POST["txt_codpro"];
 			$tipopro_cod=$_POST["txt_tipopro"];
 			$marca_cod=$_POST["txt_marcapro"];
 			$desc_pro=$_POST["txt_descpro"];
 			try {
-					// Gestion_Producto::Guardar($produ_cod, $tipopro_cod, $marca_cod, $desc_pro);
+					Gestion_Producto::Guardar($tipopro_cod, $marca_cod, $desc_pro);
 					$hola = new Gestion_Producto();
-					$hola->Guardar($produ_cod, $tipopro_cod, $marca_cod, $desc_pro);
+					$hola->Guardar($tipopro_cod, $marca_cod, $desc_pro);
 					$mensaje =("Su registro se creo correctamente");
 					echo $mensaje;
 
