@@ -40,7 +40,7 @@ $propietario=Gestion_producto::consultarpropie();
 		<select name="codigo_propiedad">
 			<?php
 			foreach ($propietario as $propie ) {
-				echo "<option value=".$propie["propie_cod"].">".$propie["propie_cod"]."</option>";
+				echo "<option value=".$propie["prop_cod"].">".$propie["prop_cod"]."</option>";
 			}
 			?>
 		</select>
