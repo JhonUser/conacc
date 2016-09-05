@@ -35,6 +35,9 @@
         case 'c.propietario':
           include 'consultar.propietario.php';
           break;
+        case 'm.propietario':
+          include 'modificar.propietario.php';
+          break;
         case 'r_marca':
           include 'registro.marca.php';
           break;
