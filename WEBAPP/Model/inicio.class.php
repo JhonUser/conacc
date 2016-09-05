@@ -17,6 +17,9 @@
   		}
 
       switch ($pagin) {
+        case 'inicio':
+          include("inicio.php");
+          break;
         case 'producto':
           include("registro.producto.php");
           break;

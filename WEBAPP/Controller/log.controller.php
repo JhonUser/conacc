@@ -8,7 +8,6 @@
     if (isset($_POST["sesion"])) {
 
       $name = $_POST["nombre"];
-      $EEE = htmlentities(addcslashes(str_replace("123456789",$name)));
       $pass = $_POST["contrasena"];
       $inyeccion = "'or'1'='1";
 

@@ -10,4 +10,6 @@ $(document).ready(function() {
     edge: 'left',
     closeOnClick: true
   });
+
+
 });
