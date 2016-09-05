@@ -53,5 +53,5 @@
  					  </div>
  					</div>
  				</form>
-      <a href="inicio.php?seccion=c.propietario">ir a consulta</a>
+      <a href="dashboard.php?seccion=c.propietario">ir a consulta</a>
  	  </div>
