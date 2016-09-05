@@ -29,7 +29,7 @@
             <a href="modificar.propietario.php?cod=<?php echo base64_encode($views['prop_cod']); ?>">
               <img src="images/modificar.png" height="20"width="20"/>
             </a>
-            <a href="../Controller/propietario.controller.php?eliminar=yes&cod=<?php echo base64_encode($views['prop_cod']); ?>">
+            <a href="../Controller/propietario.controller.php?e=e&cod=<?php echo base64_encode($views['prop_cod']); ?>">
               <img src="images/eliminar.png" height="20" width="20"/>
             </a>
           </td>

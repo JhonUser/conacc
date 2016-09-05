@@ -19,5 +19,5 @@
 			<input type="text"  name="cen" id="cen" value="<?php echo $codigo["prop_cen"]; ?>" required>
 			<label for="car">Cargo</label>
 			<input type="text"  name="car" id="car" value="<?php echo $codigo["prop_car"]; ?>" required>
-		<button class="right btn green" name="modificar" >Guardar</button>
+		<button class="right btn green" name="m" >Guardar</button>
 	</form>
