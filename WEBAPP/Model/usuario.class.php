@@ -74,7 +74,18 @@ function cargar_rol(){
 
 	}
 
+function Estado($estado,$codigo){
+		$pdo= Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
+
+		$sql="UPDATE  usuario set usu_estado=? WHERE usu_cod=? ";
+		$query=$pdo->prepare($sql);
+		$query->execute(array($estado,$codigo));
+
+		Conexion::Cerrarbd();
+
+	}//se consulta en la base de datos
 
 }
 

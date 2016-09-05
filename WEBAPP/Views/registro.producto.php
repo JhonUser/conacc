@@ -8,23 +8,23 @@ $tipopro=Gestion_Tipoproducto::cargar_tipo();
 $marca=Gestion_Marca::Cargar_marca();
 ?>
 <div class="container">
-
-
-
-			<form action="../Controller/producto.controller.php" method="POST">
-				<h5>Registro de productos</h5><hr>
-
+		<center class="">Registro de productos</center>
+			<form class="col s12" action="../Controller/producto.controller.php" method="POST">
+<!-- 
 				<label>Codigo del producto<br></label>
-				<input type="text" name="txt_codpro"/></br>
-				<label>Codigo del tipo de producto<br></label>
-					<select name="txt_tipopro">
-						<?php
-						foreach ($tipopro as $tipopros) {
-						echo "<option value=".$tipopros["tipopro_cod"].">".$tipopros["tipopro_nombre"]."</option>";
-					}
-					?>
-				</select><br>
-				<label>Codigo de marca<br></label>
+				<input type="text" name="txt_codpro"/></br> -->
+				<div class="col s6">
+					<label>Tipo de producto<br></label>
+						<select name="txt_tipopro">
+							<?php
+							foreach ($tipopro as $tipopros) {
+							echo "<option value=".$tipopros["tipopro_cod"].">".$tipopros["tipopro_nombre"]."</option>";
+						}
+						?>
+					</select>
+				</div>
+
+				<label>Marca<br></label>
 				<select name="txt_marcapro">
 					<?php
 					foreach ($marca as $marcas) {
@@ -32,9 +32,16 @@ $marca=Gestion_Marca::Cargar_marca();
 				}
 				?>
 			</select><br>
-				<label>Descripcion del producto<br></label>
-				<input type="text" name="txt_descpro"/></br><br>
-				<button class="waves-effect waves-light btn "  name="accion" value="create">Guardar</button><br>
+
+			<div class="input-field col s6">
+				<i class="material-icons prefix grey-text">description</i>
+				<input id="icon_prefix" type="text" name="txt_descpro" class="validate" required>
+				<label for="icon_prefix">Descripcion del producto</label>
+			</div>
+
+			<div class="col s7">
+				<button class="waves-effect waves-light btn "  name="accion" value="create">Guardar</button>
+			</div>
 				<?php echo @$_REQUEST["$mensaje"]; ?><br>
 
 				<?php echo "<a href='dashboard.php?seccion=r_marca' class='waves-effect waves-light btn green'>Registro de marca</a>"; ?>
@@ -44,3 +51,4 @@ $marca=Gestion_Marca::Cargar_marca();
 
 
 </div>
+

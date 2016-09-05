@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   $('select').material_select();
   $('.datepicker').pickadate();
   $('.slider').slider({full_width: true});

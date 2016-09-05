@@ -31,6 +31,7 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 			<td>Telefono</td>
 			<td>Correo Electronico</td>
 			<td>Nombre de usuario</td>
+			<td>Estado</td>
 			<td>Accion</td>
 
 
@@ -46,13 +47,13 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 							<td>".$consulta["usu_tel"]."</td>
 							<td>".$consulta["usu_email"]."</td>
 							<td>".$consulta["usu_nick"]."</td>
-
+							<td>".$consulta["usu_estado"]."</td>
 
 							<td>
 								<a href='modificar.usuario.php?codigo_usuario=".$consulta["usu_cod"]."'>
 									<img src='images/modificar.png' height='20' width='20'/>
 								</a>
-								
+								<a href='../Controller/registro.controller.php?codigo_usuario=".$consulta["usu_cod"]."&action=estado'>Inactivo</a>
 							</td>
 					</tr>";
 			}
