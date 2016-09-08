@@ -10,11 +10,11 @@
             <li>
               <a href="#" class="collapsible-header grey darken-3 white-text thin"><?php echo "Bienvenido, " . $_SESSION["nombre"]; ?><i class="material-icons right lime white-text">keyboard_arrow_down</i></a>
               <div class="collapsible-body white" >
-                 <a href="../Controller/cerrarsession.php" class="indigo white-text thin 500"><i class="material-icons right white-text">trending_down</i>Cerrar sesion</a>
+                 <a href="../Controller/cerrarsession.php" class="indigo white-text thin 500" id="cerrar"><i class="material-icons right white-text">trending_down</i>Cerrar sesion</a>
               </div>
             </li>
             <li>
-              <a href="dashboard.php?seccion=inicio" class="waves-effect active" class="collapsible-header"><i class="material-icons left green-text">home</i>Inicio</a>
+              <a href="dashboard.php?seccion=<?php echo base64_encode('inicio') ?>" class="waves-effect active" class="collapsible-header"><i class="material-icons left green-text">home</i>Inicio</a>
               <div class="collapsible-body indigo-text text-lighten-5" style="background-color: #673AB7"><p>...</p></div>
             </li>
             <li>
@@ -25,7 +25,7 @@
               <a href="dashboard.php?seccion=usuario" class="collapsible-header"><i class="material-icons left yellow-text">person_add</i>Usuarios</a>
             </li>
             <li>
-              <a href="dashboard.php?seccion=propietario" class="collapsible-header"><i class="material-icons left teal-text">person_pin</i>Propietarios</a>
+              <a href="dashboard.php?seccion=<?php echo base64_encode('propietario')?>" class="collapsible-header"><i class="material-icons left teal-text">person_pin</i>Propietarios</a>
               <div class="collapsible-body white-text" style="background-color: #FF5722"><p>...</p></div>
             </li>
             <li>
