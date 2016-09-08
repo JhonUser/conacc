@@ -79,7 +79,7 @@ class Gestion_permiso{
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-			self::$sql = "UPDATE permiso SET rol_cod = ?, modu_cod = ?, estado_permi = ?, modulo_permi = ? WHERE permiso.permi_cod = ?";
+			self::$sql = "UPDATE permiso SET rol_cod = ?, modu_cod = ?, estado_permi = ?, modulo_permi = ? WHERE permi_cod = ?";
 			self::$query= $pdo->prepare(self::$sql);
 			self::$query->execute(array($rol_cod, $modu_cod, $estado_permi, $modulo_permi, $permi_cod));
 			Conexion::Cerrarbd();
