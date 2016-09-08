@@ -13,9 +13,10 @@
 				<input id="icon_prefix" type="text" name="txt_modunom" class="validate" required>
 				<label for="icon_prefix">Codigo del modulo</label>
 			</div>
+
 			<div class="col s7">
 				<button  class="waves-effect waves-light btn teal right thin" name="accion" value="Guardar">Guardar</button>
-				</div>
+			</div>
 		</form>
 </div>
 <div class="container">

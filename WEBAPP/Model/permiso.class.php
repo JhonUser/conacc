@@ -30,7 +30,7 @@ class Gestion_permiso{
 
 	}
 
-	public static function Consultar_permiso(){
+	public static function Cosultar_modulo(){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
@@ -48,7 +48,7 @@ class Gestion_permiso{
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-		self::$sql="SELECT permiso.permi_cod, permiso.estado_permi,permiso.modulo_permi, rol.rol_cod, rol.rol_nombre, modulo.modu_cod, modulo.modu_nom from permiso	inner join rol on (permiso.permi_cod=rol.rol_cod) inner join modulo on (permiso.modu_cod = modulo.modu_cod)";
+		self::$sql="SELECT rol.rol_cod, rol.rol_nombre, permiso.permi_cod, permiso.modulo_permi, permiso.estado_permi, modulo.modu_cod, modulo.modu_nom FROM permiso INNER JOIN modulo ON modulo.modu_cod = permiso.modu_cod INNER JOIN rol ON rol.rol_cod = permiso.rol_cod";
 
 		self::$query=$pdo->prepare(self::$sql);
 		self::$query->execute();
@@ -79,7 +79,7 @@ class Gestion_permiso{
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-			self::$sql = "UPDATE permiso SET rol_cod = ?, modu_cod = ?, estado_permi = ?, modulo_permi = ? WHERE permi_cod = ?";
+			self::$sql = "UPDATE permiso SET permiso.rol_cod = ?, modu_cod = ?, estado_permi = ?, modulo_permi = ? WHERE permi_cod = ?";
 			self::$query= $pdo->prepare(self::$sql);
 			self::$query->execute(array($rol_cod, $modu_cod, $estado_permi, $modulo_permi, $permi_cod));
 			Conexion::Cerrarbd();
