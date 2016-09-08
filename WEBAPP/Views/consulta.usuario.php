@@ -5,7 +5,6 @@ require_once("../Model/usuario.class.php");
 
 $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrados
 
-
 ?>
 
 
@@ -19,13 +18,35 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 	$(document).ready(function(){
    		 $('#myTable').DataTable();
 	});
+	
+   		 function valida(usucod){
+   		 		if(confirm("desea inactivar este usuario")){
+					location.href = "../Controller/registro.controller.php?codigo_usuario="+usucod+"&action=estado"
+				} 
+   		 }
+   		  function valida1(usu){
+   		 		if(confirm("desea activar este usuario")){
+					location.href = "../Controller/registro.controller.php?codigo_usuario="+usu+"&action=activo"
+				} 
+   		 }
+   		  function valida2(usuM){
+   		   	if (usuM=="Inactivo") {
+   		   		alert("este usario esta Inactivo");
+ 					
+   		   	}
+   		   	else{
+   		   		valida3();
+   		   		
+   		   	}
+		  }
+		 
 	</script>
 </head>
 <body>
 <table id="myTable" class="striped">
 	<thead>
 		<tr>
-			<td>Documento</td>
+			<td >Documento</td>
 			<td>Nombre</td>
 			<td>Apellido</td>
 			<td>Telefono</td>
@@ -40,7 +61,7 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 	<tbody>
 		<?php
 			foreach ($usuario as $consulta) {//se pone los registros de los usuarios
-				echo "<tr>
+				echo "<tr> 
 							<td>".$consulta["usu_docu"]."</td>
 							<td>".$consulta["usu_nom"]."</td>
 							<td>".$consulta["usu_ape"]."</td>
@@ -50,16 +71,26 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 							<td>".$consulta["usu_estado"]."</td>
 
 							<td>
-								<a href='modificar.usuario.php?codigo_usuario=".$consulta["usu_cod"]."'>
-									<img src='images/modificar.png' height='20' width='20'/>
-								</a>
-								<a href='../Controller/registro.controller.php?codigo_usuario=".$consulta["usu_cod"]."&action=estado'>Inactivo</a>
+								<span style='cursor:pointer' onclick='valida2(&#34".$consulta["usu_estado"]."&#34);'>
+									<img src='images/modificar.png' height='20' width='20'/></span>
+
+								<span class='btninac' onclick='valida(".$consulta["usu_cod"].");' style='cursor:pointer'>Inactivo</span>
+
+								<span onclick='valida1(".$consulta["usu_cod"].");' style='cursor:pointer'>activar</span>
 							</td>
 					</tr>";
 			}
 		?>
 	</tbody>
+	
+	<script>
+ function valida3(usu_mo){
+		  	if(confirm("Desea modificar este usuario")){
+   		   			location.href = "modificar.usuario.php?codigo_usuario="+usu_mo+"&action=Modificar"
+   		   		}
+		  }
 
+</script>
 </table>
 </body>
 </html>
