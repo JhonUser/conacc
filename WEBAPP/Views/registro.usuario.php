@@ -66,8 +66,6 @@
 	  	</div>
 		</div>
 
-		<div class="roght">
-			<center>
+		<section>
 				<?php include 'consulta.usuario.php'; ?>
-			</center>
-		</div>
+		</section>

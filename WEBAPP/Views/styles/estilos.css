@@ -3,6 +3,16 @@
 
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #e0e0e0;
+}
+::-webkit-scrollbar-thumb {
+
+  background-color: #bdbdbd;
+
+}
+
 
 /*hr{
   color: #a9a9a9;
@@ -141,4 +151,4 @@ input[type=text],input[type=password],input[type=email],input[type=number]{
 
 }
 -->
-*/*/*/
+*/

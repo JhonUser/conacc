@@ -1,5 +1,6 @@
 <!-- Jhon T. Gómez -->
-<div class="container">
+<section class="container">
+
  	<center class=""><h5>Registro de propietarios</h5></center>
  		<div class="row">
       <form class="col s12" action="../Controller/propietario.controller.php" method="post">
@@ -50,5 +51,11 @@
  					</div>
  				</div>
  			</form>
-    <a href="dashboard.php?seccion=c.propietario">ir a consulta</a>
- 	</div>
+
+  </section>
+  <section class="container">
+
+
+    <?php include 'consultar.propietario.php'; ?>
+
+</section>

@@ -1,6 +1,7 @@
 <!-- Jhon T. Gómez -->
-<div class="container">
-  <table id="consultar.propietario">
+
+
+  <table id="consultar.propietario" class="striped">
   	<thead>
   		<tr>
   			<td>Cedula</td>
@@ -11,6 +12,7 @@
   			<td>Email</td>
         <td>Cargo</td>
         <td>Centro</td>
+        <td>Accion</td>
       </tr>
   	</thead>
   	<tbody>
@@ -26,15 +28,14 @@
           <td><?php echo $views["prop_car"]?></td>
           <td><?php echo $views["prop_cen"]?></td>
           <td>
-            <a href="dashboard.php?seccion=m.propietario&cod=<?php echo base64_encode($views['prop_cod']); ?>">
-              <img src="images/modificar.png" height="20"width="20"/>
+            <a href="dashboard.php?seccion=m.propietario&cod=<?php echo base64_encode($views['prop_cod']+500); ?>" class="btn-floating light-green">
+              <i class="material-icons">edit</i>
             </a>
-            <a href="../Controller/propietario.controller.php?e=e&cod=<?php echo base64_encode($views['prop_cod']); ?>">
-              <img src="images/eliminar.png" height="20" width="20"/>
+            <a href="../Controller/propietario.controller.php?e=e&cod=<?php echo base64_encode($views['prop_cod']); ?>" class="btn-floating red">
+              <i class="material-icons">delete_forever</i>
             </a>
           </td>
         </tr>
       <?php endforeach ?>
   	</tbody>
   </table>
-</div>

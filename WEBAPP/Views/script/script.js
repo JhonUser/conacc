@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $('select').material_select();
+  $('#myTable').DataTable();
   $('.datepicker').pickadate();
   $('.slider').slider({full_width: true});
   $('.modal-trigger').leanModal();
@@ -9,6 +10,4 @@ $(document).ready(function() {
     edge: 'left',
     closeOnClick: true
   });
-
-
 });

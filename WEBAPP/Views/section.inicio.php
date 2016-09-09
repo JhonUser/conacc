@@ -17,7 +17,7 @@
               <a href="dashboard.php?seccion=<?php echo base64_encode('inicio') ?>" class="waves-effect active" class="collapsible-header"><i class="material-icons left green-text">home</i>Inicio</a>
               <div class="collapsible-body indigo-text text-lighten-5" style="background-color: #673AB7"><p>...</p></div>
             </li>
-          
+
             <li>
               <a href="dashboard.php?seccion=rol" class="collapsible-header"><i class="material-icons left red-text">control_point</i>Rol</a>
               <div class="collapsible-body white-text" style="background-color: #FF5722"><p>...</p></div>
@@ -26,11 +26,11 @@
               <a href="dashboard.php?seccion=usuario" class="collapsible-header"><i class="material-icons left yellow-text">person_add</i>Usuarios</a>
             </li>
             <li>
-              <a href="dashboard.php?seccion=<?php echo base64_encode('propietario')?>" class="collapsible-header"><i class="material-icons left teal-text">person_pin</i>Propietarios</a>
+              <a href="dashboard.php?seccion=<?php echo base64_encode('r.propietario')?>" class="collapsible-header"><i class="material-icons left teal-text">person_pin</i>Propietarios</a>
               <div class="collapsible-body white-text" style="background-color: #FF5722"><p>...</p></div>
             </li>
 
-          
+
             <li>
               <a href="dashboard.php?seccion=producto" class="collapsible-header"><i class="material-icons left indigo-text">important_devices</i>Productos</a>
               <div class="collapsible-body white-text" style="background-color: #FF5722"><p>...</p></div>
@@ -41,7 +41,7 @@
             <li>
               <a href="dashboard.php?seccion=r_modulo"><i class="material-icons left orange-text">view_module</i>Modulo</a>
             </li>
-           
+
           </ul>
         </ul>
       </div>
