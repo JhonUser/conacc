@@ -41,7 +41,14 @@
             <li>
               <a href="dashboard.php?seccion=r_modulo"><i class="material-icons left orange-text">view_module</i>Modulo</a>
             </li>
+<<<<<<< HEAD
 
+=======
+             <li>
+              <a href="dashboard.php?seccion=r_permiso"><i class="material-icons left">pan_tool</i>Permisos</a>
+            </li>
+           
+>>>>>>> 841d13da1ac29b37f9e3d0e82e3f8db72e49efcf
           </ul>
         </ul>
       </div>

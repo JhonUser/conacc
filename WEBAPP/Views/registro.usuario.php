@@ -1,3 +1,4 @@
+
 <?php require_once("../Model/conexion.php"); require_once("../Model/usuario.class.php"); ?>
 
 <div class="container">
@@ -66,6 +67,11 @@
 	  	</div>
 		</div>
 
+<<<<<<< HEAD
 		<section>
+=======
+		<div class="right">
+			<center>
+>>>>>>> 841d13da1ac29b37f9e3d0e82e3f8db72e49efcf
 				<?php include 'consulta.usuario.php'; ?>
 		</section>

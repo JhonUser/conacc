@@ -6,26 +6,24 @@ require_once("../Model/usuario.class.php");
 require_once("../Model/permiso.class.php");
 $rol=Gestion_usuario::cargar_rol();
 $modulo=Gestion_permiso::Cargar_modulo();
-
-
 $codigo =Gestion_permiso::Consultarporcodigo($_GET["codigo_permi"]);
-$todo= Gestion_permiso::Consultar_nombres();
-
-
 ?>
 	<!-- Formulario: Modificar permiso -->
 	
 	<form action="../Controller/permiso.controller.php" method="POST">
 	<h1>Modificar usuario</h1>
 	<br>
-		<label>Codigo</label>
 			<input type="hidden" name="permi_cod" value=" <?php echo $codigo["permi_cod"]; ?>"required/>
 				<br>
 	<label>Rol</label>
 	<select name="sele_rol">
 		<?php
 		foreach ($rol as $roles) {
-		echo "<option value=".$roles["rol_cod"].">".$roles["rol_nombre"]."</option>";
+		echo "<option value='".$roles["rol_cod"]."'";  
+			 if($roles["rol_cod"] == $codigo["rol_cod"]){
+			 	echo "selected";
+			 } 
+		echo ">".$roles["rol_nombre"]."</option>";
 	}
 	?>
 	</select>
@@ -34,7 +32,15 @@ $todo= Gestion_permiso::Consultar_nombres();
 	<select name="sele_modu">
 		<?php
 		foreach ($modulo as $modulos) {
-		echo "<option value=".$modulos["modu_cod"].">".$modulos["modu_nom"]."</option>";
+		echo "<option value='".$modulos["modu_cod"]."'";
+			 if($modulos["modu_cod"] == $codigo["modu_cod"]){
+			 	echo "selected";
+			 } 
+
+
+		echo ">".$modulos["modu_nom"]."</option>";
+
+ 	
 	}
 	?>
 	</select>
