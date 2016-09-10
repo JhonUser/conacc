@@ -1,5 +1,5 @@
 <!-- Jhon T. Gómez -->
-<section class="container">
+<section >
 
  	<center class=""><h5>Registro de propietarios</h5></center>
  		<div class="row">
@@ -53,9 +53,7 @@
  			</form>
 
   </section>
-  <section class="container">
 
-
+  <section >
     <?php include 'consultar.propietario.php'; ?>
-
-</section>
+  </section>
