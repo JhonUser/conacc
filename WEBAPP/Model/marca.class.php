@@ -59,7 +59,7 @@ class Gestion_Marca{
 		return $result;
 	}
 	function Subir(){
-		$directorio = "imagenes_marca/";
+		$directorio = "../Views/imagenes_marca/";
 
 			$total_imagenes = count($_FILES["img_logomarca"]["name"]); for ($i=0; $i < $total_imagenes; $i++){
 			//Aqui se captura el nombre del archivo original con su extension

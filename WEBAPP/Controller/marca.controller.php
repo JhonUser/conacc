@@ -18,7 +18,7 @@ require_once("../Model/marca.class.php");
 				catch (Exception $e) {
 					$mensaje =("Ha ocurrido un error, el error fue :".$e->getMessage()." en ".$e->getFile()." en la linea ".$e->getLine());
 				}
-				header("Location: ../Views/consulta.marca.php?m=".$mensaje);
+				//header("Location: ../Views/consulta.marca.php?m=".$mensaje);
 			break;
 
 		case 'Update':
