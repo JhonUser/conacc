@@ -52,9 +52,23 @@ try{
 			$estado="Inactivo";
 			$codigo=$_GET["codigo_usuario"];
 	
-
+			
 			try{
 				Gestion_usuario::Estado($estado,$codigo);
+				header("location:../views/registro.usuario.php");
+
+			}catch(Exception $e){
+				echo $e;
+			}
+		break;
+
+		case 'activo':
+			$estado="activo";
+			$codigo=$_GET["codigo_usuario"];
+	
+			
+			try{
+				Gestion_usuario::activo1($estado,$codigo);
 				header("location:../views/registro.usuario.php");
 
 			}catch(Exception $e){
