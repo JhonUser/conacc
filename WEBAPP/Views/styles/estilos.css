@@ -1,25 +1,28 @@
-img{
-  
-  position: relative;
-}
-/*.espacio_form {
-  margin-top: 5%;
-  margin-left: 37%;
-  width: 343px;
-  background-color: white;
-  border: solid 1px #cbc9c9;
-}
-#log{
-  background-color: #d4e157;
-}
-form{
-  margin: 20px;
+#cerrar:hover{
+  background-color: red;
 
 }
-hr{
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #e0e0e0;
+}
+::-webkit-scrollbar-thumb {
+
+  background-color: #bdbdbd;
+
+}
+section{
+  margin-left: 20%;
+}
+
+
+
+/*hr{
   color: #a9a9a9;
   opacity: 0.3;
-}
+}*/
+/*
 input[type=text],input[type=password],input[type=email],input[type=number]{
   width: 209px;
   height: 39px;
@@ -152,4 +155,4 @@ input[type=text],input[type=password],input[type=email],input[type=number]{
 
 }
 -->
-*/*/*/
+*/

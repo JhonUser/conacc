@@ -18,22 +18,24 @@ require_once("../Model/marca.class.php");
 				catch (Exception $e) {
 					$mensaje =("Ha ocurrido un error, el error fue :".$e->getMessage()." en ".$e->getFile()." en la linea ".$e->getLine());
 				}
-				header("Location: ../Views/consulta.marca.php?m=".$mensaje);
+				//header("Location: ../Views/consulta.marca.php?m=".$mensaje);
 			break;
 
 		case 'Update':
+		$marca_cod=$_POST["txt_codmarca"];
 		$marca_nombre=$_POST["txt_nommarca"];
 
-		try{
-			Gestion_Marca::Subir($_FILES["img_logomarca"]["name"]);
-			Gestion_Marca::Modificar($marca_nombre, $_FILES["img_logomarca"]["name"]);
-			$mensaje ="Su registro se creo correctamente";
-			echo $mensaje;
-		}catch(Exception $e){
-			$mensaje =("Ha ocurrido un error, el error fue :".$e->getMessage()." en ".$e->getFile()." en la linea ".$e->getLine());
-		}
-		header("Location: ../Views/consulta.marca.php?m=".$mensaje);
-	break;
+			try {
+					Gestion_Marca::Subir($_FILES["img_logomarca"]["name"]);
+					Gestion_Marca::Modificar($marca_cod, $marca_nombre, $_FILES["img_logomarca"]["name"]);
+					$mensaje ="Su registro se creo correctamente";
+					echo $mensaje;
+				}
+				catch (Exception $e) {
+					$mensaje =("Ha ocurrido un error, el error fue :".$e->getMessage()." en ".$e->getFile()." en la linea ".$e->getLine());
+				}
+				//header("Location: ../Views/consulta.marca.php?m=".$mensaje);
+			break;
 
 		case 'Borrar':
 		$marca_cod = $_GET["marca_cod"];

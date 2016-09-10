@@ -17,6 +17,9 @@
   		}
 
       switch ($pagin) {
+        case 'inicio':
+          include("inicio.php");
+          break;
         case 'producto':
           include("registro.producto.php");
           break;
@@ -32,11 +35,17 @@
         case 'c.propietario':
           include 'consultar.propietario.php';
           break;
+        case 'm.propietario':
+          include 'modificar.propietario.php';
+          break;
         case 'r_marca':
           include 'registro.marca.php';
           break;
         case 'r_modulo':
           include 'registro.modulo.php';
+          break;
+        case 'r_permiso':
+          include 'registro.permiso.php';
           break;
         case 'r_t_producto':
           include 'registro.tipoproducto.php';

@@ -1,3 +1,4 @@
+
 <?php require_once("../Model/conexion.php"); require_once("../Model/usuario.class.php"); ?>
 
 <div class="container">
@@ -45,7 +46,7 @@
 					  <div class="input-field col s6">
 							 <i class="material-icons prefix">verified_user</i>
 
-						
+
 
 							 <input id="email" type="text" name="nombredeusuario" class="validate" required>
 
@@ -66,8 +67,8 @@
 	  	</div>
 		</div>
 
-		<div class="roght">
-			<center>
+
+		<section>
+
 				<?php include 'consulta.usuario.php'; ?>
-			</center>
-		</div>
+		</section>

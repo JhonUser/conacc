@@ -29,13 +29,22 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 					location.href = "../Controller/registro.controller.php?codigo_usuario="+usu+"&action=activo"
 				} 
    		 }
+<<<<<<< HEAD
    		  function valida2(usuM,code){
+=======
+   		  function valida2(usuM){
+>>>>>>> origin/master
    		   	if (usuM=="Inactivo") {
    		   		alert("este usario esta Inactivo");
  					
    		   	}
    		   	else{
+<<<<<<< HEAD
    		   		location.href = "modificar.usuario.php?codigo_usuario="+code+"";
+=======
+   		   		valida3();
+   		   		
+>>>>>>> origin/master
    		   	}
 		  }
 		 
@@ -70,7 +79,11 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 							<td>".$consulta["usu_estado"]."</td>
 
 							<td>
+<<<<<<< HEAD
 								<span style='cursor:pointer' onclick='valida2(&#34".$consulta["usu_estado"]."&#34,".$consulta["usu_cod"].");'>
+=======
+								<span style='cursor:pointer' onclick='valida2(&#34".$consulta["usu_estado"]."&#34);'>
+>>>>>>> origin/master
 									<img src='images/modificar.png' height='20' width='20'/></span>
 
 								<span class='btninac' onclick='valida(".$consulta["usu_cod"].");' style='cursor:pointer'>Inactivo</span>
@@ -82,7 +95,18 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 		?>
 	</tbody>
 	
+<<<<<<< HEAD
 	
+=======
+	<script>
+ function valida3(usu_mo){
+		  	if(confirm("Desea modificar este usuario")){
+   		   			location.href = "modificar.usuario.php?codigo_usuario="+usu_mo+"&action=Modificar"
+   		   		}
+		  }
+
+</script>
+>>>>>>> origin/master
 </table>
 </body>
 </html>

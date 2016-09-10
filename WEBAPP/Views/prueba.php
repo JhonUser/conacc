@@ -24,6 +24,7 @@ foreach ($pacomparar as $key) {
  			
 			if($key['marca_cod']!=$codigo){
 				echo "No puede ingresar ese codigo";
+				echo "<script>alert('No puede')</script>";
 
 			}
 

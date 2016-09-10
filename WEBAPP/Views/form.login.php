@@ -1,30 +1,21 @@
-<section id="log">
-  <nav>
-    <div class="nav-wrapper grey darken-3">
-      <ul>
+<div class="row">
 
-        <li><a href="#">Ayuda</a></li>
-     </ul>
+  <form class="col s5" action="../Controller/log.controller.php" method="post">
+    <h5>Ingresar</h5>
+    <div class="row">
+      <div class="input-field col s7">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="icon_prefix" type="text" name="nombre" class="validate">
+        <label for="icon_prefix">Usuario</label>
+      </div>
+      <div class="input-field col s7">
+        <i class="material-icons prefix black-text">vpn_key</i>
+        <input id="icon_telephone" type="password" name="contrasena" class="validate">
+        <label for="icon_telephone">Contraseña</label>
+      </div>
     </div>
-  </nav>
-<div class="espacio_form">
-
- <form action="../Controller/log.controller.php" method="post">
-
-    <br>
-    <label for="nom" id="icono" ><i class="icon-user"></i></label>
-      <input type="text" name="nombre" id="nom" placeholder="Usuario" required/>
-    <label for="contra" id="icono"><i class="icon-shield"></i></label>
-      <input type="password" name="contrasena" id="contra" placeholder="Contraseña" required/>
-    <br><br><input type="checkbox" id="admin" />
-      <label for="admin">Iniciar como Administrador</label>
-    <hr>
-    <p>Si no tiene cuenta, <a href="#">haga clic aquí </a>para realizar un registro.</p>
-    <br>
-    <button class="btn waves-effect waves-center indigo" type="submit" name="sesion">Iniciar Sesion</button>
-    <button class="btn waves-effect waves-light grey darken-1" type="reset" name="limpiar">Limpiar</button>
-
- </form>
+    <div class="input-field col s7">
+      <button type="submit" name="sesion" class="btn thin purple right">Ingresar</button>
+    </div>
+  </form>
 </div>
-
-</section>

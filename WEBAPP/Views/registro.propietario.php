@@ -1,12 +1,13 @@
+<!-- Jhon T. Gómez -->
+<section >
 
- <div class="container">
  	<center class=""><h5>Registro de propietarios</h5></center>
  		<div class="row">
       <form class="col s12" action="../Controller/propietario.controller.php" method="post">
  				  <div class="row">
             <div class="input-field col s6">
  					 		 <i class="material-icons prefix grey-text">credit_card</i>
- 							 <input id="email" type="number" name="documento" class="validate" required>
+ 							 <input id="email" type="number" name="ced" class="validate" required>
  							 <label for="email">Cedula</label>
  	  				</div>
  						<div class="input-field col s6">
@@ -44,14 +45,15 @@
  							 <input id="email" type="text" name="cen" class="validate" required>
  							 <label for="email">Centro</label>
  		  			</div>
-
-
- 				    </div>
- 						<div class="col s7">
-
- 								<button class="waves-effect waves-light btn teal right thin" name="guardar">Guardar</button>
- 					  </div>
+          </div>
+ 					<div class="col s7">
+ 						<button class="waves-effect waves-light btn teal right thin" name="g">Guardar</button>
  					</div>
- 				</form>
-      <a href="inicio.php?seccion=c.propietario">ir a consulta</a>
- 	  </div>
+ 				</div>
+ 			</form>
+
+  </section>
+
+  <section >
+    <?php include 'consultar.propietario.php'; ?>
+  </section>
