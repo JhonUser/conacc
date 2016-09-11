@@ -18,30 +18,31 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 	$(document).ready(function(){
    		 $('#myTable').DataTable();
 	});
-	
+
    		 function valida(usucod){
    		 		if(confirm("desea inactivar este usuario")){
 					location.href = "../Controller/registro.controller.php?codigo_usuario="+usucod+"&action=estado"
-				} 
+				}
    		 }
    		  function valida1(usu){
    		 		if(confirm("desea activar este usuario")){
 					location.href = "../Controller/registro.controller.php?codigo_usuario="+usu+"&action=activo"
-				} 
+				}
    		 }
    		  function valida2(usuM,code){
    		   	if (usuM=="Inactivo") {
    		   		alert("este usario esta Inactivo");
- 					
+
    		   	}
    		   	else{
    		   		location.href = "modificar.usuario.php?codigo_usuario="+code+"";
    		   	}
 		  }
-		 
+
 	</script>
 </head>
 <body>
+	<section>
 <table id="myTable" class="striped">
 	<thead>
 		<tr>
@@ -53,14 +54,12 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 			<td>Nombre de usuario</td>
 			<td>Estado</td>
 			<td>Accion</td>
-
-
-			</tr>
+		</tr>
 	</thead>
 	<tbody>
 		<?php
 			foreach ($usuario as $consulta) {//se pone los registros de los usuarios
-				echo "<tr> 
+				echo "<tr>
 							<td>".$consulta["usu_docu"]."</td>
 							<td>".$consulta["usu_nom"]."</td>
 							<td>".$consulta["usu_ape"]."</td>
@@ -68,21 +67,24 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 							<td>".$consulta["usu_email"]."</td>
 							<td>".$consulta["usu_nick"]."</td>
 							<td>".$consulta["usu_estado"]."</td>
-
 							<td>
-								<span style='cursor:pointer' onclick='valida2(&#34".$consulta["usu_estado"]."&#34,".$consulta["usu_cod"].");'>
-									<img src='images/modificar.png' height='20' width='20'/></span>
-
-								<span class='btninac' onclick='valida(".$consulta["usu_cod"].");' style='cursor:pointer'>Inactivo</span>
-
-								<span onclick='valida1(".$consulta["usu_cod"].");' style='cursor:pointer'>activar</span>
+								<span onclick='valida(".$consulta["usu_cod"].");'class='btn-floating light-red' style='cursor:pointer'>
+									<i class='material-icons'>airline_seat_flat</i>
+								</span>
+								<span onclick='valida1(".$consulta["usu_cod"].");'class='btn-floating light-blue' style='cursor:pointer'>
+									<i class='material-icons'>directions_walk</i>
+								</span>
+								<span style='cursor:pointer' onclick='valida2(&#34".$consulta["usu_estado"]."&#34,".$consulta["usu_cod"].");'class='btn-floating light-green'>
+									<i class='material-icons'>edit</i>
+								</span>
 							</td>
 					</tr>";
 			}
 		?>
 	</tbody>
-	
-	
+
+
 </table>
+</section>
 </body>
 </html>

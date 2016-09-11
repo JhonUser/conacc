@@ -1,8 +1,6 @@
-
 <?php require_once("../Model/conexion.php"); require_once("../Model/usuario.class.php"); ?>
-
-<div class="container">
-	<center class=""><h5>Registro de Vigilantes y Administradores</h5></center>
+<section>
+	<center><h5>Registro de Vigilantes y Administradores</h5></center>
 		<div class="row">
 
 		   <form class="col s12" action="../Controller/registro.controller.php" method="post" <?php $rol=Gestion_usuario::cargar_rol(); ?>>
@@ -45,14 +43,9 @@
 						</div>
 					  <div class="input-field col s6">
 							 <i class="material-icons prefix">verified_user</i>
-
-
-
 							 <input id="email" type="text" name="nombredeusuario" class="validate" required>
-
 							 <label for="email">Usuario</label>
 						</div>
-
 					  <div class="input-field col s6">
 							 <i class="material-icons prefix">vpn_key</i>
 							 <input id="email" type="password" name="contrasena" class="validate" required>
@@ -65,10 +58,7 @@
 					</div>
 				</form>
 	  	</div>
-		</div>
+	</section>
 
 
-		<section>
-
-				<?php include 'consulta.usuario.php'; ?>
-		</section>
+		<?php include 'consulta.usuario.php'; ?>
