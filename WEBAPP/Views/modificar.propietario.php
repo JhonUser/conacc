@@ -1,7 +1,7 @@
 <!-- Jhon T. Gómez -->
 <?php require_once("../Model/conexion.php"); require_once("../Model/propietario.class.php"); ?>
 <div class="container">
-	<form action="../Controller/propietario.controller.php" method="post" <?php $codigo = registro::datos_modificar(base64_decode($_GET["cod"])); ?>>
+	<form action="../Controller/propietario.controller.php" method="post" <?php $codigo = registro::datos_modificar(base64_decode($_GET["cod"])-500); ?>>
 		<center>Modificar propietario</center>
 			<input type="hidden" name="cod" value="<?php echo $codigo["prop_cod"]; ?>" required>
 			<label for="ced">CC / T.I</label>
