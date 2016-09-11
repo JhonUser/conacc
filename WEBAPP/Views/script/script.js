@@ -4,7 +4,14 @@ $(document).ready(function() {
   $('.datepicker').pickadate();
   $('.slider').slider({full_width: true});
   $('.modal-trigger').leanModal();
-  $('#consultar.propietario').DataTable();
+  $('#tabla').DataTable();
+  $("#codmarca").keyup(function(){
+			var codigo =$("#codmarca").val();
+			$.post("prueba.php", {cod: codigo}).done(function(data){
+			$("#trato").html(data);
+			//alert( codigo );
+			});
+    });
   $('.button-collapse').sideNav({
     menuWidth: 200,
     edge: 'left',

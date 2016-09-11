@@ -1,16 +1,22 @@
 	<!-- Formulario: Guardar rol -->
-<div class="container">
+<section>
 
 
 <form action="../Controller/guardarrol.php" method="post">
-	<h1>Registro de rol</h1>
+		<center class=""><h5>Registro de rol</h5></center>
+
 	<label>Codigo del rol</label>
 		<input type="number" name="txt_codrol"required/><br>
 	<label>Nombre del rol</label>
 		<input type="text" name="txt_nomrol" required/>
 	<label>Descripcion</label>
 		<input type="text" name="txt_descrol" required/>
-	<button value="Guardar" class="btn" name="action">Guardar</button>
+	<button value="Guardar" class="btn thin teal right" name="action">Guardar</button>
 </form>
-	<a href="consulta.rol.php">Consultar todo</a>
-</div>
+
+</section>
+
+
+<section>
+	<?php include 'consulta.rol.php'; ?>
+</section>

@@ -59,6 +59,9 @@
             case 'r_permiso':
               include("Registro.permiso.php");
               break;
+            case 'm_rol':
+              include("modifico_rol.php");
+              break;
 
             default:
 
@@ -69,5 +72,5 @@
   		}
     }
   }
-  
+
 ?>

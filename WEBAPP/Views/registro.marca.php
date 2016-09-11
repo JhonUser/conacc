@@ -17,8 +17,8 @@
 	        		<input class="file-path validate" type="text">
 	      		</div>
 			</div>
-		
-			<div class="col s7">	
+
+			<div class="col s7">
 				<button class="waves-effect waves-light btn teal right thin" name="accion" value="create" >Guardar</button>
 			</div>
 				<?php echo @$_REQUEST["$mensaje"]; ?>
@@ -27,4 +27,3 @@
 <div class="container">
 				<?php include 'consulta.marca.php'; ?>
 </div>
-

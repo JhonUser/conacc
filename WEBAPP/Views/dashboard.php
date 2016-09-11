@@ -13,6 +13,8 @@
 	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
      <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>
      <script type="text/javascript" src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.js"></script>
+     <script src="hhttps://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.css"></script>
      <link rel="stylesheet" type="text/css" href="styles/estilos.css">
 	</head>
 	<body>
