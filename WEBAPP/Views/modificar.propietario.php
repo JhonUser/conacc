@@ -1,8 +1,10 @@
 <!-- Jhon T. Gómez -->
-<?php require_once("../Model/conexion.php"); require_once("../Model/propietario.class.php"); ?>
+<?php require_once("../Model/conexion.php"); require_once("../Model/propietario.class.php"); ?><br>
+
 <div class="container">
+	<a href="dashboard.php?seccion=<?php echo base64_encode('r.propietario') ?>" class="btn-floating indigo"><i class="material-icons">keyboard_backspace</i></a>
 	<form action="../Controller/propietario.controller.php" method="post" <?php $codigo = registro::datos_modificar(base64_decode($_GET["cod"])-500); ?>>
-		<center>Modificar propietario</center>
+		<center><h5>Modificar propietario</h5></center>
 			<input type="hidden" name="cod" value="<?php echo $codigo["prop_cod"]; ?>" required>
 			<label for="ced">CC / T.I</label>
 			<input type="text" name="ced"  id="ced" value="<?php echo $codigo["prop_doc"]; ?>" required>
@@ -20,6 +22,6 @@
 			<input type="text"  name="cen" id="cen" value="<?php echo $codigo["prop_cen"]; ?>" required>
 			<label for="car">Cargo</label>
 			<input type="text"  name="car" id="car" value="<?php echo $codigo["prop_car"]; ?>" required>
-		<button class="right btn green" name="m" >Guardar</button>
+		<button class="right btn teal" name="m" >Guardar</button>
 	</form>
 </div>

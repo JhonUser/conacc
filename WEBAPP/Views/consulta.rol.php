@@ -8,8 +8,7 @@ $rol =Gestion_rol::Consultar();
 
 ?>
 
-
-<table id="myTable" class="striped">
+<table id="myTable" class="striped responsive-table">
 	<thead>
 		<tr>
 			<td>Codigo</td>
@@ -38,5 +37,5 @@ $rol =Gestion_rol::Consultar();
 					</tr>";
 			}
 		?>
-	</tbody>
+	<br></tbody>
 </table>
