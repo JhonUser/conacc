@@ -8,7 +8,7 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 ?>
 
 
-<html>
+<!DOCTYPE html>
 <head>
 	<title>Consultar Usuario</title>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -42,16 +42,16 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 	</script>
 </head>
 <body>
-	<section>
-<table id="myTable" class="striped">
+
+<table id="myTable" class="striped bordered responsive-table">
 	<thead>
 		<tr>
-			<td >Documento</td>
+			<td>Documento</td>
 			<td>Nombre</td>
 			<td>Apellido</td>
 			<td>Telefono</td>
 			<td>Correo Electronico</td>
-			<td>Nombre de usuario</td>
+			<td>Usuario</td>
 			<td>Estado</td>
 			<td>Accion</td>
 		</tr>
@@ -85,6 +85,6 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 
 
 </table>
-</section>
+
 </body>
 </html>

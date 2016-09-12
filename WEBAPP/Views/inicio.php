@@ -1,1 +1,2 @@
-<a href="#" class="icon icon-TYPE facebook">facebook</a>
+
+<center>...<br>...<br>...</center>

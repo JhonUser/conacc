@@ -1,7 +1,6 @@
 <!-- Jhon T. Gómez -->
 
-
-  <table id="consultar.propietario" class="striped">
+  <table id="tabla" class="striped responsive-table">
   	<thead>
   		<tr>
   			<td>Cedula</td>
@@ -31,7 +30,7 @@
             <a href="dashboard.php?seccion=m.propietario&cod=<?php echo base64_encode($views['prop_cod']+500); ?>" class="btn-floating light-green">
               <i class="material-icons">edit</i>
             </a>
-            <a href="../Controller/propietario.controller.php?e=e&cod=<?php echo base64_encode($views['prop_cod']); ?>" class="btn-floating red">
+            <a href="../Controller/propietario.controller.php?e=e&cod=<?php echo base64_encode($views['prop_cod']+500); ?>" class="btn-floating red">
               <i class="material-icons">delete_forever</i>
             </a>
           </td>

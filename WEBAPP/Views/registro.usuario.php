@@ -2,8 +2,7 @@
 <section>
 	<center><h5>Registro de Vigilantes y Administradores</h5></center>
 		<div class="row">
-
-		   <form class="col s12" action="../Controller/registro.controller.php" method="post" <?php $rol=Gestion_usuario::cargar_rol(); ?>>
+ 			<form class="col s10" action="../Controller/registro.controller.php" method="post" <?php $rol=Gestion_usuario::cargar_rol(); ?>>
 				  <div class="row">
 						<div class="input-field col s7">
 							<i class="material-icons prefix teal-text">people</i>
@@ -60,5 +59,6 @@
 	  	</div>
 	</section>
 
-
+	<section>
 		<?php include 'consulta.usuario.php'; ?>
+	</section>
