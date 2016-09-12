@@ -1,9 +1,10 @@
 <!-- Jhon T. Gómez -->
 <section >
 
- 	<center class=""><h5>Registro de propietarios</h5></center>
+
  		<div class="row">
-      <form class="col s12" action="../Controller/propietario.controller.php" method="post">
+      <form class="col s10" action="../Controller/propietario.controller.php" method="post">
+        <center><h4 class="thin">Registro de propietarios</h4></center>
  				  <div class="row">
             <div class="input-field col s6">
  					 		 <i class="material-icons prefix grey-text">credit_card</i>
