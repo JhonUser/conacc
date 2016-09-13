@@ -10,30 +10,33 @@ $propietario=Gestion_producto::consultarpropie();
 ?>
 
 <section>
+<label>Nombre </label>
 	<form action="../Controller/controller.registro.producto.php" method="post"/>
+		
 		<div class="input-field col s6">
 			<i class="material-icons prefix grey-text">account_circle</i>
 			<select name="codigo">
 				<?php
-					foreach ($usuario as $usu ) {
-						echo "<option value=".$usu["usu_cod"].">".$usu["usu_nom"]."</option>";
+					foreach ($usuario as $produc ) {
+						echo "<option value=".$produc["usu_cod"].">".$produc["usu_nom"]."</option>";
 					}
 				?>
 
-			</select>
-			<label>codigo de usuario</label>
-		</div>
+		</select>
+		<label>Nombre del producto</label>
+	</div>
+
 		<div class="input-field col s6">
 			<i class="material-icons prefix grey-text">account_circle</i>
 			<select name="codigo_pro">
 				<?php
 					foreach ($producto as $produc ) {
-						echo "<option value=".$produc["produ_cod"].">".$produc["produ_cod"]."</option>";
+						echo "<option value=".$produc["produ_cod"].">".$produc["produ_desc"]."</option>";
 					}
 				?>
 
 		</select>
-		<label>codigo del producto</label>
+		<label>Descripcion del producto</label>
 	</div>
 
 	<div class="input-field col s6">
@@ -42,7 +45,7 @@ $propietario=Gestion_producto::consultarpropie();
 		<select name="codigo_propiedad">
 			<?php
 			foreach ($propietario as $propie ) {
-				echo "<option value=".$propie["prop_cod"].">".$propie["prop_cod"]."</option>";
+				echo "<option value=".$propie["prop_cod"].">".$propie["prop_nom"]."</option>";
 			}
 			?>
 

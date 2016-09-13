@@ -1,9 +1,9 @@
-<!-- Jeison V. Calle -->
+<!-- Andrea taborda -->
 <?php
 
 class Gestion_producto{
 
-	function guardar($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta){
+	function guardar($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$fecha,$hora){
 	$pdo=conexion::Abrirbd();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
@@ -12,7 +12,23 @@ class Gestion_producto{
 	$query=$pdo->prepare($sql);
 	$query->execute(array($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta));
 
+//consultar entrada y salir
+
+	$sql1="SELECT * FROM registro_producto order by regi_cod";
+	$query=$pdo->prepare($sql1);
+	$query->execute();
+
+	$result1=$query->rowCount();
+    $codigo=$result1;
+
+	$sql2="INSERT INTO entrada_salida (regi_cod,entsal_fechaent,entsal_fechasal,entsal_horaent,entsal_horasal) values(?,?,?,?,?)";
+
+	$query1=$pdo->prepare($sql2);
+	$query1->execute(array($codigo,$fecha,"",$hora,""));
+
+	
 	conexion::Cerrarbd();
+
 }
 	function consultarUsu(){
 		$pdo=conexion::Abrirbd();

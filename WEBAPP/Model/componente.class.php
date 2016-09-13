@@ -1,3 +1,4 @@
+<!-- Andrea taborda -->
 <?php
 
 class Gestion_componente{

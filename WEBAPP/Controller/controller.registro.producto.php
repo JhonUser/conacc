@@ -1,5 +1,7 @@
-<!-- Jeison V. Calle -->
+<!-- Andrea taborda -->
 <?php
+date_default_timezone_get("America/Bogota");
+session_start();
 require_once("../Model/conexion.php");
 require_once("../Model/registro.producto.class.php");
 
@@ -14,10 +16,12 @@ switch ($accion) {
 	$registre_fecha=$_POST["registre_fecha"];
 	$registre_decrip=$_POST["registre_decrip"];
 	$registre_autoalerta=$_POST["registre_autoalerta"];
+	$fecha=date("o-m-d");
+	$hora=date("H:i");
 
 	try{
 
-		Gestion_producto::Guardar($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta);
+		Gestion_producto::Guardar($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$fecha,$hora);
 		echo "<a href='../Views/registro.registro_producto.php'>Volver</a>";
 	}catch(Exception $e){
 		echo $e;
