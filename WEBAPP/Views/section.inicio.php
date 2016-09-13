@@ -1,11 +1,11 @@
 <!-- Jhon T. Gómez -->
 
-  <nav class="z-depth-0 grey darken-3">
+  <nav class="z-depth-0 grey darken-4">
       <a  href="#!" data-activates="mobile-demo" class="button-collapse"><i class="right"><img src="images/icons/icon.png"/></i></a>
       <div class="top-nav nav-wrapper" >
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 
-        <ul class="side-nav fixed grey lighten-3" id="mobile-demo">
+        <ul class="side-nav fixed grey lighten-2" id="mobile-demo">
           <ul class="collapsible" data-collapsible="accordion" >
             <li>
               <a href="#" class="collapsible-header grey darken-3 white-text thin"><?php echo "Bienvenido, " . $_SESSION["nombre"]; ?><i class="material-icons right lime white-text">keyboard_arrow_down</i></a>
@@ -14,13 +14,12 @@
               </div>
             </li>
             <li>
-              <a href="dashboard.php?seccion=<?php echo base64_encode('inicio') ?>" class="waves-effect active" class="collapsible-header"><i class="material-icons left green-text">home</i>Inicio</a>
+              <a href="dashboard.php?seccion=<?php echo base64_encode('inicion') ?>" class="waves-effect active" class="collapsible-header"><i class="material-icons left green-text">home</i>Inicio</a>
               <div class="collapsible-body indigo-text text-lighten-5" style="background-color: #673AB7"><p>...</p></div>
             </li>
-
             <li>
               <a href="dashboard.php?seccion=rol" class="collapsible-header"><i class="material-icons left red-text">control_point</i>Rol</a>
-              
+
             </li>
             <li>
               <a href="dashboard.php?seccion=usuario" class="collapsible-header"><i class="material-icons left yellow-text">person_add</i>Usuarios</a>
@@ -43,6 +42,9 @@
             </li>
             <li>
               <a href="dashboard.php?seccion=r_permiso"><i class="material-icons left">pan_tool</i>Permisos</a>
+            </li>
+            <li>
+              <a href="dashboard.php?seccion=rr_producto"><i class="material-icons left">pan_tool</i>Registro producto</a>
             </li>
 
 

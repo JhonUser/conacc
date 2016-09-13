@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
   <html>
     <head>
@@ -9,6 +10,8 @@
       <link rel="shortcut icon" href="images/hjhj.jpg">
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.js"></script>
+      <script src="hhttps://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.css"></script>
       <link rel="stylesheet" href="styles/estilos.css" charset="utf-8">
     </head>
     <body>

@@ -1,5 +1,4 @@
 <!-- Jhon T. Gómez -->
-<?php include '../Model/seccion.class.php'; dashboard::session(); ?>
 <!DOCTYPE html>
  <html>
 	 <head>
@@ -15,6 +14,7 @@
      <script type="text/javascript" src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.js"></script>
      <script src="hhttps://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.css"></script>
+     <?php include '../Model/seccion.class.php'; dashboard::session(); ?>
      <link rel="stylesheet" type="text/css" href="styles/estilos.css">
 	</head>
 	<body>

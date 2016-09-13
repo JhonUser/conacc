@@ -9,7 +9,7 @@ $producto=Gestion_producto::consultar();
 
 <html>
 <head>
-	
+
 	<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
 	 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript"src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
@@ -43,7 +43,7 @@ $producto=Gestion_producto::consultar();
 					<td>".$produc["regi_cod"]."</td>
 					<td>".$produc["usu_cod"]."</td>
 					<td>".$produc["produ_cod"]."</td>
-					<td>".$produc["propie_cod"]."</td>
+					<td>".$produc["prop_cod"]."</td>
 					<td>".$produc["regi_serial"]."</td>
 					<td>".$produc["regi_color"]."</td>
 					<td>".$produc["regi_fecha"]."</td>

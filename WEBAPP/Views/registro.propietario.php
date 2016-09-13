@@ -1,9 +1,7 @@
 <!-- Jhon T. Gómez -->
 <section >
-
-
  		<div class="row">
-      <form class="col s10" action="../Controller/propietario.controller.php" method="post">
+      <form class="col s12" action="../Controller/propietario.controller.php" method="post">
         <center><h4 class="thin">Registro de propietarios</h4></center>
  				  <div class="row">
             <div class="input-field col s6">

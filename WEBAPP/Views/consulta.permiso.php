@@ -22,30 +22,30 @@ $modulo=Gestion_permiso::Cargar_modulo();
 <body>
 <table id="myTable">
 	<thead>
-		<tr> 
-			<td>Nombre del rol</td> 
+		<tr>
+			<td>Nombre del rol</td>
 			<td>Nombre del modulo</td>
-			<td>Estado del permiso</td> 
+			<td>Estado del permiso</td>
 			<td>Accion</td>
-			
-			
+
+
 			</tr>
 	</thead>
 	<tbody>
 	<!--Por si se quiere poner el rol_cod y elmodu_cod en la tabla = <td>".$consulta["rol_cod"]." </td> <td>".$consulta["modu_cod"]."</td>-->
 		<?php
 			foreach ($rol as $consulta) {
-				echo "<tr> 
-							<td>".$consulta["rol_nombre"]."</td> 
+				echo "<tr>
+							<td>".$consulta["rol_nombre"]."</td>
 							<td>".$consulta["modu_nom"]."</td>
-							<td>".$consulta["estado_permi"]."</td> 
+							<td>".$consulta["estado_permi"]."</td>
 
 							<td>
-								<a href='modifico_permiso.php?codigo_permi=".$consulta["permi_cod"]."'>Modificar</a>
-							
+								<a href='modifico_permiso.php?codigo_permi=".$consulta["modu_cod"]."'>Modificar</a>
+
 							</td>
 
-							
+
 					</tr>";
 			}
 		?>

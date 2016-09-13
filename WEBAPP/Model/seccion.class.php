@@ -62,6 +62,9 @@
             case 'm_rol':
               include("modifico_rol.php");
               break;
+            case 'rr_producto':
+              include("registro.registro_producto.php");
+              break;
 
             default:
 
