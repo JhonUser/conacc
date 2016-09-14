@@ -51,6 +51,8 @@ try{
 
 		break;
 
+
+
 		case 'eliminar':
 		$codigoA=$_GET["codigo_produc"];
 
@@ -65,6 +67,24 @@ try{
 
 
 		break;
+
+
+	case 'salidae':
+
+		//$codigo=$_POST["salida"];
+		$fecha=date("y/m/d");
+		$hora=date("H:i");
+echo($fecha);
+		/*try{
+			Gestion_producto::salida($codigo,$fecha,$hora);
+			header("location:../views/consulta.entrada_salida.php");
+
+		}catch(Exception $e){
+			echo $e;
+		}*/
+
+	break;
+
 
 
 

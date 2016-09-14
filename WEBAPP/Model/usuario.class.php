@@ -15,14 +15,14 @@ class Gestion_usuario{
 
 	}//se modifica en la base de datos
 
-	function Modificar($codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrar){
+	function Modificar($codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrars){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 
 		$sql="UPDATE  usuario set usu_docu=?, usu_nom=?,usu_ape=?,usu_email=?,usu_tel=?,usu_nick=?,usu_pass=? WHERE usu_cod=? ";
 		$query=$pdo->prepare($sql);
-		$query->execute(array($documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrar,$codigo));
+		$query->execute(array($documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrars,$codigo));
 
 		Conexion::Cerrarbd();
 

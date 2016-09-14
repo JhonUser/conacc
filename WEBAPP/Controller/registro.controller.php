@@ -35,12 +35,12 @@ switch ($action) {
 		$email=$_POST["email"];
 		$telefono=$_POST["telefono"];
 		$nombredeusuario=$_POST["nombredeusuario"];
-		$contrasena=$_POST["contrasena"];
-		$cifrar=password_hash($contrasena,PASSWORD_DEFAULT);
+		$contrasenas=$_POST["contrasena"];
+		$cifrars=password_hash($contrasenas,PASSWORD_DEFAULT);
 
 try{
-			Gestion_usuario::Modificar($codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrar);
-			header("location:../views/consulta.usuario.php");
+			Gestion_usuario::Modificar($codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrars);
+		header("location:../views/consulta.usuario.php");
 
 		}catch(Exception $e){
 			echo $e;

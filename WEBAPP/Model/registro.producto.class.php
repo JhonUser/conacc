@@ -121,6 +121,31 @@ function consultar(){
 			Conexion::Cerrarbd();
 		}
 
+		function consultarEntrada(){
+		$pdo = Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+		$sql = "SELECT * FROM entrada_salida";
+		$query= $pdo->prepare($sql);
+		$query->execute();
+
+		$result = $query->fetchALL(PDO::FETCH_BOTH);
+		return $result;
+
+		Conexion::Cerrarbd();
+	}
+
+	function salida($codigo,$fecha,$hora){
+			$pdo = Conexion::Abrirbd();
+			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+			$sql = "UPDATE entrada_salida SET entsal_fechasal = ?, entsal_horasal = ? WHERE entsal_cod = ?";
+			$query= $pdo->prepare($sql);
+			$query->execute(array($fecha,$hora,$codigo));
+
+			Conexion::Cerrarbd();
+		}
+
 }
 
 
