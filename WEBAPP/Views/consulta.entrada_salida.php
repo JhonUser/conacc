@@ -18,7 +18,8 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
     	$('#myTable').DataTable();
 	});
 	function salida(sld){
-		location.href = "../Controller/controller.registro.producto.php?salida="+sld+"&action=salidae";
+
+		location.href = "../Controller/controller.registro.producto.php?salidas="+sld+"&action=salidae";
 	}
 	</script>
 </head>

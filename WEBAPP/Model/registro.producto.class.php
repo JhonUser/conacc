@@ -135,7 +135,7 @@ function consultar(){
 		Conexion::Cerrarbd();
 	}
 
-	function salida($codigo,$fecha,$hora){
+	function entrada_salida($codigo,$fecha,$hora){
 			$pdo = Conexion::Abrirbd();
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

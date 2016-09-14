@@ -71,17 +71,16 @@ try{
 
 	case 'salidae':
 
-		//$codigo=$_POST["salida"];
+		$codigo=$_GET["salidas"];
 		$fecha=date("y/m/d");
 		$hora=date("H:i");
-echo($fecha);
-		/*try{
-			Gestion_producto::salida($codigo,$fecha,$hora);
+		try{
+			Gestion_producto::entrada_salida($codigo,$fecha,$hora);
 			header("location:../views/consulta.entrada_salida.php");
 
 		}catch(Exception $e){
 			echo $e;
-		}*/
+		}
 
 	break;
 
