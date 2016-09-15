@@ -48,17 +48,14 @@
             </li>
 
             <li>
-              <a href="dashboard.php?seccion=c_entrada"><i class="material-icons left">pan_tool</i>Consultar Entrada y Salida</a>
+              <a href="dashboard.php?seccion=c_entrada"><i class="material-icons left">pan_tool</i>Entrada y Salida</a>
             </li>
-<<<<<<< HEAD
-=======
 
             <li>
               <a href="dashboard.php?seccion=r_componente"><i class="material-icons left">pan_tool</i>Componentes</a>
             </li>
 
 
->>>>>>> origin/master
           </ul>
         </ul>
       </div>

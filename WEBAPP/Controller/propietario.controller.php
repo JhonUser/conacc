@@ -1,38 +1,49 @@
-<?php require '../Model/conexion.php'; require '../Model/propietario.class.php'; $consulta = new registro; ?>
-<!-- Jhon T. Gomez | Propietario -->
 <?php
-  if (isset($_GET["e"])) {
-    try {
-      $codigo = base64_decode($_GET["cod"])-500;
-      $consulta->eliminar_propietario($codigo);
-      header("location: ../Views/dashboard.php?seccion=" . base64_encode("r.propietario"));
-    } catch (Exception $e) {
-      echo "Error" . $e->getMessage();
-    }
-  }else {
+  require '../Model/conexion.php';
+  require '../Model/propietario.class.php';
 
-      $datos = array('ced' => htmlentities($_POST["ced"]), 'nom' => htmlentities($_POST["nom"]),
-                     'ape' => htmlentities($_POST["ape"]), 'tel' => htmlentities($_POST["tel"]),
-                     'dir' => htmlentities($_POST["dir"]), 'ema' => htmlentities($_POST["ema"]),
-                     'cen' => htmlentities($_POST["cen"]), 'car' => htmlentities($_POST["car"]));
+  $clic= $_REQUEST["accion"];
 
-      if (isset($_POST["g"])) {
-        try{
-            $consulta->guardar_propietario($datos);
-            header("location: ../Views/dashboard.php?seccion=" . base64_encode("r.propietario"));
-          }catch(Exception $e){
-            echo "Error" . $e->getMessage();
-          }
-        }
+  switch ($clic) {
+  	case 'registro':
 
-      if (isset($_POST["m"])) {
-        try{
-          $datos['cod'] = htmlentities($_POST["cod"]);
-          $consulta->modificar_propietario($datos);
-          echo "Registro modificado";
-         }catch(Exception $e){
-           echo "Error" . $e->getMessage();
-         }
-       }
-     }
-?>
+      $codigo   = htmlentities($_POST["cod"]);
+      $cedula   = htmlentities($_POST["ced"]);
+      $nombre   = htmlentities($_POST["nom"]);
+      $apellido = htmlentities($_POST["ape"]);
+      $telefono = htmlentities($_POST["tel"]);
+      $direccion= htmlentities($_POST["dir"]);
+      $email    = htmlentities($_POST["ema"]);
+      $centro   = htmlentities($_POST["cen"]);
+      $cargo    = htmlentities($_POST["car"]);
+
+    		try{
+    			registro::guardar($codigo, $cedula, $nombre, $apellido, $telefono, $direccion, $email, $centro, $cargo);
+          echo "Registro Guardar";
+    		} catch(Exception $e){
+    			echo $e->getMessage() . " en la linea: " . $e->getLine() . ".";
+    		}
+      break;
+
+}
+    case 'actualizar':
+
+       $codigo   = htmlentities($_POST["cod"]);
+       $cedula   = htmlentities($_POST["ced"]);
+       $nombre   = htmlentities($_POST["nom"]);
+       $apellido = htmlentities($_POST["ape"]);
+       $telefono = htmlentities($_POST["tel"]);
+       $direccion= htmlentities($_POST["dir"]);
+       $email    = htmlentities($_POST["ema"]);
+       $centro   = htmlentities($_POST["cen"]);
+       $cargo    = htmlentities($_POST["car"]);
+
+         try{
+          	  registro::modificar($codigo, $cedula, $nombre, $apellido, $telefono, $direccion, $email, $centro, $cargo);
+
+       		}catch(Exception $e){
+          			echo $e->getMessage() . " en la linea: " . $e->getLine() . ".";
+          		}
+         break;
+
+  ?>

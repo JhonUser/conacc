@@ -1,14 +1,8 @@
 <!-- Jhon T. Gómez -->
-<div class="container">
- <div class="row">
-		 <div class="card">
-			 <div class="card-action teal">
-				 <button type="button" class="btn teal z-depth-0 white-text thin" style="margin-left:25%">Registro de propietario</button>
-			 </div>
-			 <div class="card-content">
-
+<section >
  		<div class="row">
       <form class="col s12" action="../Controller/propietario.controller.php" method="post">
+        <center><h4 class="thin">Registro de propietarios</h4></center>
  				  <div class="row">
             <div class="input-field col s6">
  					 		 <i class="material-icons prefix grey-text">credit_card</i>
@@ -50,18 +44,15 @@
  							 <input id="email" type="text" name="cen" class="validate" required>
  							 <label for="email">Centro</label>
  		  			</div>
+          </div>
+ 					<div class="col s7">
+ 						<button class="waves-effect waves-light btn teal right thin" name="g">Guardar</button>
+ 					</div>
  				</div>
-<div class="card-action grey lighten-3">
-  <button class="waves-effect waves-light btn teal  thin" name="g">Guardar</button>
-    </form>
+ 			</form>
 
+  </section>
 
-</div>
-</div>
-</div>
-
-</div>
-
-  <div class="container">
+  <section >
     <?php include 'consultar.propietario.php'; ?>
-  </div>
+  </section>

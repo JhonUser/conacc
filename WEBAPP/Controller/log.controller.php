@@ -2,7 +2,7 @@
 <?php
   require_once("../Model/conexion.php");
   require_once("../Model/log.class.php");
-
+  include 'comentado.php';
 
 
     if (isset($_POST["sesion"])) {
@@ -12,7 +12,7 @@
       $inyeccion = "'or'1'='1";
 
           try {
-            $datos = Login::Validar($name);
+            $datos = login::validar($name);
 
             if (password_verify($pass,$datos["usu_pass"])) {
                 session_start();
@@ -30,7 +30,7 @@
               }
             }
           catch (Exception $e) {
-            echo "Error: " . $e->getMessage();
+            echo "Error: " . $e->getMessage() . " en la linea: " . $e->getLine() . " , su codigo es: " . $e->getCode();
           }
         }
 ?>

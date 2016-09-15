@@ -35,7 +35,7 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 
    		   	}
    		   	else{
-   		   		location.href = "dashboard.php?seccion=m_usuario&codigo_usuario="+code+"";
+   		   		location.href = "modificar.usuario.php?codigo_usuario="+code+"";
    		   	}
 		  }
 
