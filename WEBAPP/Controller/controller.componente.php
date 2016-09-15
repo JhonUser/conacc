@@ -12,7 +12,7 @@ switch ($accion) {
 
 		try{
 			Gestion_componente::guardar($nombre,$cantidad);
-			echo "<a href='../Views/registro.componente.php'>Volver</a>";
+			echo "<a href='../Views/dashboard.php?seccion=r_componente'>Volver</a>";
 		}catch(Exception $e){
 
 			echo $e;

@@ -22,7 +22,8 @@ switch ($accion) {
 	try{
 
 		Gestion_producto::Guardar($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$fecha,$hora);
-		echo "<a href='../Views/registro.registro_producto.php'>Volver</a>";
+		echo "<a href='../Views/dashboard.php?seccion=rr_producto'>Volver</a>";
+		//header("location:../Views/dashboard.php?seccion=rr_producto");
 	}catch(Exception $e){
 		echo $e;
 	}

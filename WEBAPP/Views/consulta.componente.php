@@ -18,7 +18,7 @@ $componente=Gestion_componente::consultar();
 });</script>
 </head>
 <body>
-	<button><a href="registro.componente.php">Volver</a></button>
+	<button><a href="../Views/dashboard.php?seccion=r_componente">Volver</a></button>
 <table id="myTable">
 	<thead>
 		<tr>
