@@ -62,6 +62,15 @@
             case 'm_rol':
               include("modifico_rol.php");
               break;
+            case 'm_marca':
+              include("modificar.marca.php");
+              break;
+             case 'm_modulo':
+              include("modifico_modulo.php");
+              break;
+             case 'm_permi':
+              include("modifico_permiso.php");
+              break;      
             case 'rr_producto':
               include("registro.registro_producto.php");
               break;

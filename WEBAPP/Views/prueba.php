@@ -20,22 +20,16 @@ class Intento{
 
 $pacomparar=Intento::Consul_cod();
 $codigo=$_POST["cod"];
+
 foreach ($pacomparar as $key) {
- 			
-			if($key['marca_cod']!=$codigo){
-				echo "No puede ingresar ese codigo";
-				echo "<script>alert('No puede')</script>";
-
+			if($key['marca_cod']===$codigo){
+				echo "Nro ".$key['marca_cod']." no puede usarse para codigo";
+				break;
+			}					
+	}
+			if($key['marca_cod']!==$codigo){
+				echo "Uselo";
 			}
-
-			else{
-				echo "Puede ingresar ese codigo";
-			}
-			break;
-			
-		}
-		
-
 // if($codigo =="1234"){
 // 	echo "Ojala de";
 

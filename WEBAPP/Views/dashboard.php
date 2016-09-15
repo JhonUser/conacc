@@ -32,11 +32,11 @@
 				{
 					echo "<script>alert('Modificó con exito')</script>";
 				}
-			$try = isset($_GET['d']);
-				if ($try=="d")
-				{
+			 $try = isset($_GET['d']);
+			 	if ($try=="d")
+			 	{
 					echo "<script>confirm('¿Desea eliminar?')</script>";
-				}
+			 	}
 			
 		 ?>
 

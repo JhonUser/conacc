@@ -36,9 +36,11 @@ $marca=Gestion_Marca::Cargar_marca();
 							<td>".$consulta["marca_nombre"]."</td>
 							<td>".$consulta["marca_logo"]."</td>
 							<td>
-								<a href='modificar.marca.php?codigo_marca=".$consulta["marca_cod"]."'>
-								<img src='images/modificar.png' height='20' width='20'/>
-								<a href='../Controller/marca.controller.php?marca_cod=".$consulta["marca_cod"]."&accion=Borrar' ><img src='images/eliminar.png' height='20' width='20'/>
+								<a href='dashboard.php?seccion=m_marca&codigo_marca=".$consulta["marca_cod"]."'class='btn-floating light-green'>
+								<i class='material-icons'>edit</i>
+								</a>
+								<a href='../Controller/marca.controller.php?marca_cod=".$consulta["marca_cod"]."&accion=Borrar' class='btn-floating red'>
+								<i class='material-icons'>delete_forever</i>
 							</td>
 					</tr>";
 			}

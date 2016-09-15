@@ -8,7 +8,6 @@ $rol =Gestion_rol::Consultar();
 
 ?>
 
-
 <table id="myTable" class="striped responsive-table">
 	<thead>
 		<tr>

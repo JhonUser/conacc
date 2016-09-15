@@ -34,8 +34,10 @@ $modu=Gestion_modulo::Consulta();
 							<td>".$consulta["modu_cod"]."</td>
 							<td>".$consulta["modu_nom"]."</td>
 							<td>
-								<a href='modifico_modulo.php?codigo_mod=".$consulta["modu_cod"]."'><img src='images/modificar.png' height='20' width='20'/>
-								<a href='../Controller/modulo.controller.php?modu_cod=".$consulta["modu_cod"]."&accion=Borrar' ><img src='images/eliminar.png' height='20' width='20'/>
+								<a href='dashboard.php?seccion=m_modulo&codigo_mod=".$consulta["modu_cod"]."'class='btn-floating light-green'>
+								<i class='material-icons'>edit</i>
+								<a href='../Controller/modulo.controller.php?modu_cod=".$consulta["modu_cod"]."&accion=Borrar'  class='btn-floating red'>
+								<i class='material-icons'>delete_forever</i>
 							</td>
 					</tr>";
 			}

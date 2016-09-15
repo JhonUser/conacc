@@ -21,7 +21,6 @@ switch ($accion) {
 		try {
 			Gestion_modulo::Modificar($modu_cod, $modu_nom);
 			echo "Modifico con exito";
-			//header("location:../views/consulta.modulo.php");
 		} catch (Exception $e){
 			echo $e;
 		}
