@@ -41,9 +41,14 @@ $modulo=Gestion_permiso::Cargar_modulo();
 							<td>".$consulta["estado_permi"]."</td>
 
 							<td>
+<<<<<<< HEAD
 								<a href='dashboard.php?seccion=m_permiso&codigo_permi=".$consulta["modu_cod"]."'class='btn-floating light-green'>
 								<i class='material-icons'>edit</i></a>
 
+=======
+								<a href='dashboard.php?seccion=m_permi&codigo_permi=".$consulta["permi_cod"]."'class='btn-floating light-green'>
+									<i class='material-icons'>edit</i>
+>>>>>>> origin/master
 							</td>
 
 

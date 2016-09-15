@@ -11,7 +11,7 @@
 			<div class="input-field col s6">
 				<i class="material-icons prefix grey-text">view_module</i>
 				<input id="icon_prefix" type="text" name="txt_modunom" class="validate" required>
-				<label for="icon_prefix">Codigo del modulo</label>
+				<label for="icon_prefix">Nombre del modulo</label>
 			</div>
 
 			<div class="col s7">
