@@ -8,6 +8,7 @@ $producto=Gestion_producto::consultarprodu();
 $propietario=Gestion_producto::consultarpropie();
 
 ?>
+<<<<<<< HEAD
 <div class="container">
  <div class="row">
 		 <div class="card">
@@ -15,6 +16,11 @@ $propietario=Gestion_producto::consultarpropie();
 				 <button type="button" class="btn  grey darken-3 z-depth-0 white-text thin" style="margin-left:25%">Registro de producto</button>
 			 </div>
 			 <div class="card-content">
+=======
+
+<section>
+
+>>>>>>> origin/master
 	<form action="../Controller/controller.registro.producto.php" method="post"/>
 
 		<div class="input-field">
@@ -27,7 +33,7 @@ $propietario=Gestion_producto::consultarpropie();
 				?>
 
 		</select>
-		<label>Nombre del producto</label>
+		<label>Nombre del Usuario</label>
 	</div>
 
 		<div class="input-field">
@@ -54,9 +60,10 @@ $propietario=Gestion_producto::consultarpropie();
 			?>
 
 		</select>
-		<label>Codigo de propietario</label>
+		<label>Nombre del propietario</label>
 	</div>
 
+<<<<<<< HEAD
 	<div class="input-field">
 <label >Registra serial</label>
 		<input id="icon_prefix" name="registro_serial" type="text"/>
@@ -74,6 +81,24 @@ $propietario=Gestion_producto::consultarpropie();
 
 		<input id="icon_prefix" name="registre_fecha" type="date"/>
 
+=======
+	<div class="input-field col s6">
+		<i class="material-icons prefix grey-text">account_circle</i>
+		<input id="icon_prefix" name="registro_serial" type="text" required/>
+		<label for="icon_prefix">Registra serial</label>
+	</div>
+
+	<div class="input-field col s6">
+		<i class="material-icons prefix grey-text">account_circle</i>
+		<input id="icon_prefix" name="registre_color" type="text"required/>
+		<label for="icon_prefix">Registre color </label>
+
+	</div>
+
+	<div class="input-field col s6">
+		<i class="material-icons prefix grey-text">account_circle</i>
+		<input id="icon_prefix" name="registre_fecha" type="date"required/>
+>>>>>>> origin/master
 	</div>
 
 	<div class="input-field">
@@ -102,6 +127,10 @@ $propietario=Gestion_producto::consultarpropie();
 </div>
 </div>
 
+<<<<<<< HEAD
 <div class="container">
 	<?php include 'consulta.registro_producto.php'; ?>
 </div>
+=======
+
+>>>>>>> origin/master

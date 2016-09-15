@@ -1,4 +1,4 @@
-<!-- Jeison V. Calle -->
+<!-- Andrea taborda -->
 <?php
   require_once("../model/conexion.php");
   require_once("../model/registro.producto.class.php");
