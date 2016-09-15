@@ -18,7 +18,11 @@ $producto=Gestion_producto::consultar();
 });</script>
 </head>
 <body>
+<<<<<<< HEAD
 
+=======
+	<button><a href="dashboard.php?seccion=rr_producto">Volver</a></button>
+>>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
 <table id="myTable">
 	<thead>
 		<tr>

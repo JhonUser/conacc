@@ -37,9 +37,12 @@
 			 	{
 					echo "<script>confirm('¿Desea eliminar?')</script>";
 <<<<<<< HEAD
+<<<<<<< HEAD
 				}
 
 =======
+=======
+>>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
 			 	}
 			
 >>>>>>> origin/master

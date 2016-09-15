@@ -10,6 +10,7 @@ $codigo =Gestion_permiso::Consultarporcodigo($_GET["codigo_permi"]);
 ?>
 	<!-- Formulario: Modificar permiso -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<section>
 		<a href="dashboard.php?seccion=r_permiso" class="btn-floating z-depth-0 teal darken-2"><i class="material-icons">keyboard_backspace</i></a>
 
@@ -22,6 +23,12 @@ $codigo =Gestion_permiso::Consultarporcodigo($_GET["codigo_permi"]);
 	<form action="../Controller/permiso.controller.php" method="POST">
 	<center><h4 class="thin">Modificar permiso</h4></center>
 >>>>>>> origin/master
+=======
+<section>
+<a href="dashboard.php?seccion=r_permiso" class="btn-floating indigo"><i class="material-icons">keyboard_backspace</i></a>	
+	<form action="../Controller/permiso.controller.php" method="POST">
+	<center><h4 class="thin">Modificar permiso</h4></center>
+>>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
 	<br>
 			<input type="hidden" name="permi_cod" value=" <?php echo $codigo["permi_cod"]; ?>"required/>
 				<br>
@@ -62,6 +69,7 @@ $codigo =Gestion_permiso::Consultarporcodigo($_GET["codigo_permi"]);
 			<input type="text" name="modulo_permi" value=" <?php echo $codigo["modulo_permi"]; ?>"required/>
 				<br>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<button value="Modificar" class="btn thin" name="accion">Modificar</button>
 	</form>
 
@@ -73,3 +81,9 @@ $codigo =Gestion_permiso::Consultarporcodigo($_GET["codigo_permi"]);
 
 </section>
 >>>>>>> origin/master
+=======
+	<button value="Modificar" class="btn teal thin right" name="accion">Modificar</button>
+	</form>
+
+</section>
+>>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e

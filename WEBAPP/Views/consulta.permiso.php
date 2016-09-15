@@ -42,6 +42,7 @@ $modulo=Gestion_permiso::Cargar_modulo();
 
 							<td>
 <<<<<<< HEAD
+<<<<<<< HEAD
 								<a href='dashboard.php?seccion=m_permiso&codigo_permi=".$consulta["modu_cod"]."'class='btn-floating light-green'>
 								<i class='material-icons'>edit</i></a>
 
@@ -49,6 +50,10 @@ $modulo=Gestion_permiso::Cargar_modulo();
 								<a href='dashboard.php?seccion=m_permi&codigo_permi=".$consulta["permi_cod"]."'class='btn-floating light-green'>
 									<i class='material-icons'>edit</i>
 >>>>>>> origin/master
+=======
+								<a href='dashboard.php?seccion=m_permi&codigo_permi=".$consulta["permi_cod"]."'class='btn-floating light-green'>
+									<i class='material-icons'>edit</i>
+>>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
 							</td>
 
 

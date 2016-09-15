@@ -20,7 +20,10 @@ $propietario=Gestion_producto::consultarpropie();
 
 <section>
 
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
 	<form action="../Controller/controller.registro.producto.php" method="post"/>
 
 		<div class="input-field">
@@ -61,6 +64,7 @@ $propietario=Gestion_producto::consultarpropie();
 
 		</select>
 		<label>Nombre del propietario</label>
+<<<<<<< HEAD
 	</div>
 
 <<<<<<< HEAD
@@ -75,6 +79,8 @@ $propietario=Gestion_producto::consultarpropie();
 		<input id="icon_prefix" name="registre_color" type="text"/>
 
 
+=======
+>>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
 	</div>
 
 	<div class="input-field">
@@ -98,7 +104,10 @@ $propietario=Gestion_producto::consultarpropie();
 	<div class="input-field col s6">
 		<i class="material-icons prefix grey-text">account_circle</i>
 		<input id="icon_prefix" name="registre_fecha" type="date"required/>
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
 	</div>
 
 	<div class="input-field">
@@ -119,6 +128,7 @@ $propietario=Gestion_producto::consultarpropie();
 
 </div>
 
+<<<<<<< HEAD
 <div class="card-action grey lighten-3">
 		<button name="action" class="btn thin" value="Guardar">Guardar</button>
 		<button type="button" class="btn thin indigo"><a href="dashboard.php?seccion=r_accesorio" class="white-text">Guardar Accesorio</a></button>
@@ -134,3 +144,6 @@ $propietario=Gestion_producto::consultarpropie();
 =======
 
 >>>>>>> origin/master
+=======
+
+>>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
