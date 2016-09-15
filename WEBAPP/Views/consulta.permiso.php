@@ -41,7 +41,8 @@ $modulo=Gestion_permiso::Cargar_modulo();
 							<td>".$consulta["estado_permi"]."</td>
 
 							<td>
-								<a href='modifico_permiso.php?codigo_permi=".$consulta["modu_cod"]."'>Modificar</a>
+								<a href='dashboard.php?seccion=m_permiso&codigo_permi=".$consulta["modu_cod"]."'class='btn-floating light-green'>
+								<i class='material-icons'>edit</i></a>
 
 							</td>
 
@@ -51,7 +52,6 @@ $modulo=Gestion_permiso::Cargar_modulo();
 		?>
 
 	</tbody>
-	<a href="Registro.permiso.php">Crear permiso</a>
 </table>
 </body>
 </html>

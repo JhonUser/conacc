@@ -23,6 +23,9 @@
             case 'usuario':
               include("Registro.usuario.php");
               break;
+            case 'm_usuario':
+              include("modifico_usuario.php");
+              break;
             case base64_encode('r.propietario'):
               include 'registro.propietario.php';
               break;
@@ -59,6 +62,9 @@
             case 'r_permiso':
               include("Registro.permiso.php");
               break;
+            case 'm_permiso':
+              include("modifico_permiso.php");
+              break;
             case 'm_rol':
               include("modifico_rol.php");
               break;
@@ -71,7 +77,17 @@
             case 'r_componente':
               include("registro.componente.php");
               break;
-              
+            case 'r_accesorio':
+              include("registrar.accesorio.php");
+              break;
+            case 'c_accesorio':
+              include("consultar.accesorio.php");
+              break;
+            case 'm_accesorio':
+              include("modificar.accesorio.php");
+              break;
+
+
             default:
 
           break;

@@ -3,9 +3,14 @@
 	require_once("../Model/usuario.class.php");
 	$codigo =Gestion_usuario::Consultarusuariocodigo($_GET["codigo_usuario"]);
 ?>
-
-
-	<h1>Modificar usuario</h1>
+<div class="container">
+	<div class="row">
+	    <div class="card">
+				<div class="card-action lime darken-3">
+					<a href="dashboard.php?seccion=usuario" class="btn-floating z-depth-0 lime darken-3"><i class="material-icons">keyboard_backspace</i></a>
+					<button type="button" class="btn lime darken-3 z-depth-0 white-text thin" style="margin-left:25%">Modificar Usuario</button>
+				</div>
+	      <div class="card-content">
 	<form action="../Controller/registrousu.php" method="POST">
 	<label>Codigo: <?php echo $codigo["usu_cod"]; ?></label>
 	<input type="hidden" name="codigo" value=" <?php echo $codigo["usu_cod"]; ?>"/>
@@ -30,9 +35,13 @@
 
 	<label>Contraseña</label>
 	<input type="password" name="contrasena" value=" <?php echo $codigo["usu_pass"]; ?>"required/>
-
-	<button value="Modificar" name="action">Modificar</button>
+<div class="card-action grey lighten-3">
+	<button value="Modificar" class="btn teal thin" name="action">Modificar</button>
 
 
 
 </form>
+</div>
+</div>
+</div>
+</div>
