@@ -18,7 +18,7 @@ $producto=Gestion_producto::consultar();
 });</script>
 </head>
 <body>
-	<button><a href="registro.registro_producto.php">Volver</a></button>
+	<button><a href="dashboard.php?seccion=rr_producto">Volver</a></button>
 <table id="myTable">
 	<thead>
 		<tr>

@@ -10,7 +10,7 @@ $propietario=Gestion_producto::consultarpropie();
 ?>
 
 <section>
-<label>Nombre </label>
+
 	<form action="../Controller/controller.registro.producto.php" method="post"/>
 		
 		<div class="input-field col s6">
@@ -23,7 +23,7 @@ $propietario=Gestion_producto::consultarpropie();
 				?>
 
 		</select>
-		<label>Nombre del producto</label>
+		<label>Nombre del Usuario</label>
 	</div>
 
 		<div class="input-field col s6">
@@ -50,25 +50,25 @@ $propietario=Gestion_producto::consultarpropie();
 			?>
 
 		</select>
-		<label>Codigo de propietario</label>
+		<label>Nombre del propietario</label>
 	</div>
 
 	<div class="input-field col s6">
 		<i class="material-icons prefix grey-text">account_circle</i>
-		<input id="icon_prefix" name="registro_serial" type="text"/>
+		<input id="icon_prefix" name="registro_serial" type="text" required/>
 		<label for="icon_prefix">Registra serial</label>
 	</div>
 
 	<div class="input-field col s6">
 		<i class="material-icons prefix grey-text">account_circle</i>
-		<input id="icon_prefix" name="registre_color" type="text"/>
+		<input id="icon_prefix" name="registre_color" type="text"required/>
 		<label for="icon_prefix">Registre color </label>
 
 	</div>
 
 	<div class="input-field col s6">
 		<i class="material-icons prefix grey-text">account_circle</i>
-		<input id="icon_prefix" name="registre_fecha" type="date"/>
+		<input id="icon_prefix" name="registre_fecha" type="date"required/>
 	</div>
 
 	<div class="input-field col s6">
@@ -92,6 +92,4 @@ $propietario=Gestion_producto::consultarpropie();
 </section>
 
 
-<section>
-	<?php include 'file'; ?>
-</section>
+

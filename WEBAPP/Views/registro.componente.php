@@ -7,7 +7,7 @@
 		<input name="nombre" type="text" required/><br>
 	<label>Cantidad de componentes</label><br>
 		<input type="number" name="cantidad" required="true"/><br>
-	<button name="action" value="guardar">Guardar</button>
+	<button name="action" class="btn" value="guardar">Guardar</button>
 	<a href="consulta.componente.php">Consultar todo</a>
 </form>
 

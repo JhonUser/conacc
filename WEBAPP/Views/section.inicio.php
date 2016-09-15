@@ -52,7 +52,7 @@
             </li>
 
             <li>
-              <a href="dashboard.php?seccion=r_componente"><i class="material-icons left">pan_tool</i>Registro Componente</a>
+              <a href="dashboard.php?seccion=r_componente"><i class="material-icons left">pan_tool</i>Componentes</a>
             </li>
 
 
