@@ -36,16 +36,13 @@
 			 	if ($try=="d")
 			 	{
 					echo "<script>confirm('¿Desea eliminar?')</script>";
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 				}
 
-=======
-=======
->>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
-			 	}
-			
->>>>>>> origin/master
+
+		
+
+
 		 ?>
 
      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

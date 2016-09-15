@@ -8,7 +8,11 @@ $producto=Gestion_producto::consultarprodu();
 $propietario=Gestion_producto::consultarpropie();
 
 ?>
-<<<<<<< HEAD
+
+
+<section>
+
+
 <div class="container">
  <div class="row">
 		 <div class="card">
@@ -16,14 +20,7 @@ $propietario=Gestion_producto::consultarpropie();
 				 <button type="button" class="btn  grey darken-3 z-depth-0 white-text thin" style="margin-left:25%">Registro de producto</button>
 			 </div>
 			 <div class="card-content">
-=======
 
-<section>
-
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
 	<form action="../Controller/controller.registro.producto.php" method="post"/>
 
 		<div class="input-field">
@@ -64,30 +61,9 @@ $propietario=Gestion_producto::consultarpropie();
 
 		</select>
 		<label>Nombre del propietario</label>
-<<<<<<< HEAD
 	</div>
 
-<<<<<<< HEAD
-	<div class="input-field">
-<label >Registra serial</label>
-		<input id="icon_prefix" name="registro_serial" type="text"/>
 
-	</div>
-
-	<div class="input-fiel">
-	<label>Registre color </label>
-		<input id="icon_prefix" name="registre_color" type="text"/>
-
-
-=======
->>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
-	</div>
-
-	<div class="input-field">
-
-		<input id="icon_prefix" name="registre_fecha" type="date"/>
-
-=======
 	<div class="input-field col s6">
 		<i class="material-icons prefix grey-text">account_circle</i>
 		<input id="icon_prefix" name="registro_serial" type="text" required/>
@@ -104,10 +80,25 @@ $propietario=Gestion_producto::consultarpropie();
 	<div class="input-field col s6">
 		<i class="material-icons prefix grey-text">account_circle</i>
 		<input id="icon_prefix" name="registre_fecha" type="date"required/>
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
+
+	<div class="input-field">
+<label >Registra serial</label>
+		<input id="icon_prefix" name="registro_serial" type="text"/>
+
+	</div>
+
+	<div class="input-fiel">
+	<label>Registre color </label>
+		<input id="icon_prefix" name="registre_color" type="text"/>
+
+
+	</div>
+
+	<div class="input-field">
+
+		<input id="icon_prefix" name="registre_fecha" type="date"/>
+
+
 	</div>
 
 	<div class="input-field">
@@ -128,7 +119,6 @@ $propietario=Gestion_producto::consultarpropie();
 
 </div>
 
-<<<<<<< HEAD
 <div class="card-action grey lighten-3">
 		<button name="action" class="btn thin" value="Guardar">Guardar</button>
 		<button type="button" class="btn thin indigo"><a href="dashboard.php?seccion=r_accesorio" class="white-text">Guardar Accesorio</a></button>
@@ -137,13 +127,7 @@ $propietario=Gestion_producto::consultarpropie();
 </div>
 </div>
 
-<<<<<<< HEAD
+
 <div class="container">
 	<?php include 'consulta.registro_producto.php'; ?>
 </div>
-=======
-
->>>>>>> origin/master
-=======
-
->>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
