@@ -10,7 +10,7 @@ $codigo =Gestion_permiso::Consultarporcodigo($_GET["codigo_permi"]);
 ?>
 	<!-- Formulario: Modificar permiso -->
 <section>
-<a href="dashboard.php?seccion=marca" class="btn-floating indigo"><i class="material-icons">keyboard_backspace</i></a>	
+<a href="dashboard.php?seccion=r_permiso" class="btn-floating indigo"><i class="material-icons">keyboard_backspace</i></a>	
 	<form action="../Controller/permiso.controller.php" method="POST">
 	<center><h4 class="thin">Modificar permiso</h4></center>
 	<br>
