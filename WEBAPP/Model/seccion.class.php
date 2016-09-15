@@ -70,6 +70,9 @@
               break;
              case 'm_permi':
               include("modifico_permiso.php");
+              break;
+            case 'm_producto':
+              include("modificar.producto.php");
               break;      
             case 'rr_producto':
               include("registro.registro_producto.php");

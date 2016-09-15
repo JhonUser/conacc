@@ -51,4 +51,6 @@ $marca=Gestion_Marca::Cargar_marca();
 
 
 </div>
-
+<div class="container">
+	<?php include 'consulta.producto.php'; ?>
+</div>
