@@ -1,4 +1,5 @@
 	<!-- Formulario: Guardar rol -->
+
 <section>
 	<form action="../Controller/guardarrol.php" method="post">
 			<center><h4 class="thin">Registro de Rol</h4></center>

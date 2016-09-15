@@ -22,6 +22,22 @@
 		<?php
 			include 'section.inicio.php';
 			dashboard::pagina();
+			$try = isset($_GET['c']);
+				if ($try=="c")
+				{
+					echo "<script>alert('Guardó con exito')</script>";
+				}
+			$try = isset($_GET['u']);
+				if ($try=="u")
+				{
+					echo "<script>alert('Modificó con exito')</script>";
+				}
+			$try = isset($_GET['d']);
+				if ($try=="d")
+				{
+					echo "<script>confirm('¿Desea eliminar?')</script>";
+				}
+			
 		 ?>
 
      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
