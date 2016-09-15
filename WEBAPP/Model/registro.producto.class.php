@@ -14,7 +14,7 @@ class Gestion_producto{
 
 //consultar entrada y salir
 
-	$sql1="SELECT * FROM registro_producto order by regi_cod";
+	$sql1="SELECT max(regi_cod) FROM registro_producto";
 	$query=$pdo->prepare($sql1);
 	$query->execute();
 
@@ -103,7 +103,7 @@ function consultar(){
 			$pdo = Conexion::Abrirbd();
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-			$sql = "UPDATE registro_producto SET usu_cod = ?, produ_cod = ?,propie_cod=?,regi_serial=?,regi_color=?,regi_fecha=?,regi_desc=?,regi_autoalterna=? WHERE regi_cod = ?";
+			$sql = "UPDATE registro_producto SET usu_cod = ?, produ_cod = ?,prop_cod=?,regi_serial=?,regi_color=?,regi_fecha=?,regi_desc=?,regi_autoalterna=? WHERE regi_cod = ?";
 			$query= $pdo->prepare($sql);
 			$query->execute(array($codigo_usu,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$codigo_registro));
 

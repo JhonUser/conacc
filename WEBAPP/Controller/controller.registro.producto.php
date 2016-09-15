@@ -72,7 +72,7 @@ try{
 	case 'salidae':
 
 		$codigo=$_GET["salidas"];
-		$fecha=date("y/m/d");
+		$fecha=date("o-m-d");
 		$hora=date("H:i");
 		try{
 			Gestion_producto::entrada_salida($codigo,$fecha,$hora);

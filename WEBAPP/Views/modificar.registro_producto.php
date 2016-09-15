@@ -18,7 +18,7 @@
         <input type="text" name="produ_cod" value=" <?php echo $codigoP["produ_cod"]; ?>" />
 
       <label>codigo de propietario</label>
-        <input type="text" name="propie_cod" value=" <?php echo $codigoP["propie_cod"]; ?>"/>
+        <input type="text" name="propie_cod" value=" <?php echo $codigoP["prop_cod"]; ?>"/>
 
         <label>registro serial</label>
         <input type="text" name="regi_serial" value=" <?php echo $codigoP["regi_serial"]; ?>"/>
