@@ -13,6 +13,7 @@ switch ($accion) {
 		try{
 			Gestion_permiso::Guardar($rol_cod, $modu_cod, $estado_permi, $modulo_permi);
 			echo "Guardo con exito";
+			header("location:../Views/dashboard.php?seccion=r_permiso&c=c");
 		}catch (Exception $e){
 			echo $e;
 		}
@@ -26,17 +27,21 @@ switch ($accion) {
 		try {
 			Gestion_permiso::Modificar($permi_cod, $rol_cod, $modu_cod, $estado_permi, $modulo_permi);
 			echo "Modifico con exito";
+			header("location:../Views/dashboard.php?seccion=r_permiso&u=u");
 			} catch (Exception $e){
 				echo $e;
 			}
+			break;
 	case 'Borrar':
 		$permi_cod=$_GET["codigo_permi"];
 		try {
 			Gestion_permiso::Eliminar($permi_cod);
 			echo "Elimino con exito";
+			header("location:../Views/dashboard.php?seccion=r_permiso&d=d");
 			} catch (Exception $e){
 				echo $e;
 			}
+			break;
 }
-header("location:../Views/dashboard.php?seccion=r_permiso");
+
 ?>

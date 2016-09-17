@@ -3,6 +3,7 @@
 require_once("../Model/conexion.php");
 require_once("../Model/rol.class.php");
 date_default_timezone_set('America/Bogota');
+
 $action=$_REQUEST["action"];
 switch ($action) {
 	case 'Guardar':

@@ -16,6 +16,7 @@ require_once("../Model/marca.class.php");
 					Gestion_Marca::Guardar($marca_nombre, $_FILES["img_logomarca"]["name"]);
 					$mensaje ="Su registro se creo correctamente";
 					echo $mensaje;
+					header("location:../Views/dashboard.php?seccion=r_marca&c=c");
 				}
 				catch (Exception $e) {
 					$mensaje =("Ha ocurrido un error, el error fue :".$e->getMessage()." en ".$e->getFile()." en la linea ".$e->getLine());
@@ -32,6 +33,7 @@ require_once("../Model/marca.class.php");
 					Gestion_Marca::Modificar($marca_cod, $marca_nombre, $_FILES["img_logomarca"]["name"]);
 					$mensaje ="Su registro se creo correctamente";
 					echo $mensaje;
+					header("location:../Views/dashboard.php?seccion=r_marca&u=u");
 				}
 				catch (Exception $e) {
 					$mensaje =("Ha ocurrido un error, el error fue :".$e->getMessage()." en ".$e->getFile()." en la linea ".$e->getLine());
@@ -47,11 +49,11 @@ require_once("../Model/marca.class.php");
 	       		 Gestion_Marca::Eliminar($marca_cod);
 	       		 echo "Eliminó con exito";
 	       		 echo "<a href='../Views/registro.rol.php'>Volver</a>";
+	       		 header("location:../Views/dashboard.php?seccion=r_marca&d=d");
       		}catch (Exception $e){
        		 		echo $e;
        		}
      	break;
 
 	}
-	header("location:../Views/dashboard.php?seccion=r_marca");
 ?>

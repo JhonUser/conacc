@@ -11,6 +11,7 @@ switch ($accion) {
 		try {
 			Gestion_modulo::Guardar($modu_cod, $modu_nom);
 			echo "Guardo con exito";
+			header("location:../Views/dashboard.php?seccion=r_modulo&c=c");
 		} catch (Exception $e){
 			echo $e;
 		}
@@ -21,6 +22,7 @@ switch ($accion) {
 		try {
 			Gestion_modulo::Modificar($modu_cod, $modu_nom);
 			echo "Modifico con exito";
+			header("location:../Views/dashboard.php?seccion=r_modulo&u=u");
 		} catch (Exception $e){
 			echo $e;
 		}
@@ -31,10 +33,10 @@ switch ($accion) {
 		Gestion_modulo::Eliminar($modu_cod);
        		 echo "Eliminó con exito";
        		 echo "<a href='../Views/consulta.modulo.php'>Volver</a>";
+       		 header("location:../Views/dashboard.php?seccion=r_modulo&d=d");
       	}catch (Exception $e){
        		 	echo $e;
        		 }
      	break;
 }
-header("location:../Views/dashboard.php?seccion=r_modulo");
 ?>

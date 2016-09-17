@@ -18,6 +18,7 @@ class Intento{
 	}
 }
 
+
 $pacomparar=Intento::Consul_cod();
 $codigo=$_POST["cod"];
 
@@ -35,3 +36,21 @@ foreach ($pacomparar as $key) {
 
 // }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	
+<head>
+	<title></title>
+	<script src="script/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="script/sweetalert.css">
+<script type="text/javascript">
+	function funcion(){
+		swal("De");
+	}
+	</script>
+</head>
+<body>
+<button onclick="funcion()">Try</button>
+</body>
+</html>
