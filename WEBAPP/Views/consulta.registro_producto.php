@@ -18,7 +18,11 @@ $producto=Gestion_producto::consultar();
 });</script>
 </head>
 <body>
+<<<<<<< HEAD
+
+=======
 	<button><a href="dashboard.php?seccion=rr_producto">Volver</a></button>
+>>>>>>> bc2ececf64e412e51bca382338c595c94e8e386e
 <table id="myTable">
 	<thead>
 		<tr>
@@ -50,8 +54,9 @@ $producto=Gestion_producto::consultar();
 					<td>".$produc["regi_desc"]."</td>
 					<td>".$produc["regi_autoalterna"]."</td>
 					<td>
-						<a href='modificar.registro_producto.php?producto=".$produc["regi_cod"]."'>modificar</a>
-						<a href='../Controller/controller.registro.producto.php?codigo_produc=".$produc["regi_cod"]."& action=eliminar' >Eliminar</a>
+						<a href='modificar.registro_producto.php?producto=".$produc["regi_cod"]."'class='btn-floating light-green'><i class='material-icons'>edit</i></a>
+						<a href='../Controller/controller.registro.producto.php?codigo_produc=".$produc["regi_cod"]."& action=eliminar'class='btn-floating light-red' >
+						<i class='material-icons'>delete_forever</i></a>
 					</td>
 			</tr>";
 			}

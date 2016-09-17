@@ -55,6 +55,5 @@ require_once("../Model/producto.class.php");
        		 }
      	break;
 }		
-	header("location: ../Views/dashboard.php?seccion=producto");
+	//header("location: ../Views/dashboard.php?seccion=producto");
 ?>
-

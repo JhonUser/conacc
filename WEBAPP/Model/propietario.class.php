@@ -1,42 +1,119 @@
+<!-- Jhon T. Gómez -->
 <?php
-class registro{
-  private static $gestion;
-    public function guardar($codigo, $cedula, $nombre, $apellido, $telefono, $direccion, $email, $centro, $cargo){
-    	$conex = Conexion::Abrirbd();
-    	$conex->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    	self::$gestion = "INSERT INTO propietario(propie_cod,propie_docu,propie_nombre,propie_apelli,propie_tel,propie_dire,propie_email,propie_centro,propie_cargo)
-                        VALUES(?,?,?,?,?,?,?,?,?)";
-    	$info = $conex->prepare(self::$gestion);
-    	$info->execute(array($codigo, $cedula, $nombre, $apellido, $telefono, $direccion, $email, $centro, $cargo));
+  class registro{
+    private static $consul;
+      public static function guardar_propietario($datos){
+      	try {
+          $conex = Conexion::Abrirbd();
 
-  	  Conexion::Cerrarbd();
+          self::$consul = "INSERT INTO propietario(prop_doc,prop_nom,prop_ape,prop_tel,prop_dir,prop_ema,prop_cen,prop_car)
+                           VALUES(:doc,:nom,:ape,:tel,:dir,:ema,:cen,:car)";
+
+          $info = $conex->prepare(self::$consul);
+
+          $info->bindValue(":doc", $datos["ced"]);
+          $info->bindValue(":nom", $datos["nom"]);
+          $info->bindValue(":ape", $datos["ape"]);
+          $info->bindValue(":tel", $datos["tel"]);
+          $info->bindValue(":dir", $datos["dir"]);
+          $info->bindValue(":ema", $datos["ema"]);
+          $info->bindValue(":cen", $datos["cen"]);
+          $info->bindValue(":car", $datos["car"]);
+
+        	$info->execute();
+
+          Conexion::Cerrarbd();
+      	}
+        catch (Exception $e) {
+          die("Error: " . $e->getMessage() . " ,linea: " . $e->getLine());
+      	}
+      }
+
+    public static function consultar_propietario(){
+  		try {
+        $conex = Conexion::Abrirbd();
+
+        self::$consul = "SELECT * FROM propietario";
+        $info = $conex->prepare(self::$consul);
+    		$info->execute();
+        $datos = $info->fetchALL(PDO::FETCH_BOTH);
+
+        return $datos;
+
+  	    Conexion::Cerrarbd();
+  		}
+      catch (Exception $e) {
+  		  die("Error: " . $e->getMessage() . " ,linea: " . $e->getLine());
+  		}
     }
-    public function consultar_propietario(){
-  		$pdo= Conexion::Abrirbd();
-  		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-  		$sql="SELECT * FROM propietario";
+    public static function modificar_propietario($datos){
+      try {
+        $conex = Conexion::Abrirbd();
 
-  		$query=$pdo->prepare($sql);
-  		$query->execute();
-  		$result=$query->fetchALL(PDO::FETCH_BOTH);
+        self::$consul = "UPDATE propietario SET prop_doc = :doc,
+                                                prop_nom = :nom,
+                                                prop_ape = :ape,
+                                                prop_tel = :tel,
+                                                prop_dir = :dir,
+                                                prop_ema = :ema,
+                                                prop_cen = :cen,
+                                                prop_car = :car
+                         WHERE prop_cod = :cod";
 
-  		Conexion::Cerrarbd();
-  		return $result;
+        $info = $conex->prepare(self::$consul);
 
-  	}
-    public function datos_modificar($datos){
-      $conex = Conexion::Abrirbd();
-      $conex->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        $info->bindValue(":doc", $datos["ced"]);
+        $info->bindValue(":nom", $datos["nom"]);
+        $info->bindValue(":ape", $datos["ape"]);
+        $info->bindValue(":tel", $datos["tel"]);
+        $info->bindValue(":dir", $datos["dir"]);
+        $info->bindValue(":ema", $datos["ema"]);
+        $info->bindValue(":cen", $datos["cen"]);
+        $info->bindValue(":car", $datos["car"]);
+        $info->bindValue(":cod", $datos["cod"]);
 
-      $buscar = "SELECT * FROM propietario WHERE propie_cod=?";
-      $info = $conex->prepare($buscar);
-      $info->execute(array($datos));
-      $result = $info->fetch(PDO::FETCH_BOTH);
+        $info->execute();
 
-      Conexion::Cerrarbd();
-
-      return $result;
+        Conexion::Cerrarbd();
+      }catch (Exception $e) {
+        die("Error: " . $e->getMessage() . " ,linea: " . $e->getLine());
       }
     }
+
+    public static function eliminar_propietario($codigo){
+      try {
+        $conex = Conexion::Abrirbd();
+
+        self::$consul = "DELETE FROM propietario WHERE prop_cod = :cod";
+
+        $info = $conex->prepare(self::$consul);
+        $info->bindValue(":cod", $codigo);
+        $info->execute();
+
+        Conexion::Cerrarbd();
+      } catch (Exception $e) {
+        die("Error: " . $e->getMessage() . " ,linea: " . $e->getLine());
+      }
+    }
+
+    public static function datos_modificar($codigo){
+      try {
+        $conex = Conexion::Abrirbd();
+
+        self::$consul = "SELECT * FROM propietario WHERE prop_cod = :cod";
+
+        $info = $conex->prepare(self::$consul);
+        $info->bindValue(":cod", $codigo);
+        $info->execute();
+        $result = $info->fetch(PDO::FETCH_BOTH);
+
+        return $result;
+
+        Conexion::Cerrarbd();
+      } catch (Exception $e) {
+        die("Error: " . $e->getMessage() . " , linea: " . $e->getLine());
+      }
+    }
+  }
 ?>
