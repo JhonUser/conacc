@@ -44,21 +44,17 @@
               <a href="dashboard.php?seccion=r_permiso"><i class="material-icons left">pan_tool</i>Permisos</a>
             </li>
             <li>
-              <a href="dashboard.php?seccion=rr_producto"><i class="material-icons left">pan_tool</i>Registro producto</a>
+              <a href="dashboard.php?seccion=rr_producto"><i class="material-icons left">book</i>Asignar producto</a>
             </li>
-
             <li>
-              <a href="dashboard.php?seccion=c_entrada"><i class="material-icons left">pan_tool</i>Consultar Entrada y Salida</a>
+              <a href="dashboard.php?seccion=r_accesorio"><i class="material-icons left">extension</i>Accesorio</a>
             </li>
-<<<<<<< HEAD
-=======
-
             <li>
-              <a href="dashboard.php?seccion=r_componente"><i class="material-icons left">pan_tool</i>Componentes</a>
+              <a href="dashboard.php?seccion=c_entrada"><i class="material-icons left">compare_arrows</i>Entrada y Salida</a>
             </li>
-
-
->>>>>>> origin/master
+            <li>
+              <a href="dashboard.php?seccion=r_componente"><i class="material-icons left">settings_input_component</i>Componentes</a>
+            </li>
           </ul>
         </ul>
       </div>

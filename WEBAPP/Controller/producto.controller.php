@@ -17,6 +17,7 @@ require_once("../Model/producto.class.php");
 					$hola->Guardar($tipopro_cod, $marca_cod, $desc_pro);
 					$mensaje =("Su registro se creo correctamente");
 					echo $mensaje;
+					header("Location: ../Views/dashboard.php?seccion=producto");
 
 				}
 				catch (Exception $e) {
@@ -35,6 +36,7 @@ require_once("../Model/producto.class.php");
 					$hola->Modificar($produ_cod, $tipopro_cod, $marca_cod, $desc_pro);
 					$mensaje =("Modifico con exito");
 					echo $mensaje;
+					header("Location: ../Views/dashboard.php?seccion=producto");
 
 				}
 				catch (Exception $e) {
@@ -49,6 +51,7 @@ require_once("../Model/producto.class.php");
     try {
        		 Gestion_Producto::Eliminar($produ_cod);
        		 echo "Eliminó con exito";
+       		 header("Location: ../Views/dashboard.php?seccion=producto");
        		 
       	}catch (Exception $e){
        		 	echo $e;

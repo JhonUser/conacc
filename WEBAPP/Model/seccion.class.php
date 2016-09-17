@@ -77,6 +77,9 @@
             case 'rr_producto':
               include("registro.registro_producto.php");
               break;
+            case 'r_accesorio':
+              include("registrar.accesorio.php");
+              break;
             case 'c_entrada':
               include("consulta.entrada_salida.php");
               break;

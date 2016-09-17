@@ -84,6 +84,16 @@ class Gestion_permiso{
 			self::$query->execute(array($rol_cod, $modu_cod, $estado_permi, $modulo_permi, $permi_cod));
 			Conexion::Cerrarbd();
 		}
+	public static function Eliminar($codigo_permi)
+		{
+			$pdo = Conexion::Abrirbd();
+			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+
+			self::$sql = "DELETE FROM permiso WHERE permi_cod = ?";
+			self::$query= $pdo->prepare(self::$sql);
+			self::$query->execute(array($codigo_permi));
+			Conexion::Cerrarbd();
+		}
 }
 ?>

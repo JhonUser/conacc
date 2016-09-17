@@ -29,7 +29,14 @@ switch ($accion) {
 			} catch (Exception $e){
 				echo $e;
 			}
-
+	case 'Borrar':
+		$permi_cod=$_GET["codigo_permi"];
+		try {
+			Gestion_permiso::Eliminar($permi_cod);
+			echo "Elimino con exito";
+			} catch (Exception $e){
+				echo $e;
+			}
 }
 header("location:../Views/dashboard.php?seccion=r_permiso");
 ?>

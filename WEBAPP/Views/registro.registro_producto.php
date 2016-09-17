@@ -119,11 +119,11 @@ $propietario=Gestion_producto::consultarpropie();
 
 </div>
 
-<div class="card-action grey lighten-3">
+
 		<button name="action" class="btn thin" value="Guardar">Guardar</button>
 		<button type="button" class="btn thin indigo"><a href="dashboard.php?seccion=r_accesorio" class="white-text">Guardar Accesorio</a></button>
 		<button  class="blue btn"><a href="dashboard.php?seccion=r_componente" class="white-text thin">Registro Componente</a></button>
-</div>
+
 </div>
 </div>
 
