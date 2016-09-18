@@ -73,7 +73,10 @@
               break;
             case 'm_producto':
               include("modificar.producto.php");
-              break;      
+              break;
+            case 'm_compo':
+              include("modificar.componente.php");
+              break;           
             case 'rr_producto':
               include("registro.registro_producto.php");
               break;

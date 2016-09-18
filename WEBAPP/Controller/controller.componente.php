@@ -12,7 +12,7 @@ switch ($accion) {
 
 		try{
 			Gestion_componente::guardar($nombre,$cantidad);
-			echo "<a href='../Views/dashboard.php?seccion=r_componente'>Volver</a>";
+			header ("location:../Views/dashboard.php?seccion=r_componente&c=c");
 		}catch(Exception $e){
 
 			echo $e;
@@ -31,6 +31,7 @@ echo"<script>alert('guardo con exito'); </script>";
 		try{
 			Gestion_componente::modificar($codigoCompo,$nombreCompo,$cantidadCompo);
 			echo "modifico con exito";
+			header("location: ../Views/dashboard.php?seccion=r_componente&u=u");
 		}catch(Exception $e){
 
 			echo $e;
@@ -46,6 +47,7 @@ echo"<script>alert('guardo con exito'); </script>";
 			Gestion_componente::eliminar($codigoC);
 			echo "<script>alert('elimino con exito');</script>";
 			 echo "<a href='../Views/consulta.componente.php'>Volver</a>";
+			header("location: ../Views/dashboard.php?seccion=r_componente&d=d");
 		}catch(Exception $e){
 
 			echo $e;

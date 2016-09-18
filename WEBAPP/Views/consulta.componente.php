@@ -18,7 +18,6 @@ $componente=Gestion_componente::consultar();
 });</script>
 </head>
 <body>
-	<button><a href="../Views/dashboard.php?seccion=r_componente">Volver</a></button>
 <table id="myTable">
 	<thead>
 		<tr>
@@ -37,8 +36,11 @@ $componente=Gestion_componente::consultar();
 					<td>".$comp["compo_nombre"]."</td>
 					<td>".$comp["compo_cant"]."</td>
 					<td>
-						<a href='modificar.componente.php?codigo_component=".$comp["compo_cod"]."'>modificar</a>
-						<a href='../Controller/controller.componente.php?compo_codi=".$comp["compo_cod"]."& action=eliminar' >Eliminar</a>
+						
+						<a href='dashboard.php?seccion=m_compoa&codigo_component=".$comp["compo_cod"]."'class='btn-floating light-green'>
+								<i class='material-icons'>edit</i>
+						<a href='../Controller/controller.componente.php?compo_codi=".$comp["compo_cod"]."&action=eliminar' class='btn-floating red'>
+								<i class='material-icons'>delete_forever</i>
 					</td>
 			</tr>";
 			}
