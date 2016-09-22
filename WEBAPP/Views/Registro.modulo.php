@@ -4,9 +4,10 @@
 		<form class="col s12" action="../Controller/modulo.controller.php" method="POST">
 			<div class="input-field col s6">
 				<i class="material-icons prefix grey-text">vpn_key</i>
-				<input id="icon_prefix" type="number" name="txt_moducod" class="validate" required>
+				<input id="icon_prefix" type="number" name="txt_moducod" id="moducod" class="validate" required>
 				<label for="icon_prefix">Codigo del modulo</label>
 			</div>
+			<span id="trato" style="color: green"></span>
 
 			<div class="input-field col s6">
 				<i class="material-icons prefix grey-text">view_module</i>

@@ -13,7 +13,7 @@
      <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>
      <script type="text/javascript" src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
      <script src="script/sweetalert.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="script/sweetalert.css">>
+	<link rel="stylesheet" type="text/css" href="script/sweetalert.css">
      <?php include '../Model/seccion.class.php'; dashboard::session(); ?>
      <link rel="stylesheet" type="text/css" href="styles/estilos.css">
      <script type="text/javascript">
@@ -24,17 +24,25 @@
 		swal("!Bien!", "Modificó con exito!", "success");
 	}
 	function d(){
-		swal({
+swal({
   title: "Are you sure?",
   text: "You will not be able to recover this imaginary file!",
   type: "warning",
-  showCancelButton: "true",
+  showCancelButton: true,
   confirmButtonColor: "#DD6B55",
   confirmButtonText: "Yes, delete it!",
-  closeOnConfirm: "true"
+  cancelButtonText: "No, cancel plx!",
+  closeOnConfirm: false,
+  closeOnCancel: false
 },
-function(){
-  swal("Deleted!", "Your imaginary file has been deleted.", "success");
+function(isConfirm){
+  if (isConfirm) {
+  	window.location.href="../Controller/guardarrol.php?rol_cod=$consulta['rol_cod']&action=Borrar";
+   
+
+  } else {
+	    swal("Cancelled", "Your imaginary file is safe :)", "error");
+  }
 });
 	}
 
@@ -59,14 +67,14 @@ function(){
 					echo "u()";
 					echo "</script>";
 				}
-			 $try = isset($_GET['d']);
-			 	if ($try=="d")
-			 	{
-					echo "<script type='text/javascript'>";
-					echo "d()";
-					echo "</script>";
+			 // $try = isset($_GET['d']);
+			 // 	if ($try=="d")
+			 // 	{
+				// 	echo "<script type='text/javascript'>";
+				// 	echo "d()";
+				// 	echo "</script>";
 
-				}
+				// }
 
 		 ?>
 

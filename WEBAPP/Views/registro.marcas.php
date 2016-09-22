@@ -14,6 +14,17 @@
 
     });
 </script>
+ <script src="script/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="script/sweetalert.css">
+<script type="text/javascript">
+function a(){
+	swal({
+  title: "HTML <small>Title</small>!",
+  text: "A custom <input type='text' value='2' name='img_logomarca'> message.",
+  html: true
+});
+	}
+</script>
 <div class="container">
 
 
@@ -27,6 +38,8 @@
 		<label>Logo de marca</label>
 			<input type="text" name="img_logomarca">
 		<button name="accion" value="create" class="btn">Guardar</button>
+		
 		<?php echo @$_REQUEST["$mensaje"]; ?>
 	</form>
 </div>
+<button onclick="a()">Prueba</button>

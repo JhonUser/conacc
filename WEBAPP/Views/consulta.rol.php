@@ -31,7 +31,7 @@ $rol =Gestion_rol::Consultar();
 								<a href='dashboard.php?seccion=m_rol&codigo_rol=".$consulta["rol_cod"]."'class='btn-floating light-green'>
 									<i class='material-icons'>edit</i>
 								</a>
-								<a href='../Controller/guardarrol.php?rol_cod=".$consulta["rol_cod"]."&action=Borrar' class='btn-floating red'>
+								<a onclick='d()' class='btn-floating red'>
 									<i class='material-icons'>delete_forever</i>
 								</a>
 							</td>

@@ -45,7 +45,7 @@ switch ($action) {
     try {
        		 Gestion_rol::Eliminar($rol_cod);
        		 echo "Eliminó con exito";
-       		 header("location: ../Views/dashboard.php?seccion=rol&d=d");
+       		 header("location: ../Views/dashboard.php?seccion=rol");
       	}catch (Exception $e){
        		 	echo $e;
        		 }
