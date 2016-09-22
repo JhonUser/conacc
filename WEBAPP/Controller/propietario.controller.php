@@ -1,6 +1,7 @@
 <?php require '../Model/conexion.php'; require '../Model/propietario.class.php'; $consulta = new registro; ?>
 <!-- Jhon T. Gomez | Propietario -->
 <?php
+
   if (isset($_GET["e"])) {
     try {
       $codigo = base64_decode($_GET["cod"])-500;
