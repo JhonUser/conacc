@@ -23,25 +23,27 @@
 	function u(){
 		swal("!Bien!", "Modificó con exito!", "success");
 	}
-	function d(){
+	function d(c){
 swal({
-  title: "Are you sure?",
-  text: "You will not be able to recover this imaginary file!",
+  title: "¿Desea eliminar?",
+  text: "",
   type: "warning",
   showCancelButton: true,
   confirmButtonColor: "#DD6B55",
-  confirmButtonText: "Yes, delete it!",
-  cancelButtonText: "No, cancel plx!",
+  confirmButtonText: "Si",
+  cancelButtonText: "No",
   closeOnConfirm: false,
   closeOnCancel: false
 },
 function(isConfirm){
   if (isConfirm) {
-  	window.location.href="../Controller/guardarrol.php?rol_cod=$consulta['rol_cod']&action=Borrar";
+  	swal("Muy bien", "Se ha eliminadó", "success");
+  	var t = "../Controller/guardarrol.php?rol_cod="+ c + "&action=Borrar";
+  	window.location.href=t;
    
 
   } else {
-	    swal("Cancelled", "Your imaginary file is safe :)", "error");
+	    swal("Cancelado", "No se eliminara el registro", "error");
   }
 });
 	}
