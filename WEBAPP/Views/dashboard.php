@@ -16,15 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="script/sweetalert.css">
      <?php include '../Model/seccion.class.php'; dashboard::session(); ?>
      <link rel="stylesheet" type="text/css" href="styles/estilos.css">
-
-     <script type="text/javascript">
-	function c(){
-		swal("!Bien!", "Guardó con exito!", "success");
-	}
-	function u(){
-		swal("!Bien!", "Modificó con exito!", "success");
-	}
-	</script>
+     <script type="text/javascript" src="script/script.js"></script>
 	</head>
 	<body>
 
@@ -52,6 +44,6 @@
 
      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-     <script type="text/javascript" src="script/script.js"></script>
+     
 	 </body>
  </html>

@@ -18,3 +18,9 @@ $(document).ready(function() {
     closeOnClick: true
   });
 });
+function c(){
+    swal("!Bien!", "Guardó con exito!", "success");
+  };
+  function u(){
+    swal("!Bien!", "Modificó con exito!", "success");
+  };
