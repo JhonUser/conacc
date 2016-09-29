@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="script/sweetalert.css">
      <?php include '../Model/seccion.class.php'; dashboard::session(); ?>
      <link rel="stylesheet" type="text/css" href="styles/estilos.css">
+
      <script type="text/javascript">
 	function c(){
 		swal("!Bien!", "Guardó con exito!", "success");
@@ -23,31 +24,6 @@
 	function u(){
 		swal("!Bien!", "Modificó con exito!", "success");
 	}
-	function d(c){
-swal({
-  title: "¿Desea eliminar?",
-  text: "",
-  type: "warning",
-  showCancelButton: true,
-  confirmButtonColor: "#DD6B55",
-  confirmButtonText: "Si",
-  cancelButtonText: "No",
-  closeOnConfirm: false,
-  closeOnCancel: false
-},
-function(isConfirm){
-  if (isConfirm) {
-  	swal("Muy bien", "Se ha eliminadó", "success");
-  	var t = "../Controller/guardarrol.php?rol_cod="+ c + "&action=Borrar";
-  	window.location.href=t;
-   
-
-  } else {
-	    swal("Cancelado", "No se eliminara el registro", "error");
-  }
-});
-	}
-
 	</script>
 	</head>
 	<body>
@@ -55,28 +31,22 @@ function(isConfirm){
 		<?php
 			include 'section.inicio.php';
 			dashboard::pagina();
-			$try = isset($_GET['c']);
+			$try = isset($_GET['crt']);
 				if ($try=="c")
 				{
 					echo "<script type='text/javascript'>";
 					echo "c()";
-					echo "</script>";
+					echo "</script>";	
+				
 				}
-			$try = isset($_GET['u']);
+			$try = isset($_GET['upt']);
 				if ($try=="u")
 				{
 					echo "<script type='text/javascript'>";
 					echo "u()";
 					echo "</script>";
+					
 				}
-			 // $try = isset($_GET['d']);
-			 // 	if ($try=="d")
-			 // 	{
-				// 	echo "<script type='text/javascript'>";
-				// 	echo "d()";
-				// 	echo "</script>";
-
-				// }
 
 		 ?>
 

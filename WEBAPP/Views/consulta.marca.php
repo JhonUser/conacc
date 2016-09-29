@@ -4,19 +4,33 @@ require_once("../Model/marca.class.php");
 
 $marca=Gestion_Marca::Cargar_marca();
 ?>
-<html>
-<head>
-	<title>Consultar marca</title>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>
-	<script type="text/javascript" src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function(){
-   		 $('#myTable').DataTable();
-	});
+<script type="text/javascript">
+function d(c){
+swal({
+  title: "¿Desea eliminar?",
+  text: "",
+  type: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#DD6B55",
+  confirmButtonText: "Si",
+  cancelButtonText: "No",
+  closeOnConfirm: false,
+  closeOnCancel: false
+},
+function(isConfirm){
+  if (isConfirm) {
+  	swal("Muy bien", "Se ha eliminadó", "success");
+  	var t = "../Controller/marca.controller.php?marca_cod="+ c + "&accion=Borrar";
+  	window.location.href=t;
+   
+
+  } else {
+	    swal("Cancelado", "No se eliminara el registro", "error");
+  }
+});
+	}
 	</script>
-</head>
-<body>
+
 <table id="myTable">
 	<thead>
 		<tr>
@@ -39,13 +53,12 @@ $marca=Gestion_Marca::Cargar_marca();
 								<a href='dashboard.php?seccion=m_marca&codigo_marca=".$consulta["marca_cod"]."'class='btn-floating light-green'>
 								<i class='material-icons'>edit</i>
 								</a>
-								<a href='../Controller/marca.controller.php?marca_cod=".$consulta["marca_cod"]."&accion=Borrar' class='btn-floating red'>
-								<i class='material-icons'>delete_forever</i>
+								<a onclick='d(".$consulta["marca_cod"].")' class='btn-floating red'>
+									<i class='material-icons'>delete_forever</i>
+								</a>
 							</td>
 					</tr>";
 			}
 		?>
 	</tbody>
 </table>
-</body>
-</html>

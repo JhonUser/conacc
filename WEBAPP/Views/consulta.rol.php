@@ -6,7 +6,32 @@ require_once("../Model/rol.class.php");
 $rol =Gestion_rol::Consultar();
 
 ?>
+<script type="text/javascript">
+function d(c){
+swal({
+  title: "¿Desea eliminar?",
+  text: "",
+  type: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#DD6B55",
+  confirmButtonText: "Si",
+  cancelButtonText: "No",
+  closeOnConfirm: false,
+  closeOnCancel: false
+},
+function(isConfirm){
+  if (isConfirm) {
+  	swal("Muy bien", "Se ha eliminadó", "success");
+  	var t = "../Controller/guardarrol.php?rol_cod="+ c + "&action=Borrar";
+  	window.location.href=t;
+   
 
+  } else {
+	    swal("Cancelado", "No se eliminara el registro", "error");
+  }
+});
+	}
+	</script>
 
 <table id="myTable" class="striped responsive-table">
 	<thead>

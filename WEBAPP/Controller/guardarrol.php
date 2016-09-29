@@ -19,7 +19,8 @@ switch ($action) {
 		try{
 			Gestion_rol::Guardar($codigo_rol, $nombre_rol, $desc_rol);
 			Gestion_rol::Seguir($usu, $segui_modulo, $segui_accion, $fecha, $hora);
-			header("location: ../Views/dashboard.php?seccion=rol&c=c");
+			$crt="c";
+			header("location: ../Views/dashboard.php?seccion=rol&crt");
 
 		}catch(Exception $e){
 			echo $e;
@@ -30,9 +31,11 @@ switch ($action) {
 		$rol_cod = $_POST["txt_codrol"];
 		$rol_nombre = $_POST["txt_nomrol"];
 		$desc_rol=$_POST["txt_descrol"];
+		$upt="u";
+
 		try{
 			Gestion_rol::Modificar($rol_cod, $rol_nombre, $desc_rol);
-			header("location: ../Views/dashboard.php?seccion=rol&u=u");
+			header("location: ../Views/dashboard.php?seccion=rol&upt");
 		}catch(Exception $e){
 			echo $e;
 		}
