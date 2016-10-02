@@ -8,10 +8,11 @@ switch ($accion) {
 	case 'Guardar':
 		$modu_cod=$_POST["txt_moducod"];
 		$modu_nom=$_POST["txt_modunom"];
+		$crt="c";
 		try {
 			Gestion_modulo::Guardar($modu_cod, $modu_nom);
 			echo "Guardo con exito";
-			header("location:../Views/dashboard.php?seccion=r_modulo&c=c");
+			header("location:../Views/dashboard.php?seccion=r_modulo&crt");
 		} catch (Exception $e){
 			echo $e;
 		}
@@ -19,10 +20,11 @@ switch ($accion) {
 	case 'Modificar':
 		 $modu_cod=$_POST["txt_moducod"];
 		 $modu_nom=$_POST["txt_modunom"];
+		 $upt="u";
 		try {
 			Gestion_modulo::Modificar($modu_cod, $modu_nom);
 			echo "Modifico con exito";
-			header("location:../Views/dashboard.php?seccion=r_modulo&u=u");
+			header("location:../Views/dashboard.php?seccion=r_modulo&upt");
 		} catch (Exception $e){
 			echo $e;
 		}
@@ -38,5 +40,19 @@ switch ($accion) {
        		 	echo $e;
        		 }
      	break;
+     case 'concod':
+  //   	$pacomparar =Gestion_modulo::Consulta();
+		// $codigo=$_POST["cod"];
+		// 	foreach ($pacomparar as $key){
+		// 		if($key['modu_cod']===$codigo){
+		// 			echo "Nro ".$key['modu_cod']." no puede usarse para codigo";
+		// 			break;
+		// 		}				
+		// 	}
+		// 		if($key['modu_cod']!==$codigo){
+
+					//echo "Uselo";
+				// }
+		break;
 }
 ?>

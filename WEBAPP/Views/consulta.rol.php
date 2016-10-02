@@ -33,7 +33,7 @@ function(isConfirm){
 	}
 	</script>
 
-<table id="myTable" class="striped responsive-table">
+<table id="myTable">
 	<thead>
 		<tr>
 			<td>Codigo</td>

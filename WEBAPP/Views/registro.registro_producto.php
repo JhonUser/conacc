@@ -12,8 +12,7 @@ $propietario=Gestion_producto::consultarpropie();
 
 <section>
 
-
-<div class="container">
+	<div class="container">
  <div class="row">
 		 <div class="card">
 			 <div class="card-action grey darken-3">

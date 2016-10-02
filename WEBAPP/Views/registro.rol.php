@@ -4,7 +4,8 @@
 	$( document ).ready(function(){
 		$("#codrol").keyup(function(){
 			var codigo =$("#codrol").val();
-			$.post("prueba.php", {cod: codigo}).done(function(data){
+			var vali= "concod";
+			$.post("../Controller/guardarrol.php", {cod: codigo, action:vali}).done(function(data){
 			$("#trato").html(data);	
 			//alert( codigo );
 			});

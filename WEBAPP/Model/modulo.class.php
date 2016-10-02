@@ -21,7 +21,7 @@ Class Gestion_modulo
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		self::$sql = "SELECT * FROM modulo ORDER BY modu_nom";
+		self::$sql = "SELECT * FROM modulo";
 		self::$query= $pdo->prepare(self::$sql);
 		self::$query->execute();
 

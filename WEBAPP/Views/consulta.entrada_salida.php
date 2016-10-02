@@ -7,12 +7,7 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 
 ?>
 
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
 	 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript"src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
     	$('#myTable').DataTable();
@@ -22,8 +17,7 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 		location.href = "../Controller/controller.registro.producto.php?salidas="+sld+"&action=salidae";
 	}
 	</script>
-</head>
-<body>
+
 	
 <table id="myTable">
 	<thead>
@@ -57,5 +51,3 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 	</tbody>
 </table>
 
-</body>
-</html>

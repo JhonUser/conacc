@@ -1,7 +1,7 @@
 <!-- Jeison V. Calle -->
 <?php
 require_once("../Model/conexion.php");
-require_once("../Model/rol.class.php");
+require_once("../Model/rol.class.php");		
 date_default_timezone_set('America/Bogota');
 
 $action=$_REQUEST["action"];
@@ -53,6 +53,19 @@ switch ($action) {
        		 	echo $e;
        		 }
      	break;
+    case 'concod':
+    	$pacomparar =Gestion_rol::Consultar();
+		$codigo=$_POST["cod"];
+			foreach ($pacomparar as $key){
+				if($key['rol_cod']===$codigo){
+					echo "Nro ".$key['rol_cod']." no puede usarse para codigo";
+					break;
+				}				
+			}
+				if($key['rol_cod']!==$codigo){
+					echo "Uselo";
+				}
+		break;
 }
 //header("location:../views/consulta.rol.php");
 ?>

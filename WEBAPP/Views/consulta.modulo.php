@@ -4,20 +4,8 @@ require_once("../Model/modulo.class.php");
 
 $modu=Gestion_modulo::Consulta();
 ?>
-<html>
-<head>
-	<title>Consultar modulo</title>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>
-	<script type="text/javascript" src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function(){
-   		 $('#myTable').DataTable();
-	});
-	</script>
-</head>
-<body>
-<table id="myTable">
+
+<table id="myTable" class="striped responsive-table">
 	<thead>
 		<tr>
 			<td>Codigo</td>
@@ -44,5 +32,3 @@ $modu=Gestion_modulo::Consulta();
 		?>
 	</tbody>
 </table>
-</body>
-</html>

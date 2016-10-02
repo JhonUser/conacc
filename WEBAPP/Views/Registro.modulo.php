@@ -1,4 +1,21 @@
 	<!-- Formulario: Guardar modulo -->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+	$( document ).ready(function(){
+		$("#modu_cod").keyup(function(){
+			var codigo =$("#moducod").val();
+			var vali= "concod";
+			$.post("../Controller/modulo.controller.php", {cod: codigo, accion:vali}).done(function(data){
+			$("#depues").html(data);	
+			//alert( codigo );
+			});
+        	
+		});
+        
+
+    });
+</script>
+
 <div class="container">
 	<center class="">Registro de modulos</center>
 		<form class="col s12" action="../Controller/modulo.controller.php" method="POST">
@@ -7,7 +24,7 @@
 				<input id="icon_prefix" type="number" name="txt_moducod" id="moducod" class="validate" required>
 				<label for="icon_prefix">Codigo del modulo</label>
 			</div>
-			<span id="trato" style="color: green"></span>
+			<span id="depues" style="color: green"></span>
 
 			<div class="input-field col s6">
 				<i class="material-icons prefix grey-text">view_module</i>

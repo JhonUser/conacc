@@ -7,17 +7,6 @@ $componente=Gestion_componente::consultar();
 
 ?>
 
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
-	 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript"src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript">$(document).ready(function(){
-    $('#myTable').DataTable();
-});</script>
-</head>
-<body>
 <table id="myTable">
 	<thead>
 		<tr>
@@ -47,6 +36,3 @@ $componente=Gestion_componente::consultar();
 		?>
 	</tbody>
 </table>
-
-</body>
-</html>

@@ -4,14 +4,7 @@ $(document).ready(function() {
   $('.datepicker').pickadate();
   $('.slider').slider({full_width: true});
   $('.modal-trigger').leanModal();
-  $('#tabla').DataTable();
-  $("#codrol").keyup(function(){
-      var codigo =$("#codrol").val();
-      $.post("../prueba.php", {cod: codigo}).done(function(data){
-      $("#trato").html(data); 
-      //alert( codigo );
-      });         
-    });
+   $('#tabla').DataTable();
   $('.button-collapse').sideNav({
     menuWidth: 200,
     edge: 'left',
@@ -19,8 +12,8 @@ $(document).ready(function() {
   });
 });
 function c(){
-    swal("!Bien!", "Guardó con exito!", "success");
-  };
-  function u(){
-    swal("!Bien!", "Modificó con exito!", "success");
-  };
+  swal("!Bien!", "Guardó con exito!", "success");
+};
+function u(){
+  swal("!Bien!", "Modificó con exito!", "success");
+};
