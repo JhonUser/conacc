@@ -73,5 +73,18 @@ class Gestion_rol{
 
 			Conexion::Cerrarbd();
 		}
+		function consultarRol($nombre){
+			$pdo= Conexion::Abrirbd();
+			$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+			$sql="SELECT * FROM rol where rol_nombre like CONCAT ('%',?,'%')";
+
+			$query=$pdo->prepare($sql);
+			$query->execute(array($nombre));
+			$result=$query->fetchALL(PDO::FETCH_BOTH);
+
+			Conexion::Cerrarbd();
+			return $result;
+	}
 	}
 ?>

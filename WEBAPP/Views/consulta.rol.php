@@ -7,6 +7,16 @@ $rol =Gestion_rol::Consultar();
 
 ?>
 <script type="text/javascript">
+	$(document).ready(function(){
+			$("#buscar").keyup(function(){
+				var nom = $(this).val();
+				var mod= "rol";
+				$.post("prueba.php", {name: nom, mdl: mod}, function(data){
+					$("#listado").html(data);
+				});
+			});
+		});
+
 function d(c){
 swal({
   title: "¿Desea eliminar?",
@@ -32,7 +42,7 @@ function(isConfirm){
 });
 	}
 	</script>
-
+<input id="buscar" style="border: none; width: 80%; padding: 15px; background-color: blue; color: #fff; padding: 15px; width: 80%" type="text" placeholder="Buscar rol"></input>
 <table id="myTable">
 	<thead>
 		<tr>
@@ -43,7 +53,7 @@ function(isConfirm){
 
 			</tr>
 	</thead>
-	<tbody>
+	<tbody id="listado">
 		<?php
 		/* Con esta linea se puede hacer el elminar - <a href='../Controller/guardarrol.php?rol_cod=".$consulta["rol_cod"]."&action=Borrar' >Eliminar</a>*/
 			foreach ($rol as $consulta) {

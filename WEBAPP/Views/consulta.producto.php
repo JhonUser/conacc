@@ -8,6 +8,17 @@ $produ =Gestion_Producto::Consultar();
 
 ?>
 <script type="text/javascript">
+
+$(document).ready(function(){
+			$("#buscar").keyup(function(){
+				var nom = $(this).val();
+				var mod = "producto";
+				$.post("prueba.php", {name1: nom, mdl: mod}, function(data){
+					$("#listados").html(data);
+				});
+			});
+		});
+
 function d(c){
 swal({
   title: "¿Desea eliminar?",
@@ -33,7 +44,7 @@ function(isConfirm){
 });
 	}
 	</script>
-
+<input id="buscar" style="border: none; width: 80%; padding: 15px; background-color: blue; color: #fff; padding: 15px; width: 80%" type="text" placeholder="Buscar producto"></input>
 <table id="myTable" class="striped responsive-table">
 	<thead>
 		<tr>
@@ -44,7 +55,7 @@ function(isConfirm){
 
 			</tr>
 	</thead>
-	<tbody>
+	<tbody id="listados">
 		<?php
 		/* Con esta linea se puede hacer el elminar - <a href='../Controller/guardarrol.php?rol_cod=".$consulta["rol_cod"]."&action=Borrar' >Eliminar</a>*/
 			foreach ($produ as $consulta) {

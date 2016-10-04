@@ -62,6 +62,19 @@ class Gestion_Producto{
 
 			Conexion::Cerrarbd();
 		}	
+	function consultarProdu($nombre){
+			$pdo= Conexion::Abrirbd();
+			$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+			$sql="SELECT producto.produ_cod, producto.marca_cod, marca.marca_nombre, producto.tipopro_cod, tipo_producto.tipopro_nombre, producto.produ_desc from producto inner join marca on producto.marca_cod=marca.marca_cod inner join tipo_producto on producto.tipopro_cod=tipo_producto.tipopro_cod where produ_desc like CONCAT ('%',?,'%')";
+
+			$query=$pdo->prepare($sql);
+			$query->execute(array($nombre));
+			$result=$query->fetchALL(PDO::FETCH_BOTH);
+
+			Conexion::Cerrarbd();
+			return $result;
+	}
 		
 }
 ?>
