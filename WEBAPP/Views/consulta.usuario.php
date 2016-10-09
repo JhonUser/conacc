@@ -14,19 +14,64 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
    		 $('#myTable').DataTable();
 	});
 
-   		 function valida(usucod){
-   		 		if(confirm("desea inactivar este usuario")){
-					location.href = "../Controller/registro.controller.php?codigo_usuario="+usucod+"&action=estado"
-				}
+   		function valida(usue,usucod){
+   			if(usue=="Inactivo"){
+   				swal({
+				  title: "El usuario ya esta inactivo",
+				  timer: 2000,
+				  showConfirmButton: false
+				});
+   			}
+   			else{
+
+			swal({
+			  title: "¿Desea inactivar este usuario?",
+			  type: "warning",
+			  showCancelButton: true,
+			  cancelButtonText: "No",
+			  confirmButtonColor: "#DD6B55",
+			  confirmButtonText: "Si",
+			  closeOnConfirm: false
+			},
+			function(){
+			  swal("Hecho", "Se ha inactivado.", "success");
+			  location.href = "../Controller/registro.controller.php?codigo_usuario="+usucod+"&action=estado"
+			});
+			}
+   		 		
    		 }
-   		  function valida1(usu){
-   		 		if(confirm("desea activar este usuario")){
-					location.href = "../Controller/registro.controller.php?codigo_usuario="+usu+"&action=activo"
-				}
+   		  function valida1(usues, usu){
+   		  	 if(usues=="Activo"){
+   		  	 	swal({
+				  title: "El usuario ya esta inactivo",
+				  timer: 2000,
+				  showConfirmButton: false
+				});
+   		  	 }
+   		  	 else{
+   		  		swal({
+			  title: "¿Desea activar este usuario?",
+			  type: "warning",
+			  showCancelButton: true,
+			  cancelButtonText: "No",
+			  confirmButtonColor: "#DD6B55",
+			  confirmButtonText: "Si",
+			  closeOnConfirm: false
+			},
+			function(){
+			  swal("Hecho", "Se ha activado.", "success");
+			  location.href = "../Controller/registro.controller.php?codigo_usuario="+usu+"&action=activo"
+			});
+   		  	}
    		 }
    		  function valida2(usuM,code){
    		   	if (usuM=="Inactivo") {
-   		   		alert("este usario esta Inactivo");
+   		   		swal({
+				  title: "El usuario esta inactivo",
+				  text: "No se puede modificar, si desea modificar cambie el estado.",
+				  timer: 2500,
+				  showConfirmButton: false
+				});
 
    		   	}
    		   	else{
@@ -62,15 +107,17 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 							<td>".$consulta["usu_nick"]."</td>
 							<td>".$consulta["usu_estado"]."</td>
 							<td>
-								<span onclick='valida(".$consulta["usu_cod"].");'class='btn-floating light-red' style='cursor:pointer'>
-									<i class='material-icons'>airline_seat_flat</i>
+								<span title='Inactivar' onclick='valida(&#34".$consulta["usu_estado"]."&#34,".$consulta["usu_cod"].");'class='btn-floating light-red' style='cursor:pointer'>
+									<i class='material-icons'>lock_outline</i>
 								</span>
-								<span onclick='valida1(".$consulta["usu_cod"].");'class='btn-floating light-blue' style='cursor:pointer'>
-									<i class='material-icons'>directions_walk</i>
+								<span title='Activar' onclick='valida1(&#34".$consulta["usu_estado"]."&#34,".$consulta["usu_cod"].");'class='btn-floating light-blue' style='cursor:pointer'>
+									<i class='material-icons'>lock_open</i>
 								</span>
 								<span style='cursor:pointer' onclick='valida2(&#34".$consulta["usu_estado"]."&#34,".$consulta["usu_cod"].");'class='btn-floating light-green'>
 									<i class='material-icons'>edit</i>
 								</span>
+
+
 							</td>
 					</tr>";
 			}

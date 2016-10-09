@@ -7,14 +7,13 @@ $producto=Gestion_producto::consultar();
 
 ?>
 
-<button><a href="dashboard.php?seccion=rr_producto">Volver</a></button>
 <table id="myTable">
 	<thead>
 		<tr>
 			<td>codigo registro </td>
-			<td>Codigo usuario</td>
-			<td>codigo producto</td>
-			<td>codigo propietario</td>
+			<td>Documento del responsable</td>
+			<td>Descripcion del producto</td>
+			<td>Documento del propietario</td>
 			<td>registro serial </td>
 			<td>registro colos</td>
 			<td>registro fecha</td>
@@ -30,9 +29,9 @@ $producto=Gestion_producto::consultar();
 			foreach ($producto as $produc) {
 			echo "<tr>
 					<td>".$produc["regi_cod"]."</td>
-					<td>".$produc["usu_cod"]."</td>
-					<td>".$produc["produ_cod"]."</td>
-					<td>".$produc["prop_cod"]."</td>
+					<td>".$produc["usu_docu"]."</td>
+					<td>".$produc["produ_desc"]."</td>
+					<td>".$produc["prop_doc"]."</td>
 					<td>".$produc["regi_serial"]."</td>
 					<td>".$produc["regi_color"]."</td>
 					<td>".$produc["regi_fecha"]."</td>

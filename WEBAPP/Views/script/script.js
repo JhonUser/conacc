@@ -17,3 +17,6 @@ function c(){
 function u(){
   swal("!Bien!", "Modificó con exito!", "success");
 };
+function e(){
+  swal("Error", "Algo va mal!", "warning");
+};

@@ -9,122 +9,78 @@ $propietario=Gestion_producto::consultarpropie();
 
 ?>
 
-
-<section>
-
-	<div class="container">
- <div class="row">
+<div class="container">
+	<div class="row">
 		 <div class="card">
 			 <div class="card-action grey darken-3">
 				 <button type="button" class="btn  grey darken-3 z-depth-0 white-text thin" style="margin-left:25%">Registro de producto</button>
 			 </div>
 			 <div class="card-content">
+			 	<div class="row">
+				<form action="../Controller/controller.registro.producto.php" method="post">
+					<div class="input-field">
+						<select name="codigo_pro">
+							<?php
+								foreach ($producto as $produc ) {
+									echo "<option value=".$produc["produ_cod"].">".$produc["produ_desc"]."</option>";
+								}
+							?>
+						</select>
+						<label>Producto</label>
+					</div>
 
-	<form action="../Controller/controller.registro.producto.php" method="post"/>
+					<div class="input-field">
+						<select name="codigo_propietario">
+							<?php
+								foreach ($propietario as $propie ) {
+									echo "<option value=".$propie["prop_cod"].">".$propie["prop_nom"]."</option>";
+								}
+							?>
+						</select>
+						<label>Nombre del propietario</label>
+					</div>
 
-		<div class="input-field">
+					<div class="input-field">
+						<i class="material-icons prefix grey-text">fingerprint</i>
+						<input type="text" id="icon_prefix" name="registro_serial">
+						<label>Serial</label>
+					</div>
 
-			<select name="codigo">
-				<?php
-					foreach ($usuario as $produc ) {
-						echo "<option value=".$produc["usu_cod"].">".$produc["usu_nom"]."</option>";
-					}
-				?>
+					<div class="input-field">
+						<i class="material-icons prefix grey-text">color_lens</i>
+						<input  type="text" id="icon_prefix" name="registre_color">
+						<!-- <label for="icon_prefix">Color</label> -->
+					</div>
+					
+					<div class="input-field">
+						<i class="material-icons prefix grey-text">date_range</i>
+						<input  type="date" id="icon_prefix" name="registre_fecha">
+						<label for="icon_prefix">Fecha</label>
+					</div>
 
-		</select>
-		<label>Nombre del Usuario</label>
-	</div>
+					<div class="input-field">
+						<i class="material-icons prefix grey-text">description</i>
+						<input  type="text" id="icon_prefix" name="registre_decrip">
+						<label for="icon_prefix">Descripción</label>
+					</div>
 
-		<div class="input-field">
+					<div class="input-field">
+						<i class="material-icons prefix grey-text">accessibility</i>
+						<input type="text" id="icon_prefix" name="registre_autoalerta">
+						<label for="icon_prefix">Autorizacion alterina</label>
+					</div>
 
-			<select name="codigo_pro">
-				<?php
-					foreach ($producto as $produc ) {
-						echo "<option value=".$produc["produ_cod"].">".$produc["produ_desc"]."</option>";
-					}
-				?>
-
-		</select>
-		<label>Descripcion del producto</label>
-	</div>
-
-	<div class="input-field">
-
-
-		<select name="codigo_propiedad">
-			<?php
-			foreach ($propietario as $propie ) {
-				echo "<option value=".$propie["prop_cod"].">".$propie["prop_nom"]."</option>";
-			}
-			?>
-
-		</select>
-		<label>Nombre del propietario</label>
-	</div>
-
-
-	<div class="input-field col s6">
-		<i class="material-icons prefix grey-text">account_circle</i>
-		<input id="icon_prefix" name="registro_serial" type="text" required/>
-		<label for="icon_prefix">Registra serial</label>
-	</div>
-
-	<div class="input-field col s6">
-		<i class="material-icons prefix grey-text">account_circle</i>
-		<input id="icon_prefix" name="registre_color" type="text"required/>
-		<label for="icon_prefix">Registre color </label>
-
-	</div>
-
-	<div class="input-field col s6">
-		<i class="material-icons prefix grey-text">account_circle</i>
-		<input id="icon_prefix" name="registre_fecha" type="date"required/>
-
-	<div class="input-field">
-<label >Registra serial</label>
-		<input id="icon_prefix" name="registro_serial" type="text"/>
-
-	</div>
-
-	<div class="input-fiel">
-	<label>Registre color </label>
-		<input id="icon_prefix" name="registre_color" type="text"/>
-
-
-	</div>
-
-	<div class="input-field">
-
-		<input id="icon_prefix" name="registre_fecha" type="date"/>
-
-
-	</div>
-
-	<div class="input-field">
-
-		<textarea name="registre_decrip" type="text"></textarea>
-		<label for="icon_prefix">Registre descripcion</label>
-
-	</div>
-
-	<div class="input-field">
-
-		<input id="icon_prefix" name="registre_autoalerta" type="text"/>
-		<label for="icon_prefix">Registre autoalterna</label>
-
-	</div>
-
-</form>
-
+					<button name="action" class="btn thin" value="Guardar">Guardar</button>
+				</form>
+			</div>
 </div>
 
 
-		<button name="action" class="btn thin" value="Guardar">Guardar</button>
-		<button type="button" class="btn thin indigo"><a href="dashboard.php?seccion=r_accesorio" class="white-text">Guardar Accesorio</a></button>
-		<button  class="blue btn"><a href="dashboard.php?seccion=r_componente" class="white-text thin">Registro Componente</a></button>
+			
+		</div>
+	</div>
+</div>
 
-</div>
-</div>
 
 
 <div class="container">

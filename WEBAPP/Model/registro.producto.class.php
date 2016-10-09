@@ -74,7 +74,8 @@ function consultar(){
 		$pdo=conexion::AbrirBD();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-		$sql="SELECT * FROM registro_producto";
+		$sql="SELECT registro_producto.regi_cod, registro_producto.usu_cod, usuario.usu_docu, registro_producto.produ_cod, producto.produ_desc, registro_producto.prop_cod, propietario.prop_doc, registro_producto.regi_serial, registro_producto.regi_color, registro_producto.regi_fecha, registro_producto.regi_desc, registro_producto.regi_autoalterna
+			from registro_producto inner join usuario on registro_producto.usu_cod = usuario.usu_cod inner join producto on registro_producto.produ_cod = producto.produ_cod inner join propietario on propietario.prop_cod = registro_producto.prop_cod";
 		$query=$pdo->prepare($sql);
 		$query->execute();
 

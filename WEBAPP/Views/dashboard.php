@@ -23,6 +23,12 @@
 		<?php
 			include 'section.inicio.php';
 			dashboard::pagina();
+			$err= isset($_GET['e']);
+				if($err=="23000"){
+					echo "<script type='text/javascript'>";
+					echo "e()";
+					echo "</script>";
+				}
 			$try = isset($_GET['crt']);
 				if ($try=="c")
 				{

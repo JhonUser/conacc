@@ -16,9 +16,12 @@ switch ($action) {
 		$nombredeusuario=$_POST["nombredeusuario"];
 		$contrasena=$_POST["contrasena"];
 		$cifrar=password_hash($contrasena,PASSWORD_DEFAULT);
+		$estado="Activo";
 		//$codigo,
 		try{
-			Gestion_usuario::Guardar($seleccion,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrar);
+			Gestion_usuario::Guardar($seleccion,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrar,$estado);
+			$crt="c";
+			header("location: ../Views/dashboard.php?seccion=usuario&crt");
 			echo "Guardo con exito";
 
 		}catch(Exception $e){
@@ -40,7 +43,8 @@ switch ($action) {
 
 try{
 			Gestion_usuario::Modificar($codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrars);
-		header("location:../views/consulta.usuario.php");
+			$upt="u";
+		header("location: ../Views/dashboard.php?seccion=usuario&upt");
 
 		}catch(Exception $e){
 			echo $e;
@@ -55,7 +59,7 @@ try{
 			
 			try{
 				Gestion_usuario::Estado($estado,$codigo);
-				header("location:../views/registro.usuario.php");
+				header("location: ../Views/dashboard.php?seccion=usuario");
 
 			}catch(Exception $e){
 				echo $e;
@@ -63,13 +67,13 @@ try{
 		break;
 
 		case 'activo':
-			$estado="activo";
+			$estado="Activo";
 			$codigo=$_GET["codigo_usuario"];
 	
 			
 			try{
 				Gestion_usuario::activo1($estado,$codigo);
-				header("location:../views/registro.usuario.php");
+				header("location: ../Views/dashboard.php?seccion=usuario");
 
 			}catch(Exception $e){
 				echo $e;

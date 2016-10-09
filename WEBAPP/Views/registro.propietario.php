@@ -1,6 +1,6 @@
 <!-- Jhon T. Gómez -->
 <div class="container">
- <div class="row">
+ <div class="row"> 
 		 <div class="card">
 			 <div class="card-action teal">
 				 <button type="button" class="btn teal z-depth-0 white-text thin" style="margin-left:25%">Registro de propietario</button>

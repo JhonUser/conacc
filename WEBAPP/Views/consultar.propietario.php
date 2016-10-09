@@ -1,5 +1,30 @@
 <!-- Jhon T. Gómez -->
+<script type="text/javascript">
+  function d(c){
+swal({
+  title: "¿Desea eliminar?",
+  text: "",
+  type: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#DD6B55",
+  confirmButtonText: "Si",
+  cancelButtonText: "No",
+  closeOnConfirm: false,
+  closeOnCancel: false
+},
+function(isConfirm){
+  if (isConfirm) {
+    swal("Muy bien", "Se ha eliminadó", "success");
+    var t = "../Controller/propietario.controller.php?e=e&cod="+ c;
+    window.location.href=t;
+   
 
+  } else {
+      swal("Cancelado", "No se eliminara el registro", "error");
+  }
+});
+  }
+</script>
   <table id="tabla" class="striped responsive-table">
   	<thead>
   		<tr>
@@ -30,8 +55,9 @@
             <a href="dashboard.php?seccion=m.propietario&cod=<?php echo base64_encode($views['prop_cod']+500); ?>" class="btn-floating light-green">
               <i class="material-icons">edit</i>
             </a>
-            <a href="../Controller/propietario.controller.php?e=e&cod=<?php echo base64_encode($views['prop_cod']+500); ?>" class="btn-floating red">
-              <i class="material-icons">delete_forever</i>
+           
+            <a onclick='d("<?php echo base64_encode($views['prop_cod']+500); ?>")' class='btn-floating red'>
+                  <i class='material-icons'>delete_forever</i>
             </a>
           </td>
         </tr>

@@ -1,16 +1,16 @@
 <!-- Andrea taborda -->
 <?php
-date_default_timezone_get("America/Bogota");
 session_start();
 require_once("../Model/conexion.php");
 require_once("../Model/registro.producto.class.php");
+date_default_timezone_set('America/Bogota');
 
 $accion=$_REQUEST["action"];
 switch ($accion) {
 	case 'Guardar':
-	$codigo=$_POST["codigo"];
+	$codigo= $_SESSION["codigo"];
 	$codigo_pro=$_POST["codigo_pro"];
-	$codigo_propiedad=$_POST["codigo_propiedad"];
+	$codigo_propiedad=$_POST["codigo_propietario"];
 	$registro_serial=$_POST["registro_serial"];
 	$registre_color=$_POST["registre_color"];
 	$registre_fecha=$_POST["registre_fecha"];
@@ -77,7 +77,7 @@ try{
 		$hora=date("H:i");
 		try{
 			Gestion_producto::entrada_salida($codigo,$fecha,$hora);
-			header("location:../views/consulta.entrada_salida.php");
+			header("location: ../Views/dashboard.php?seccion=c_entrada");
 
 		}catch(Exception $e){
 			echo $e;

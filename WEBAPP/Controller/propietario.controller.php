@@ -20,7 +20,8 @@
       if (isset($_POST["g"])) {
         try{
             $consulta->guardar_propietario($datos);
-            header("location: ../Views/dashboard.php?seccion=" . base64_encode("r.propietario"));
+            $crt="c";
+            header("location: ../Views/dashboard.php?seccion=" . base64_encode("r.propietario")."&crt");
           }catch(Exception $e){
             echo "Error" . $e->getMessage();
           }
@@ -30,7 +31,9 @@
         try{
           $datos['cod'] = htmlentities($_POST["cod"]);
           $consulta->modificar_propietario($datos);
+          $upt="u";
           echo "Registro modificado";
+          header("location: ../Views/dashboard.php?seccion=" . base64_encode("r.propietario")."&upt");
          }catch(Exception $e){
            echo "Error" . $e->getMessage();
          }

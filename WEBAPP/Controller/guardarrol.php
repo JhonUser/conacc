@@ -23,7 +23,8 @@ switch ($action) {
 			header("location: ../Views/dashboard.php?seccion=rol&crt");
 
 		}catch(Exception $e){
-			echo $e;
+			$e= $e->getCode();
+			header("location: ../Views/dashboard.php?seccion=rol&e");
 		}
 
 		break;

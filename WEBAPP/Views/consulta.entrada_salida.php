@@ -18,7 +18,7 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 	}
 	</script>
 
-	
+
 <table id="myTable">
 	<thead>
 		<tr>
@@ -43,11 +43,13 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 					<td>".$comp["entsal_fechasal"]."</td>
 					<td>".$comp["entsal_horaent"]."</td>
 					<td>".$comp["entsal_horasal"]."</td>
-					<td><div onclick='salida(".$comp["entsal_cod"].");'>Salida</div></td>
+					<td>
+					<a class='btn-floating light-red' title='Marcar salida' style='cursor:pointer'onclick='salida(".$comp["entsal_cod"].");'>
+						<i class='material-icons'>exit_to_app</i></a>
+					</td>
 					
 			</tr>";
 			}
 		?>
 	</tbody>
 </table>
-
