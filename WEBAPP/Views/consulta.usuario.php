@@ -8,7 +8,7 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 ?>
 
 
->
+
 	<script type="text/javascript">
 	$(document).ready(function(){
    		 $('#myTable').DataTable();
@@ -38,7 +38,7 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 			  location.href = "../Controller/registro.controller.php?codigo_usuario="+usucod+"&action=estado"
 			});
 			}
-   		 		
+
    		 }
    		  function valida1(usues, usu){
    		  	 if(usues=="Activo"){
@@ -126,5 +126,3 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 
 
 </table>
-
-
