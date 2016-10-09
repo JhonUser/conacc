@@ -17,7 +17,7 @@ function(isConfirm){
     swal("Muy bien", "Se ha eliminadó", "success");
     var t = "../Controller/propietario.controller.php?e=e&cod="+ c;
     window.location.href=t;
-   
+
 
   } else {
       swal("Cancelado", "No se eliminara el registro", "error");
@@ -25,7 +25,7 @@ function(isConfirm){
 });
   }
 </script>
-  <table id="tabla" class="striped responsive-table">
+  <table id="table" class="striped responsive-table">
   	<thead>
   		<tr>
   			<td>Cedula</td>
@@ -55,7 +55,7 @@ function(isConfirm){
             <a href="dashboard.php?seccion=m.propietario&cod=<?php echo base64_encode($views['prop_cod']+500); ?>" class="btn-floating light-green">
               <i class="material-icons">edit</i>
             </a>
-           
+
             <a onclick='d("<?php echo base64_encode($views['prop_cod']+500); ?>")' class='btn-floating red'>
                   <i class='material-icons'>delete_forever</i>
             </a>
