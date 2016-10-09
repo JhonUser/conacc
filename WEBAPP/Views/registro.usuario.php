@@ -9,7 +9,7 @@
 		<div class="row">
  			<form class="col s10" action="../Controller/registro.controller.php" method="post" <?php $rol=Gestion_usuario::cargar_rol(); ?>>
 				<div class="row">
-					<div class="input-field col s7">
+					<div class="input-field col s6">
 						<i class="material-icons prefix teal-text">people</i>
 					 		<select class="icons" name="seleccion">
 					 	    <option value="" disabled selected>Elija Rol de Usuario</option>
@@ -22,12 +22,12 @@
 					<div class="input-field col s6">
 				    <i class="material-icons prefix grey-text">account_circle</i>
 				    <input id="icon_prefix" type="text" name="nombre" class="validate" required>
-				    <label for="icon_prefix">Nombre</label>
+				    <label for="icon_prefix">Nombre(s)</label>
 				  </div>
 				  <div class="input-field col s6">
 				    <i class="material-icons prefix grey-text">person_outline</i>
 				    <input id="icon_telephone" type="text" name="apellido" class="validate" required>
-				    <label for="icon_telephone">Apellido</label>
+				    <label for="icon_telephone">Apellido(s)</label>
 				  </div>
 					<div class="input-field col s6">
 					 	<i class="material-icons prefix grey-text">credit_card</i>
