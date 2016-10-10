@@ -7,15 +7,15 @@
 ?>
 	<div class="container">
 	 	<div class="card">
-			<div class="card-action teal">
-        <button type="button" class="btn teal z-depth-0 white-text thin" style="margin-left:32%">Registro de productos</button>
+			<div class="card-action teal darken-3">
+        <button type="button" class="btn teal darken-3 z-depth-0 white-text thin" style="margin-left:32%">Registro de productos</button>
       </div>
 	    <div class="card-content">
 				<form action="../Controller/controller.registro.producto.php" method="post">
 
 					<div class="row">
 
-						<div class="input-field col s6">
+						<div class="input-field col s5">
 							<i class="material-icons prefix grey-text">people</i>
 							<select name="codigo_pro">
 								<option value="" disabled selected>Descripcion*</option>
@@ -26,7 +26,11 @@
 								?>
 							</select>
 						</div>
-						<div class="input-field col s6">
+						<div class="input-field col s1">
+							<a href="dashboard.php?seccion=r_t_producto" class="btn-floating btn-large waves-effect waves-light red pull-s5"><i class="material-icons">add</i></a>
+						</div>
+
+						<div class="input-field col s5">
 							<i class="material-icons prefix grey-text">people</i>
 							<select name="codigo_propietario">
 								<option value="" disabled selected>Propietario*</option>
@@ -36,6 +40,9 @@
 									}
 								?>
 							</select>
+						</div>
+						<div class="input-field col s1">
+							<a href="dashboard.php?seccion=r_marca" class="btn-floating btn-large waves-effect waves-light red pull-s5"><i class="material-icons">add</i></a>
 						</div>
 					</div>
 					<div class="row">
