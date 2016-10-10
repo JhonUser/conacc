@@ -51,7 +51,7 @@ $propietario=Gestion_producto::consultarpropie();
 						<input  type="text" id="icon_prefix" name="registre_color">
 						<!-- <label for="icon_prefix">Color</label> -->
 					</div>
-					
+
 					<div class="input-field">
 						<i class="material-icons prefix grey-text">date_range</i>
 						<input  type="date" id="icon_prefix" name="registre_fecha">
@@ -76,7 +76,7 @@ $propietario=Gestion_producto::consultarpropie();
 </div>
 
 
-			
+
 		</div>
 	</div>
 </div>
