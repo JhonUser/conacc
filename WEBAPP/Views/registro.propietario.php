@@ -58,6 +58,7 @@
         <button class="waves-effect waves-light btn teal  thin" name="g">Guardar</button>
 
         <a class="activator waves-effect waves-light btn grey darken-2  thin" href="#">Consultar propietarios</a>
+        <a href="dashboard.php?seccion=rr_producto"class="btn orange right thin">Registrar Producto</a>
           </form>
 
 

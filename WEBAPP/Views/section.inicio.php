@@ -30,7 +30,7 @@
                   <a href="dashboard.php?seccion=usuario" class="collapsible-header"><i class="material-icons left yellow-text">person_add</i>Usuarios</a>
                 </li>
                 <li>
-                  <a href="dashboard.php?seccion=<?php echo base64_encode('r.propietario')?>" class="collapsible-header"><i class="material-icons left teal-text">person_pin</i>Propietarios</a>
+                  <a href="dashboard.php?seccion=r_propietario" class="collapsible-header"><i class="material-icons left teal-text">person_pin</i>Propietarios</a>
                   <div class="collapsible-body white-text" style="background-color: #FF5722"><p>...</p></div>
                 </li>
 

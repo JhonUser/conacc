@@ -13,7 +13,7 @@ switch ($accion) {
 	$codigo_propiedad=$_POST["codigo_propietario"];
 	$registro_serial=$_POST["registro_serial"];
 	$registre_color=$_POST["registre_color"];
-	$registre_fecha=$_POST["registre_fecha"];
+	$registre_fecha = date("o-m-d");
 	$registre_decrip=$_POST["registre_decrip"];
 	$registre_autoalerta=$_POST["registre_autoalerta"];
 	$fecha=date("o-m-d");
