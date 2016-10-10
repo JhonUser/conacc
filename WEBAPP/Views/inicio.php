@@ -1,2 +1,1 @@
 
-<center>..<br>...<br>..</center>
