@@ -12,7 +12,6 @@
       </div>
 	    <div class="card-content">
 				<form action="../Controller/controller.registro.producto.php" method="post">
-<<<<<<< HEAD
 					<div class="row">
 						<div class="input-field col s6">
 							<i class="material-icons prefix grey-text">people</i>
@@ -36,48 +35,8 @@
 								?>
 							</select>
 						</div>
-=======
-					<div class="input-field">
-					<!-- <select name="codigo_pro">
-							<?php
-								// foreach ($producto as $produc ) {
-								// 	echo "<option value=".$produc["produ_cod"].">".$produc["tipopro_nombre"]." -".$produc["marca_nombre"]."</option>";
-								//}
-							?>
-						</select> -->
-						<select name="codigo_pro">
-							<?php
-								foreach ($producto as $produc ) {
-									echo "<option value=".$produc["produ_cod"].">".$produc["produ_desc"]."</option>";
-								}
-							?>
-						</select>
-						<label>Producto</label>
-					</div>
 
-					<div class="input-field">
-						<select name="codigo_propietario">
-							<?php
-								foreach ($propietario as $propie ) {
-									echo "<option value=".$propie["prop_cod"].">".$propie["prop_nom"]."</option>";
-								}
-							?>
-						</select>
-						<label>Nombre del propietario</label>
-					</div>
-
-					<div class="input-field">
-						<i class="material-icons prefix grey-text">fingerprint</i>
-						<input type="text" id="icon_prefix" name="registro_serial">
-						<label>Serial</label>
-					</div>
-
-					<div class="input-field">
-						<i class="material-icons prefix grey-text">color_lens</i>
-						<input  type="text" id="icon_prefix" name="registre_color">
-						<!-- <label for="icon_prefix">Color</label> -->
->>>>>>> origin/master
-					</div>
+				
 					<div class="row">
 						<div class="input-field col s6">
 							<i class="material-icons prefix grey-text">fingerprint</i>
