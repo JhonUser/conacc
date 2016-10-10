@@ -1,7 +1,7 @@
 	<div class="container">
 		<div class="card">
-			<div class="card-action  light-green darken-4">
-	      <button type="button" class="btn light-green darken-4 z-depth-0 white-text thin" style="margin-left:28%">Registro de Tipos de productos</button>
+			<div class="card-action cyan darken-4">
+	      <button type="button" class="btn cyan darken-4 z-depth-0 white-text thin" style="margin-left:28%">Registro de Tipos de productos</button>
 	    </div>
 	    <div class="card-content">
 				<form action="../Controller/tipoproducto.controller.php" method="POST">
@@ -23,7 +23,8 @@
 					<div class="card-action grey lighten-3">
 						<button name="accion" value="create" class="btn teal thin">Guardar</button>
 						<?php echo @$_REQUEST["$mensaje"];?>
-						<a class="activator waves-effect waves-light btn grey thin" href="#">Consultar propietarios</a>
+						<a class="activator waves-effect waves-light btn grey thin" href="#">Consultar</a>
+						<a href="dashboard.php?seccion=rr_producto" class="btn red thin right">Ir a Registro producto</a>
 				</form>
 			</div>
 	  </div>
