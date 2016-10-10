@@ -12,7 +12,9 @@
       </div>
 	    <div class="card-content">
 				<form action="../Controller/controller.registro.producto.php" method="post">
+
 					<div class="row">
+
 						<div class="input-field col s6">
 							<i class="material-icons prefix grey-text">people</i>
 							<select name="codigo_pro">
@@ -35,8 +37,7 @@
 								?>
 							</select>
 						</div>
-
-				
+					</div>
 					<div class="row">
 						<div class="input-field col s6">
 							<i class="material-icons prefix grey-text">fingerprint</i>
