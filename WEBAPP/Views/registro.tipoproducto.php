@@ -1,18 +1,35 @@
-	<!-- Formulario: Guardar tipo de producto -->
-<div class="container">
-
-
-	<h2>Guardar tipo de prducto</h2>
-	<form action="../Controller/tipoproducto.controller.php" method="POST">
-		<label>Codigo del tipo de producto</label>
-			<input type="text" name="txt_tipoprocod"/></br>
-		<label>Nombre del tipo de producto</label>
-			<input type="text" name="txt_tipopronom"/></br>
-		<label>Descripcion del tipo de producto</label>
-			<input type="text" name="txt_desctipopro"></br>
-		<button name="accion" value="create" class="btn green">Guardar</button>
-		<?php echo @$_REQUEST["$mensaje"];?>
-		<?php echo "<a href='dashboard.php?seccion=c_t_producto' class='btn indigo'>Consultar</a>"; ?>
-	</form>
-
+	<div class="container">
+		<div class="card">
+			<div class="card-action  light-green darken-4">
+	      <button type="button" class="btn light-green darken-4 z-depth-0 white-text thin" style="margin-left:28%">Registro de Tipos de productos</button>
+	    </div>
+	    <div class="card-content">
+				<form action="../Controller/tipoproducto.controller.php" method="POST">
+					<div class="input-field col s6">
+						<i class="material-icons prefix grey-text">code</i>
+						<input type="text" name="txt_tipoprocod"/>
+						<label>Codigo:</label>
+					</div>
+					<div class="input-field col s6">
+						<i class="material-icons prefix grey-text">assignment</i>
+						<input type="text" name="txt_tipopronom"/>
+						<label>Nombre:</label>
+					</div>
+					<div class="input-field col s6">
+						<i class="material-icons prefix grey-text">subtitles</i>
+						<input type="text" name="txt_desctipopro">
+						<label>Descripción:</label>
+					</div>
+					<div class="card-action grey lighten-3">
+						<button name="accion" value="create" class="btn teal thin">Guardar</button>
+						<?php echo @$_REQUEST["$mensaje"];?>
+						<a class="activator waves-effect waves-light btn blue-grey thin" href="#">Consultar propietarios</a>
+				</form>
+			</div>
+	  </div>
+		<div class="card-reveal">
+		  <span class="card-title grey-text text-darken-4">Consulta de Tipos de productos<i class="material-icons right">close</i></span>
+		  <?php include 'consulta.tipoproducto.php'; ?>
+		</div>
+	</div>
 </div>
