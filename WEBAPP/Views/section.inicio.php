@@ -40,9 +40,6 @@
                   <div class="collapsible-body white-text" style="background-color: #FF5722"><p>...</p></div>
                 </li>
                 <li>
-                  <a href="dashboard.php?seccion=r_marca"><i class="material-icons left brown-text">branding_watermark</i>Marca</a>
-                </li>
-                <li>
                   <a href="dashboard.php?seccion=r_modulo"><i class="material-icons left orange-text">view_module</i>Modulo</a>
                 </li>
                 <li>
