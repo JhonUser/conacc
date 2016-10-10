@@ -19,6 +19,13 @@ $propietario=Gestion_producto::consultarpropie();
 			 	<div class="row">
 				<form action="../Controller/controller.registro.producto.php" method="post">
 					<div class="input-field">
+					<!-- <select name="codigo_pro">
+							<?php
+								// foreach ($producto as $produc ) {
+								// 	echo "<option value=".$produc["produ_cod"].">".$produc["tipopro_nombre"]." -".$produc["marca_nombre"]."</option>";
+								//}
+							?>
+						</select> -->
 						<select name="codigo_pro">
 							<?php
 								foreach ($producto as $produc ) {

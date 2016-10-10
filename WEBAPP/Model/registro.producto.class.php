@@ -48,7 +48,7 @@ function consultarprodu(){
 	$pdo=conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-		$sql="SELECT * FROM producto";
+		$sql="SELECT producto.produ_cod, producto.marca_cod, marca.marca_nombre, producto.tipopro_cod, tipo_producto.tipopro_nombre, producto.produ_desc from producto inner join marca on producto.marca_cod = marca.marca_cod inner JOIN tipo_producto on producto.tipopro_cod= tipo_producto.tipopro_cod ";
 		$query=$pdo->prepare($sql);
 		$query->execute();
 
