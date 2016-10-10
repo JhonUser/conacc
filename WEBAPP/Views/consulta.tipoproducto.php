@@ -23,7 +23,7 @@
                     <td>".$row["tipopro_nombre"]."</td>
                     <td>".$row["tipopro_desc"]."</td>
                     <td>
-                    <a class='btn-floating green' href='modifico_tipoproducto.php?tipopro_cod=".$row["tipopro_cod"]."'><i class='material-icons'>edit</i></a> 
+                    <a class='btn-floating green' href='dashboard.php?seccion=m_tipoproducto&tipopro_cod=".$row["tipopro_cod"]."'><i class='material-icons'>edit</i></a> 
                     <a class='btn-floating red' href='../Controller/tipoproducto.controller.php?tipopro_cod=".$row["tipopro_cod"]."&accion=delete' ><i class='material-icons'>delete_forever</i></a></td>
                   </tr>";
             $item++;

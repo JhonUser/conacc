@@ -56,7 +56,7 @@
             case 'tipopro_cod':
               include 'modifico_tipoproducto.php';
               break;
-            case 'tipopro_cod':
+            case 'm_tipoproducto':
               include 'modifico_tipoproducto.php';
               break;
             case 'r_permiso':
@@ -79,7 +79,7 @@
               break;
             case 'm_compo':
               include("modificar.componente.php");
-              break;           
+              break;
             case 'rr_producto':
               include("registro.registro_producto.php");
               break;
@@ -92,7 +92,7 @@
             case 'r_componente':
               include("registro.componente.php");
               break;
-              
+
             default:
 
           break;
