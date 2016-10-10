@@ -64,9 +64,23 @@ switch ($action) {
 				}				
 			}
 				if($key['rol_cod']!==$codigo){
-					echo "Uselo";
+					echo "Puede usarlo";
 				}
 		break;
+
+	case 'connom':
+    	$pacomparar =Gestion_rol::Consultar();
+		$nombre=$_POST["nom"];
+			foreach ($pacomparar as $key){
+				if($key['rol_nombre']===$nombre){
+					echo $key['rol_nombre']." no se puede usar";
+					break;
+				}				
+			}
+				if($key['rol_nombre']!==$nombre){
+					echo "Puede usarlo";
+				}
+		break;	
 }
 //header("location:../views/consulta.rol.php");
 ?>

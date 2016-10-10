@@ -1,16 +1,8 @@
 	<!-- Formulario: Guardar rol -->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="script/script.js"></script>
 <script>
 	$( document ).ready(function(){
-		function algo(){
-			var tr=$("#trato").val();
-			if ("no" in tr){
-				alert("No puede, carajo");
-			}
-			else{
-				alert("hagale");
-			}
-		}
 		$("#codrol").keyup(function(){
 			var codigo =$("#codrol").val();
 			var vali= "concod";
@@ -21,6 +13,15 @@
         	
 		});
         
+        $("#nom").keyup(function(){
+			var nombre =$("#nom").val();
+			var valid= "connom";
+			$.post("../Controller/guardarrol.php", {nom: nombre, action:valid}).done(function(data){
+			$("#nombre").html(data);	
+			
+			});
+        	
+		});
 
     });
 </script>
@@ -40,15 +41,16 @@
 								</div>
 							</div>
 							<span  id="trato" style="color: green"></span>
-
-							<div class="row">
+					
+							<div class="row" id="trato">
 							  	<div class="input-field col s10">
 									<i class="material-icons prefix grey-text">control_point</i>
 								  <input type="text" name="txt_nomrol" id="nom" class="validate" required>
 									<label for="nom">Nombre</label>
 								</div>
 							</div>
-
+							<span  id="nombre" style="color: green"></span>
+							
 							<div class="row">
 							  	<div class="input-field col s10">
 									<i class="material-icons prefix grey-text">description</i>
