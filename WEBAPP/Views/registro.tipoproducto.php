@@ -23,7 +23,7 @@
 					<div class="card-action grey lighten-3">
 						<button name="accion" value="create" class="btn teal thin">Guardar</button>
 						<?php echo @$_REQUEST["$mensaje"];?>
-						<a class="activator waves-effect waves-light btn blue-grey thin" href="#">Consultar propietarios</a>
+						<a class="activator waves-effect waves-light btn grey thin" href="#">Consultar propietarios</a>
 				</form>
 			</div>
 	  </div>
