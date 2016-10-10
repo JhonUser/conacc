@@ -59,7 +59,7 @@ switch ($action) {
 		$codigo=$_POST["cod"];
 			foreach ($pacomparar as $key){
 				if($key['rol_cod']===$codigo){
-					echo "Nro ".$key['rol_cod']." no puede usarse para codigo";
+					echo $key['rol_cod']." no puede usarse para codigo";
 					break;
 				}				
 			}

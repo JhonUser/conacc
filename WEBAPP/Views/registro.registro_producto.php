@@ -13,7 +13,7 @@ $propietario=Gestion_producto::consultarpropie();
 	<div class="row">
 		 <div class="card">
 			 <div class="card-action grey darken-3">
-				 <button type="button" class="btn  grey darken-3 z-depth-0 white-text thin" style="margin-left:25%">Registro de producto</button>
+				 <button type="button" class="btn  grey darken-3 z-depth-0 white-text thin" style="margin-left:25%;">Registro de producto</button>
 			 </div>
 			 <div class="card-content">
 			 	<div class="row">
