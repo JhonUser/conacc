@@ -48,5 +48,6 @@
 	      <span class="card-title grey-text text-darken-4">Consulta de Marcas<i class="material-icons right">close</i></span>
 	      <?php include 'consulta.marca.php'; ?>
 	    </div>
+		</div>
   </div>
 </div>

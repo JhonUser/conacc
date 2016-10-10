@@ -1,22 +1,15 @@
 
-<div class="row">
-
-  <form class="col s5" action="../Controller/log.controller.php" method="post">
-    <h5>Ingresar</h5>
-    <div class="row">
-      <div class="input-field col s7">
-        <i class="material-icons prefix">account_circle</i>
-        <input id="icon_prefix" type="text" name="nombre" class="validate">
-        <label for="icon_prefix">Usuario</label>
+<center class="teal">
+      <div class="row" style="margin-left: 37%; margin-top:10%">
+        <div class="card col s5 grey">
+          <div class="col s12">
+            <h5 class="white-text thin">Control de Acceso - ConAcc</h5><br>
+            <form class="" action="../Controller/log.controller.php" method="post">
+              <input type="text" name="nombre" class="white" placeholder="Usuario" required="">
+              <input type="password" name="contrasena" class="white" placeholder="Contraseña" required="">
+              <button type="submit" class="btn thin brown" name="v">Ingresar</button>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="input-field col s7">
-        <i class="material-icons prefix black-text">vpn_key</i>
-        <input id="icon_telephone" type="password" name="contrasena" class="validate">
-        <label for="icon_telephone">Contraseña</label>
-      </div>
-    </div>
-    <div class="input-field col s7">
-      <button type="submit" name="sesion" class="btn thin purple right">Ingresar</button>
-    </div>
-  </form>
-</div>
+    </center>

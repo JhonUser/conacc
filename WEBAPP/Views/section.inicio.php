@@ -39,12 +39,12 @@
                 <li>
                   <a href="dashboard.php?seccion=r_accesorio"  class="collapsible-header"><i class="material-icons left">extension</i>Accesorio</a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="dashboard.php?seccion=r_permiso"  class="collapsible-header"><i class="material-icons left">pan_tool</i>Permisos</a>
-                </li>
-                <li>
+                </li> -->
+                <!-- <li>
                   <a href="dashboard.php?seccion=r_modulo"  class="collapsible-header"><i class="material-icons left orange-text">view_module</i>Modulo</a>
-                </li>
+                </li> -->
                 <li>
                   <a href="dashboard.php?seccion=producto" class="collapsible-header"><i class="material-icons left indigo-text">important_devices</i>Productos</a>
                 </li>
