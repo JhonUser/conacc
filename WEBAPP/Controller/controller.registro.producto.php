@@ -18,16 +18,16 @@ switch ($accion) {
 	$registre_autoalerta=$_POST["registre_autoalerta"];
 	$fecha=date("o-m-d");
 	$hora=date("H:i");
-
+	$crt="c";
 	try{
 
 		Gestion_producto::Guardar($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$fecha,$hora);
-		echo "<a href='../Views/dashboard.php?seccion=rr_producto'>Volver</a>";
-		//header("location:../Views/dashboard.php?seccion=rr_producto");
+		//echo "<a href='../Views/dashboard.php?seccion=rr_producto&crt'>Volver</a>";
+		header("location:../Views/dashboard.php?seccion=rr_producto&crt");
 	}catch(Exception $e){
 		echo $e;
 	}
-	echo"<script>alert('guardo con exito'); </script>";
+	//echo"<script>alert('guardo con exito'); </script>";
 		break;
 
 		case 'modificar'://funcion para modificar usuario 9 lineas de abajo son para capturar los datos

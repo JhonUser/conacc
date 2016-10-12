@@ -34,7 +34,7 @@
        							 <label for="email">Telefono</label>
        		  			</div>
                   <div class="input-field col s6">
-       							 <i class="material-icons prefix grey-text">phone_android</i>
+       							 <i class="material-icons prefix grey-text">place</i>
        							 <input id="email" type="text" name="dir" class="validate" required>
        							 <label for="email">Direccion</label>
        		  			</div>
@@ -44,12 +44,12 @@
        							 <label for="email">Email</label>
        						</div>
                   <div class="input-field col s6">
-       							 <i class="material-icons prefix grey-text">phone_android</i>
+       							 <i class="material-icons prefix grey-text">group</i>
        							 <input id="email" type="text" name="car" class="validate" required>
        							 <label for="email">Cargo</label>
        		  			</div>
                   <div class="input-field col s6">
-       							 <i class="material-icons prefix grey-text">phone_android</i>
+       							 <i class="material-icons prefix grey-text">domain</i>
        							 <input id="email" type="text" name="cen" class="validate" required>
        							 <label for="email">Centro</label>
        		  			</div>

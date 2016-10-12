@@ -2,6 +2,7 @@
 	require_once("../Model/conexion.php");
 	require_once("../Model/usuario.class.php");
 	$codigo =Gestion_usuario::Consultarusuariocodigo($_GET["codigo_usuario"]);
+	// $codigo["usu_pass"];
 ?>
 <div class="container">
 	<div class="row">
@@ -11,7 +12,7 @@
 					<button type="button" class="btn lime darken-3 z-depth-0 white-text thin" style="margin-left:25%">Modificar Usuario</button>
 				</div>
 	      <div class="card-content">
-	<form action="../Controller/registrousu.php" method="POST">
+	<form action="../Controller/registro.controller.php" method="POST">
 	<label>Codigo: <?php echo $codigo["usu_cod"]; ?></label>
 	<input type="hidden" name="codigo" value=" <?php echo $codigo["usu_cod"]; ?>"/>
 

@@ -59,7 +59,7 @@ switch ($action) {
 		$codigo=$_POST["cod"];
 			foreach ($pacomparar as $key){
 				if($key['rol_cod']===$codigo){
-					echo $key['rol_cod']." no puede usarse para codigo";
+					echo "Codigo ".$key['rol_cod']." ya existe";
 					break;
 				}				
 			}
@@ -73,7 +73,7 @@ switch ($action) {
 		$nombre=$_POST["nom"];
 			foreach ($pacomparar as $key){
 				if($key['rol_nombre']===$nombre){
-					echo $key['rol_nombre']." no se puede usar";
+					echo $key['rol_nombre']." ya existe";
 					break;
 				}				
 			}

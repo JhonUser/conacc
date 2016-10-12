@@ -4,7 +4,7 @@ $(document).ready(function() {
   $('.datepicker').pickadate();
   $('.slider').slider({full_width: true});
   $('.modal-trigger').leanModal();
-   $('#tabla').DataTable();
+  $('#tabla').DataTable();
   $('.button-collapse').sideNav({
     menuWidth: 200,
     edge: 'left',

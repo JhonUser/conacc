@@ -73,7 +73,7 @@
 
 				<div class="card-action grey lighten-3">
 					<button name="action" class="btn thin" value="Guardar">Guardar</button>
-					<a href="dashboard.php?seccion=r_propietario"class="btn orange right thin">Registrar Propietario</a>
+					<a href="dashboard.php?seccion=<?php echo base64_encode('r.propietario'); ?>"class="btn orange right thin">Registrar Propietario</a>
 					</form>
 				</div>
 	    </div>

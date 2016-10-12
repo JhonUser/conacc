@@ -26,7 +26,7 @@
             case 'm_usuario':
               include("modifico_usuario.php");
               break;
-            case 'r_propietario':
+            case base64_encode('r.propietario'):
               include 'registro.propietario.php';
               break;
             case 'rol':
