@@ -8,14 +8,15 @@
 	        <div >
 	          <div class="card">
 							<div class="card-action teal darken-2">
-							<a href="dashboard.php?seccion=<?php echo base64_encode('r.propietario') ?>" class="btn-floating z-depth-0 teal darken-2"><i class="material-icons">keyboard_backspace</i></a>
+							<a href="dashboard.php?seccion=r.propietario' ?>" class="btn-floating z-depth-0 teal darken-2"><i class="material-icons">keyboard_backspace</i></a>
 							<button type="button" class="btn teal darken-2 z-depth-0 white-text thin" style="margin-left:25%">Modificar propietario</button>
 
 							</div>
 
 	            <div class="card-content">
 
-								<form action="../Controller/propietario.controller.php" method="post" <?php $codigo = registro::datos_modificar(base64_decode($_GET["cod"])-500); ?>>
+								<form action="../Controller/propietario.controller.php" method="post" <?php 
+								$codigo = registro::datos_modificar($_GET["cod"]); ?>>
 
 										<input type="hidden" name="cod" value="<?php echo $codigo["prop_cod"]; ?>" required>
 										<label for="ced">CC / T.I*</label>

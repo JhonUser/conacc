@@ -1,24 +1,16 @@
-
-
 ::-webkit-scrollbar {
   width: 5px;
   background-color: #e0e0e0;
 }
 ::-webkit-scrollbar-thumb {
-
   background-color: #bdbdbd;
-
 }
 .side-nav{
   margin-top: 4.7%;
-
 }
 .card{
   margin-left: 16%;
 }
-
-
-
 
 /*hr{
   color: #a9a9a9;

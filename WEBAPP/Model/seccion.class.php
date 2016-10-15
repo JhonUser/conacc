@@ -2,14 +2,14 @@
 <?php
   class dashboard{
 
-    public static function session(){
+    function session(){
        session_start();
        	if (!isset($_SESSION["nombre"])) {
        		header("location: ../index.php");
       	}
      }
 
-    public static function pagina(){
+    function pagina(){
       if (isset($_GET["seccion"])) {
   			$ventana = $_GET["seccion"];
 

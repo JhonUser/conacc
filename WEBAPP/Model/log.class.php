@@ -15,7 +15,7 @@
         Conexion::Cerrarbd();
       }
       catch (Exception $e) {
-          die( "Error: " . $e->getMessage() . " en la linea: " . $e->getLine() . " , su codigo es: " . $e->getCode());
+          echo "Error: " . $e->getMessage();
       }
     }
   }

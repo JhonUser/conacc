@@ -12,17 +12,15 @@
 				try {
 					self::$conex=new PDO('mysql:host='.self::$bdhost.';dbname='.self::$bdname.';charset=utf8',self::$bduser, self::$bdpass);
 					self::$conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-					//echo "BD abierta";
+				
 				}
 				catch(PDOException $e){
 					echo $e->getMessage();
 				}
 			}return self::$conex;
 		}
-		public static function Cerrarbd()
-		{
+		public static function Cerrarbd(){
 			self::$conex=null;
-			//echo "BD cerrada";
 		}
 	}
 ?>

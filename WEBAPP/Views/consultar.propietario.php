@@ -52,11 +52,11 @@ function(isConfirm){
           <td><?php echo $views["prop_car"]?></td>
           <td><?php echo $views["prop_cen"]?></td>
           <td>
-            <a href="dashboard.php?seccion=m.propietario&cod=<?php echo base64_encode($views['prop_cod']+500); ?>" class="btn-floating light-green">
+            <a href="dashboard.php?seccion=m.propietario&cod=<?php echo $views['prop_cod']; ?>" class="btn-floating light-green">
               <i class="material-icons">edit</i>
             </a>
 
-            <a onclick='d("<?php echo base64_encode($views['prop_cod']+500); ?>")' class='btn-floating red'>
+            <a onclick='d("<?php echo $views['prop_cod']; ?>")' class='btn-floating red'>
                   <i class='material-icons'>delete_forever</i>
             </a>
           </td>

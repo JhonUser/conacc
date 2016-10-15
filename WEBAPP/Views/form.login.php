@@ -1,4 +1,3 @@
-
 <center class="teal">
       <div class="row" style="margin-left: 37%; margin-top:10%">
         <div class="card col s5 grey">
