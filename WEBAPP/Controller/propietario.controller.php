@@ -4,9 +4,8 @@
   if (isset($_GET["e"])) {
     try {
       $codigo = $_GET["cod"];
-    
       registro::eliminar_propietario($codigo);
-      header("location: ../Views/dashboard.php?seccion=r.propietario"));
+      header("location: ../Views/dashboard.php?seccion=".base64_encode("r.propietario"));
     } catch (Exception $e) {
       echo "Error" . $e->getMessage();
     }
@@ -21,7 +20,7 @@
         try{
             registro::guardar_propietario($datos);
             $crt="c";
-            header("location: ../Views/dashboard.php?seccion=r.propietario"."&crt");
+            header("location: ../Views/dashboard.php?seccion=".base64_encode("r.propietario")."&crt");
           }catch(Exception $e){
             echo "Error" . $e->getMessage();
           }
@@ -33,7 +32,7 @@
           registro::modificar_propietario($datos);
           $upt="u";
           echo "Registro modificado";
-          header("location: ../Views/dashboard.php?seccion=r.propietario"."&upt");
+          header("location: ../Views/dashboard.php?seccion=".base64_encode("r.propietario")."&upt");
          }catch(Exception $e){
            echo "Error" . $e->getMessage();
          }

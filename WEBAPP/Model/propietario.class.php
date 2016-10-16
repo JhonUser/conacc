@@ -3,15 +3,13 @@
       function guardar_propietario($datos){
       	try {
           $conex = Conexion::Abrirbd();
-          $consul = 
-          "INSERT INTO propietario(prop_doc,prop_nom,prop_ape,prop_tel,prop_dir,prop_ema,prop_cen,prop_car)
-                       VALUES(:doc,:nom,:ape,:tel,:dir,:ema,:cen,:car)";
-          
+          $consul="INSERT INTO propietario(prop_doc,prop_nom,prop_ape,prop_tel,prop_dir,prop_ema,prop_cen,prop_car)
+                       VALUES(?,?,?,?,?,?,?,?)";
+
           $info = $conex->prepare($consul);
 
-        	$info->execute(array($datos["doc"], $datos["nom"],$datos["ape"],
-                               $datos["tel"], $datos["dir"],$datos["ema"],
-                               $datos["cen"], $datos["car"] ));
+        	$info->execute(array($datos["ced"], $datos["nom"],$datos["ape"],$datos["tel"], $datos["dir"],$datos["ema"],
+                               $datos["cen"], $datos["car"]));
 
           Conexion::Cerrarbd();
       	}
@@ -43,10 +41,10 @@
         $conex = Conexion::Abrirbd();
 
         $consul = "UPDATE propietario SET prop_doc = ?,prop_nom = ?,prop_ape = ?,prop_tel = ?,
-                                          prop_dir = ?,prop_ema = ?,prop_cen = ?,prop_car = ? 
+                                          prop_dir = ?,prop_ema = ?,prop_cen = ?,prop_car = ?
                                       WHERE prop_cod = ?";
         $info = $conex->prepare($consul);
-        $info->execute(array($datos["doc"], $datos["nom"],$datos["ape"],
+        $info->execute(array($datos["ced"], $datos["nom"],$datos["ape"],
                              $datos["tel"], $datos["dir"],$datos["ema"],
                              $datos["cen"], $datos["car"],$datos["cod"])
                             );
@@ -63,7 +61,7 @@
 
         $consul = "DELETE FROM propietario WHERE prop_cod = ?";
         $info = $conex->prepare($consul);
-        $info->execute($codigo);
+        $info->execute(array($codigo));
 
         Conexion::Cerrarbd();
       } catch (Exception $e) {
@@ -78,7 +76,7 @@
         $consul = "SELECT * FROM propietario WHERE prop_cod = ?";
 
         $info = $conex->prepare($consul);
-        $info->execute($codigo);
+        $info->execute(array($codigo));
         $result = $info->fetch(PDO::FETCH_BOTH);
 
         return $result;
