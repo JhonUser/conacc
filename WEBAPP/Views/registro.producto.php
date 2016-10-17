@@ -8,12 +8,17 @@ $tipopro=Gestion_Tipoproducto::cargar_tipo();
 $marca=Gestion_Marca::Cargar_marca();
 ?>
 <div class="container">
-		<center class="">Registro de productos</center>
+		<div class="card">
+			<div class="card-action blue-grey">
+          		<button type="button" class="btn blue-grey z-depth-0 white-text thin" style="margin-left:32%">Registro de productos</button>
+        	</div>
+        	<div class="card-content">
+        	<div class="row">
 			<form class="col s12" action="../Controller/producto.controller.php" method="POST">
 <!-- 
 				<label>Codigo del producto<br></label>
 				<input type="text" name="txt_codpro"/></br> -->
-				<div class="col s6">
+				<div class="col s11">
 					<label>Tipo de producto<br></label>
 						<select name="txt_tipopro">
 							<?php
@@ -23,7 +28,7 @@ $marca=Gestion_Marca::Cargar_marca();
 						?>
 					</select>
 				</div>
-
+				<div class="col s11">
 				<label>Marca<br></label>
 				<select name="txt_marcapro">
 					<?php
@@ -31,15 +36,16 @@ $marca=Gestion_Marca::Cargar_marca();
 					echo "<option value=".$marcas["marca_cod"].">".$marcas["marca_nombre"]."</option>";
 				}
 				?>
-			</select><br>
+			</select>
+			</div>
 
-			<div class="input-field col s6">
+			<div class="input-field col s12">
 				<i class="material-icons prefix grey-text">description</i>
 				<input id="icon_prefix" type="text" name="txt_descpro" class="validate" required>
 				<label for="icon_prefix">Descripcion del producto</label>
 			</div>
 
-			<div class="col s7">
+			<div class="col s12">
 				<button class="waves-effect waves-light btn "  name="accion" value="create">Guardar</button>
 			</div>
 				<?php echo @$_REQUEST["$mensaje"]; ?><br>
@@ -47,8 +53,10 @@ $marca=Gestion_Marca::Cargar_marca();
 				<a href="dashboard.php?seccion=r_marca"style="margin-left: 101%; margin-top: -60%;" class="btn-floating btn-large waves-effect waves-light red pull-s5"><i class="material-icons">add</i></a>
 				
 			</form>
+			</div>
+			</div>
 
-
+</div>
 
 </div>
 <div class="container">
