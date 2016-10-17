@@ -1,7 +1,11 @@
 <!-- Jeison V. Calle -->
 <?php
+session_start();
+ if (!isset($_SESSION["nombre"]) or ($_SESSION["rol"] != 1)) {
+	 header("location: ../Views/index.php");
+ }
 require_once("../Model/conexion.php");
-require_once("../Model/rol.class.php");		
+require_once("../Model/rol.class.php");
 date_default_timezone_set('America/Bogota');
 
 $action=$_REQUEST["action"];
@@ -61,7 +65,7 @@ switch ($action) {
 				if($key['rol_cod']===$codigo){
 					echo "Codigo ".$key['rol_cod']." ya existe";
 					break;
-				}				
+				}
 			}
 				if($key['rol_cod']!==$codigo){
 					echo "Puede usarlo";
@@ -75,12 +79,12 @@ switch ($action) {
 				if($key['rol_nombre']===$nombre){
 					echo $key['rol_nombre']." ya existe";
 					break;
-				}				
+				}
 			}
 				if($key['rol_nombre']!==$nombre){
 					echo "Puede usarlo";
 				}
-		break;	
+		break;
 }
 //header("location:../views/consulta.rol.php");
 ?>

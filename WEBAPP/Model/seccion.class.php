@@ -4,8 +4,8 @@
 
     function session(){
        session_start();
-       	if (!isset($_SESSION["nombre"])) {
-       		header("location: ../index.php");
+       	if (!isset($_SESSION["nombre"]) or ($_SESSION["rol"] != 1)) {
+       		header("location: ../Views/index.php");
       	}
      }
 
@@ -14,9 +14,6 @@
   			$ventana = $_GET["seccion"];
 
           switch ($ventana) {
-            case base64_encode('inicio'):
-              include("inicio.php");
-              break;
             case 'producto':
               include("registro.producto.php");
               break;
@@ -92,7 +89,12 @@
             case 'r_componente':
               include("registro.componente.php");
               break;
-
+            case 'anuncios':
+              include 'registrar.anuncios.php';
+              break;
+            case 'm_anuncios':
+              include 'modificar.anuncio.php';
+              break;
             default:
 
           break;

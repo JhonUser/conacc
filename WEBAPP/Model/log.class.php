@@ -6,7 +6,8 @@
       try{
 
         $pdo=Conexion::Abrirbd();
-        $consul = "SELECT usuario.usu_cod, usuario.usu_nom, usuario.usu_nick, usuario.usu_pass, rol.rol_cod, rol.rol_nombre FROM rol INNER JOIN usuario ON rol.rol_cod = usuario.rol_cod AND usuario.usu_nick = ?";
+        $consul = "SELECT usuario.usu_cod, usuario.usu_nom, usuario.usu_nick, usuario.usu_pass, rol.rol_cod
+                   FROM usuario INNER JOIN rol ON usuario.rol_cod = rol.rol_cod AND usuario.usu_nick = ?";
         $mostrar = $pdo->prepare($consul);
         $mostrar->execute(array($name));
         $dato=$mostrar->fetch(PDO::FETCH_BOTH);

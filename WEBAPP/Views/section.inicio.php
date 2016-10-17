@@ -1,4 +1,12 @@
 <!-- Jhon T. Gómez -->
+  <ul id="dropdown1" class="dropdown-content" style="margin-top: 4.7%;">
+    <li><a href="#!">Perfil</a></li>
+    <li><a href="#!">Cuenta</a></li>
+    <li class="divider"></li>
+    <li>
+      <a href="../Controller/cerrarsession.php" class="indigo-text">Salir</a>
+    </li>
+  </ul>
   <nav class="blue-grey darken-2 z-depth-0" >
       <div class="nav-wrapper">
         <ul>
@@ -6,10 +14,13 @@
             <a href="#" class="white-text thin" style="background: #3c948b; width: 240px;"><?php echo "Bienvenido, " . $_SESSION["nombre"]; ?></a>
 
           </li>
-          <li class="right">
-            <a href="../Controller/cerrarsession.php" class="grey darken-3 thin 500" id="cerrar"><i class="material-icons right white-text">trending_down</i>Cerrar sesion</a>
+
             <!-- <a href="#"  ><i class="material-icons button-collapse" data-activates="slide-out">menu</i></a> -->
-          </li>
+
+            <li class="right">
+              <a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons">more_vert</i></a>
+            </li>
+
         </ul>
       </div>
     </nav>
@@ -18,7 +29,7 @@
     <ul class="side-nav fixed z-depth-0" id="mobile-demo">
               <ul class="collapsible grey lighten-4" data-collapsible="accordion" >
                 <li>
-                  <a href="dashboard.php?seccion=<?php echo base64_encode('inicion') ?>"class="collapsible-header" class="collapsible-header"><i class="material-icons left green-text">home</i>Inicio</a>
+                  <a href="dashboard.php?seccion=anuncios"class="collapsible-header" class="collapsible-header"><i class="material-icons left green-text">home</i>Inicio</a>
                   <div class="collapsible-body indigo-text text-lighten-5" style="background-color: #673AB7"><p>...</p></div>
                 </li>
                 <li>

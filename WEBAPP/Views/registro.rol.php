@@ -7,20 +7,20 @@
 			var codigo =$("#codrol").val();
 			var vali= "concod";
 			$.post("../Controller/guardarrol.php", {cod: codigo, action:vali}).done(function(data){
-			$("#trato").html(data);	
+			$("#trato").html(data);
 			//alert( codigo );
 			});
-        	
+
 		});
-        
+
         $("#nom").keyup(function(){
 			var nombre =$("#nom").val();
 			var valid= "connom";
 			$.post("../Controller/guardarrol.php", {nom: nombre, action:valid}).done(function(data){
-			$("#nombre").html(data);	
-			
+			$("#nombre").html(data);
+
 			});
-        	
+
 		});
 
     });
@@ -33,7 +33,6 @@
 			</div>
 				 <div class="card-content">
 					<form action="../Controller/guardarrol.php" method="post" onsubmit="algo()">
-						<center><h4 class="thin">Registro de Rol</h4></center>
 							<div class="row">
 							  	<div class="input-field col s10">
 									<i class="material-icons prefix grey-text">control_point_duplicate</i>
@@ -41,7 +40,7 @@
 								</div>
 							</div>
 							<span  id="trato" style="color: green"></span>
-					
+
 							<div class="row" id="trato">
 							  	<div class="input-field col s10">
 									<i class="material-icons prefix grey-text">control_point</i>
@@ -50,7 +49,7 @@
 								</div>
 							</div>
 							<span  id="nombre" style="color: green"></span>
-							
+
 							<div class="row">
 							  	<div class="input-field col s10">
 									<i class="material-icons prefix grey-text">description</i>
