@@ -1,4 +1,3 @@
-<!-- Andrea T. -->
 <?php require_once("../model/conexion.php");
 		require_once("../model/registro.producto.class.php");
 			$usuario=Gestion_producto::consultarUsu();
@@ -30,17 +29,12 @@
 							<a href="dashboard.php?seccion=r_t_producto" class="btn-floating btn-large waves-effect waves-light red pull-s5"><i class="material-icons">add</i></a>
 						</div>
 
-						<div class="input-field col s5">
+					<div class="input-field col 5">
 							<i class="material-icons prefix grey-text">people</i>
-							<select name="codigo_propietario">
-								<option value="" disabled selected>Propietario*</option>
-								<?php
-									foreach ($propietario as $propie ) {
-										echo "<option value=".$propie["prop_cod"].">".$propie["prop_nom"]."</option>";
-									}
-								?>
-							</select>
-						</div>
+							<input  type="text" id="icon_prefix" name="codigo_propietario">
+							<label for="icon_prefix">Documento de Propietario: *</label>
+					</div>
+					
 						<div class="input-field col s1">
 							<a href="dashboard.php?seccion=r_marca" class="btn-floating btn-large waves-effect waves-light red pull-s5"><i class="material-icons">add</i></a>
 						</div>
