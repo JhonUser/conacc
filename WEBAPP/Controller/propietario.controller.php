@@ -21,8 +21,11 @@
             registro::guardar_propietario($datos);
             $crt="c";
             header("location: ../Views/dashboard.php?seccion=".base64_encode("r.propietario")."&crt");
+          
           }catch(Exception $e){
-            echo "Error" . $e->getMessage();
+            $e= $e->getCode();
+            echo $e;
+            //header("location: ../Views/dashboard.php?seccion=".base64_encode("r.propietario")."&e");
           }
         }
 
@@ -34,7 +37,7 @@
           echo "Registro modificado";
           header("location: ../Views/dashboard.php?seccion=".base64_encode("r.propietario")."&upt");
          }catch(Exception $e){
-           echo "Error" . $e->getMessage();
+             header("location: ../Views/dashboard.php?seccion=".base64_encode("r.propietario")."&e");
          }
        }
      }

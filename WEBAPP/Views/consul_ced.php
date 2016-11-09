@@ -31,9 +31,8 @@ $codigoEntrada=Gestion_producto::consultarced($cedula);
 			<td>Apellidos</td>
 			<td>Documento</td>
 			<td>serial</td>
-			<td>Producto</td>
-			<td>Color</td>
-			<td>Fecha entrada</td>
+			<td>Descripcion</td>
+		  <td>Fecha entrada</td>
 			<td>Hora entrada</td>
 			<td>Fecha salida</td>
 			<td>Hora salida</td>
@@ -48,12 +47,12 @@ $codigoEntrada=Gestion_producto::consultarced($cedula);
 					<td>".$camp["prop_ape"]."</td>
 					<td>".$camp["prop_doc"]."</td>
 					<td>".$camp["regi_serial"]."</td>
-					<td>".$camp["tipopro_nombre"]."-".$camp["marca_nombre"]."</td>
+					<td>".$camp["regi_desc"]."</td>
 					<td>".$camp["entsal_fechaent"]."</td>
 					<td>".$camp["entsal_horaent"]."</td>
 					<td>".$camp["entsal_fechasal"]."</td>
 					<td>".$camp["entsal_horasal"]."</td>
-					
+
 					<td>
 					<a class='btn-floating light-red' title='Marcar salida' style='cursor:pointer'onclick='salida(".$camp["entsal_cod"].");'>
 						<i class='material-icons'>exit_to_app</i></a>

@@ -109,7 +109,7 @@ function consultar(){
 		$pdo=conexion::AbrirBD();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-		$sql="SELECT registro_producto.regi_cod, propietario.prop_doc, propietario.prop_nom, propietario.prop_ape, propietario.prop_cod, registro_producto.produ_cod, registro_producto.regi_serial, entrada_salida.entsal_cod, entrada_salida.entsal_fechaent, entrada_salida.entsal_fechasal, entrada_salida.entsal_horaent, entrada_salida.entsal_horasal from entrada_salida inner join registro_producto on registro_producto.regi_cod=entrada_salida.regi_cod inner join propietario on registro_producto.prop_cod=propietario.prop_cod where prop_doc = ?";
+		$sql="SELECT registro_producto.regi_cod, propietario.prop_doc, propietario.prop_nom, propietario.prop_ape, propietario.prop_cod, registro_producto.produ_cod, registro_producto.regi_serial, registro_producto.regi_desc, entrada_salida.entsal_cod, entrada_salida.entsal_fechaent, entrada_salida.entsal_fechasal, entrada_salida.entsal_horaent, entrada_salida.entsal_horasal from entrada_salida inner join registro_producto on registro_producto.regi_cod=entrada_salida.regi_cod inner join propietario on registro_producto.prop_cod=propietario.prop_cod where prop_doc = ?";
 		$query=$pdo->prepare($sql);
 		$query->execute(array($cedu));
 		$result=$query->fetchALL(PDO::FETCH_BOTH);

@@ -25,7 +25,8 @@ switch ($accion) {
 		//echo "<a href='../Views/dashboard.php?seccion=rr_producto&crt'>Volver</a>";
 		header("location:../Views/dashboard.php?seccion=rr_producto&crt");
 	}catch(Exception $e){
-		echo $e;
+		$e= $e->getCode();
+			header("location:../Views/dashboard.php?seccion=rr_producto&e");
 	}
 	//echo"<script>alert('guardo con exito'); </script>";
 		break;
@@ -43,9 +44,11 @@ switch ($accion) {
 try{
 			Gestion_producto::modificar($codigo_registro,$codigo_pro,$registro_serial,$registre_color,$registre_decrip,$registre_autoalerta);
 			header("location:../Views/dashboard.php?seccion=rr_producto&upt");
-			
+
 		}catch(Exception $e){
 			echo $e;
+			$e= $e->getCode();
+				header("location:../Views/dashboard.php?seccion=rr_producto&e");
 		}
 
 		break;
