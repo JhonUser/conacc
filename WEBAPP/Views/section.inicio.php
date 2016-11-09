@@ -1,7 +1,6 @@
 <!-- Jhon T. Gómez -->
   <ul id="dropdown1" class="dropdown-content" style="margin-top: 4.7%;">
-    <li><a href="#!">Perfil</a></li>
-    <li><a href="#!">Cuenta</a></li>
+  
     <li class="divider"></li>
     <li>
       <a href="../Controller/cerrarsession.php" class="indigo-text">Salir</a>
