@@ -11,15 +11,20 @@
         $p = $_GET["p"];
         switch ($p) {
           case 'propietario':
-            include 'registro.propietario.php';
+            include 'registro.propietario.vigilante.php';
             break;
           case 'producto':
-            include 'registro.registro_producto.php';
+            include 'registro.registro_producto.Vigilante.php';
             break;
           case 'inicio':
             include 'inicio.php';
             break;
-
+          case 'r_producto':
+            include 'registro.producto.php';
+            break;
+          case 'm.propietario':
+            include 'modificar.propietario.php';
+            break;
           default:
             # code...
             break;

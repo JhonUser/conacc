@@ -15,7 +15,7 @@
       <link rel="stylesheet" type="text/css" href="script/sweetalert.css">
     </head>
 
-    <body style="background-color: #c5cae9;">
+    <body style="background-color: grey;">
       <?php
   		$err= isset($_GET['att']);
   				if($err=="error"){

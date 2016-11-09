@@ -34,8 +34,6 @@
         <li>
           <a href="vigilante.php?p=producto"  class="collapsible-header"><i class="material-icons left grey-text">book</i>Producto</a>
         </li>
-        <li>
-          <a href="vigilante.php?p=aproducto" class="collapsible-header"><i class="material-icons left grey-text">important_devices</i>Productos</a>
-        </li>
+      
       </ul>
     </ul>
