@@ -15,7 +15,7 @@
 
 	            <div class="card-content">
 
-								<form action="../Controller/propietario.controller.php" method="post" <?php 
+								<form action="../Controller/propietario.controller.php" method="post" <?php
 								$codigo = registro::datos_modificar($_GET["cod"]); ?>>
 
 										<input type="hidden" name="cod" value="<?php echo $codigo["prop_cod"]; ?>" required>
@@ -31,10 +31,28 @@
 										<input type="text"  name="dir" id="dir" value="<?php echo $codigo["prop_dir"]; ?>" required>
 										<label for="ema">Email*</label>
 										<input type="email" name="ema" id="ema" value="<?php echo $codigo["prop_ema"]; ?>" required>
-										<label for="cen">Centro*</label>
-										<input type="text"  name="cen" id="cen" value="<?php echo $codigo["prop_cen"]; ?>" required>
-										<label for="car">Cargo*</label>
-										<input type="text"  name="car" id="car" value="<?php echo $codigo["prop_car"]; ?>" required>
+									<div class="row">
+										<div class="input-field col s6">
+											<i class="material-icons prefix grey-text">people</i>
+											<select name="car">
+											 <option value="Instructor">Instructor</option>
+											 <option value="Aprendiz">Aprendiz</option>
+											 <option value="Administrativo">Administrativo</option>
+											 <option value="Vigilante">Vigilante</option>
+											 <option value="Visitante">Visitante</option>
+											</select>
+										<label>Cargo</label>
+										</div>
+										<div class="input-field col s6">
+											<i class="material-icons prefix grey-text">people</i>
+											<select name="cen">
+											 <option value="CDMC">CDMC</option>
+											 <option value="Mobiliario">C. Mobiliario</option>
+											 <option value="Confeccion y Moda">C. Confeccion y Moda</option>
+											</select>
+										<label>Centro</label>
+										</div>
+									</div>
 
 
 	            </div>

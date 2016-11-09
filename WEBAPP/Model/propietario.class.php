@@ -86,5 +86,21 @@
         echo "Error: " . $e->getMessage();
       }
     }
+    function buscar($codigo){
+      try {
+        $conex = Conexion::Abrirbd();
+
+        $consul = "SELECT * FROM propietario WHERE prop_doc = ?";
+
+        $info = $conex->prepare($consul);
+        $info->execute(array($codigo));
+
+        $result = $info->fetchALL(PDO::FETCH_BOTH);
+        return $result;
+      } catch (Exception $e) {
+        echo "Error";
+      }
+
+    }
   }
 ?>

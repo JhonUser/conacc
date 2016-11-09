@@ -1,0 +1,84 @@
+#bg{
+	width: 100%;
+	 height: 671px; 
+	 /*background-image: url(bg2.jpg);
+	 background-repeat: no-repeat*/
+}
+body {
+  margin: 0; 
+}
+video{
+    top: 0%;
+    left: 0%;
+    width:100%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0px;
+}
+
+#conuno{
+	position: absolute; 
+	top:150px; 
+	font-size: 46px;
+	width: 95%
+}
+#condos{
+	position: absolute;
+	 top:150px; 
+	 left: 5px; 
+	 font-size: 46px;
+	font-weight: bold;
+	   color: #4db6ac;
+	   width: 95%
+}
+#try1{
+	position: absolute; 
+	top:50px; 
+	font-size: 46px;
+	width: 95%
+}
+#try2{
+	position: absolute;
+	 top:50px; 
+	 left: 5px; 
+	 font-size: 46px;
+	font-weight: bold;
+	   color: #4db6ac;
+	   width: 95%
+}
+#try3{
+	position: absolute; 
+	  top:80px; 
+	font-size: 24px;
+	width: 95%;
+	font-weight: 200;
+}
+#contres{
+	position: absolute; 
+	  top:200px; 
+	font-size: 34px;
+	width: 95%;
+	font-weight: 200;
+}
+#button {
+    background:transparent;
+}
+#goal{
+	font-size: 25px;
+	font-weight: 300;
+}
+#btns{
+	margin-left: 15%;
+}
+section{
+	width: 100%;
+}
+#footer{
+	 background-color: #4db6ac;
+}
+#btns{
+	position: absolute;
+	top:80%;
+	left: 20%;
+	z-index: 10px
+}

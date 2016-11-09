@@ -28,7 +28,7 @@
 					echo "<script type='text/javascript'>";
 					echo "e();";
 					echo "setTimeout('redir()',2000);";
-					echo "</script>";	
+					echo "</script>";
 				}
 
 			$try = isset($_GET['crt']);
@@ -37,8 +37,8 @@
 					echo "<script type='text/javascript'>";
 					echo "c();";
 					echo "setTimeout('redir()',2000)";
-					echo "</script>";	
-				
+					echo "</script>";
+
 				}
 			$try = isset($_GET['upt']);
 				if ($try=="u")
@@ -47,7 +47,7 @@
 					echo "u();";
 					echo "setTimeout('redir()',2000)";
 					echo "</script>";
-					
+
 				}
 			$try = isset($_GET['act']);
 				if ($try=="ac")
@@ -56,9 +56,9 @@
 					echo "a();";
 					echo "setTimeout('redir()',2000)";
 					echo "</script>";
-					
-				}	
-			
+
+				}
+
 		 ?>
 
 

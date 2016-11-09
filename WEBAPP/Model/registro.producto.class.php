@@ -6,16 +6,16 @@ class Gestion_producto{
 	function guardar($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$fecha,$hora){
 	$pdo=conexion::Abrirbd();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-	$sql2="SELECT prop_cod from propietario where prop_doc = ?";
-	$query=$pdo->prepare($sql2);
-	$query->execute(array($codigo_propiedad));
-	$result2=$query->rowCount();
-	$codigo_propie=$result2;
+	// $sql2="SELECT prop_cod from propietario where prop_doc = ?";
+	// $query=$pdo->prepare($sql2);
+	// $query->execute(array($codigo_propiedad));
+	// $result2=$query->rowCount();
+	// $codigo_propie=$result2;
 
 	$sql="INSERT INTO registro_producto (usu_cod,produ_cod,prop_cod,regi_serial,regi_color,regi_fecha,regi_desc,regi_autoalterna) values(?,?,?,?,?,?,?,?)";
 
 	$query=$pdo->prepare($sql);
-	$query->execute(array($codigo,$codigo_pro,$codigo_propie,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta));
+	$query->execute(array($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta));
 
 //consultar entrada y salir
 
@@ -24,14 +24,14 @@ class Gestion_producto{
 	$query->execute();
 	$result1=$query->fetch(PDO::FETCH_BOTH);
 	$codigo=$result1[0];
-    
+
 
 	$sql2="INSERT INTO entrada_salida (regi_cod,entsal_fechaent,entsal_fechasal,entsal_horaent,entsal_horasal) values(?,?,?,?,?)";
 
 	$query1=$pdo->prepare($sql2);
 	$query1->execute(array($codigo,$fecha,"",$hora,""));
 
-	
+
 	conexion::Cerrarbd();
 
 }
@@ -129,7 +129,7 @@ function consultar(){
 	// 	return $result;
 
 	// 	Conexion::Cerrarbd();
-		
+
 	// }
 		function modificar($codigo_registro,$codigo_pro,$registro_serial,$registre_color,$registre_decrip,$registre_autoalerta){
 			$pdo = Conexion::Abrirbd();

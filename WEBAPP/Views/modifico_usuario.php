@@ -34,8 +34,7 @@
 	<label>Nombre de Usuario</label>
 	<input type="text" name="nombredeusuario" value=" <?php echo $codigo["usu_nick"]; ?>"required/>
 
-	<label>Contraseña</label>
-	<input type="password" name="contrasena" value=" <?php echo $codigo["usu_pass"]; ?>"required/>
+
 <div class="card-action grey lighten-3">
 	<button value="Modificar" class="btn teal thin" name="action">Modificar</button>
 

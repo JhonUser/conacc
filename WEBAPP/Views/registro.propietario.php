@@ -1,9 +1,27 @@
 <!-- Jhon T. Gómez -->
+<script type="text/javascript">
+      function sugerencia(str){
+        var xmlhttp;
+        if (str.length==0) {
+          document.getElementById("txtHint").innerHTML="";
+          return;
+        }
+        if (window.XMLHttpRequest) {
+          xmlhttp =new XMLHttpRequest();
+        }else {
+          xmlhttp =new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function(){
+          if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+            document.getElementById('txtHint').innerHTML=xmlhttp.responseText;
+          }
+        }
+        xmlhttp.open("GET", "../Controller/buscar.controller.php?num=" + str, true);
+        xmlhttp.send();
+      }
+    </script>
 <div class="container">
 <div class="row">
-
-
-
   <div class="card">
     <div class="card-action teal">
       <button type="button" class="btn teal z-depth-0 white-text thin" style="margin-left:25%">Registro de propietario</button>
@@ -15,8 +33,9 @@
        				  <div class="row">
                   <div class="input-field col s6">
        					 		 <i class="material-icons prefix grey-text">credit_card</i>
-       							 <input id="email" type="number" name="ced" class="validate" required>
+       							 <input id="email" type="number" name="ced" onkeyup="sugerencia(this.value)" class="validate" required>
        							 <label for="email">Cedula</label>
+                     <div style="position:absolute; font-size: 13px; margin-left: 11%; margin-top: -3%;" id="txtHint"></div>
        	  				</div>
        						<div class="input-field col s6">
        				       <i class="material-icons prefix grey-text">account_circle</i>
@@ -44,15 +63,25 @@
        							 <label for="email">Email</label>
        						</div>
                   <div class="input-field col s6">
-       							 <i class="material-icons prefix grey-text">group</i>
-       							 <input id="email" type="text" name="car" class="validate" required>
-       							 <label for="email">Cargo</label>
-       		  			</div>
+      							<i class="material-icons prefix grey-text">people</i>
+      							<select name="car">
+      					     <option value="Instructor">Instructor</option>
+      					     <option value="Aprendiz">Aprendiz</option>
+      					     <option value="Administrativo">Administrativo</option>
+      					     <option value="Vigilante">Vigilante</option>
+      					     <option value="Visitante">Visitante</option>
+      						  </select>
+      						<label>Cargo</label>
+      						</div>
                   <div class="input-field col s6">
-       							 <i class="material-icons prefix grey-text">domain</i>
-       							 <input id="email" type="text" name="cen" class="validate" required>
-       							 <label for="email">Centro</label>
-       		  			</div>
+      							<i class="material-icons prefix grey-text">people</i>
+      							<select name="cen">
+      					     <option value="CDMC">CDMC</option>
+      					     <option value="Mobiliario">C. Mobiliario</option>
+      					     <option value="Confeccion y Moda">C. Confeccion y Moda</option>
+      						  </select>
+      						<label>Centro</label>
+      						</div>
        				</div>
       <div class="card-action grey lighten-3">
         <button class="waves-effect waves-light btn teal  thin" name="g">Guardar</button>

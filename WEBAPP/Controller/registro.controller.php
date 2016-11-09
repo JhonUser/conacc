@@ -26,6 +26,8 @@ switch ($action) {
 
 		}catch(Exception $e){
 			echo $e;
+			$e= 23000;
+			header("location: ../Views/dashboard.php?seccion=usuario&e");
 		}
 
 		break;
@@ -38,11 +40,10 @@ switch ($action) {
 		$email=$_POST["email"];
 		$telefono=$_POST["telefono"];
 		$nombredeusuario=$_POST["nombredeusuario"];
-		$contrasenas=$_POST["contrasena"];
-		$cifrars=password_hash($contrasenas,PASSWORD_DEFAULT);
+
 
 try{
-			Gestion_usuario::Modificar($codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrars);
+			Gestion_usuario::Modificar($codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario);
 			$upt="u";
 		header("location: ../Views/dashboard.php?seccion=usuario&upt");
 
@@ -55,8 +56,8 @@ try{
 		case 'estado':
 			$estado="Inactivo";
 			$codigo=$_GET["codigo_usuario"];
-	
-			
+
+
 			try{
 				Gestion_usuario::Estado($estado,$codigo);
 				header("location: ../Views/dashboard.php?seccion=usuario");
@@ -69,8 +70,8 @@ try{
 		case 'activo':
 			$estado="Activo";
 			$codigo=$_GET["codigo_usuario"];
-	
-			
+
+
 			try{
 				Gestion_usuario::activo1($estado,$codigo);
 				header("location: ../Views/dashboard.php?seccion=usuario");

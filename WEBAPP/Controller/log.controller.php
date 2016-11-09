@@ -19,15 +19,11 @@
                   }
                 }
                 else {
-                  //echo "error";
-                  $attp="log_error";
-                  header('location: ../Views/index.php?attp');
+                  echo "error";
                 }
               }
             catch (Exception $e) {
-              $attp="log_error";
-              header('location: ../Views/index.php?attp');
-              //echo "Error: " . $e->getMessage();
+              echo "Error: " . $e->getMessage();
             }
           }
   ?>

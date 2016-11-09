@@ -30,8 +30,6 @@
 	<label>Nombre de Usuario</label>
 	<input type="text" name="nombredeusuario" value=" <?php echo $codigo["usu_nick"]; ?>"required/>
 
-	<label>Contraseña</label>
-	<input type="password" name="contrasena" value=" <?php echo $codigo["usu_pass"]; ?>"required/>
 
 	<button value="Modificar" name="action">Modificar</button>
 
