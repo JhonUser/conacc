@@ -19,6 +19,8 @@
                   }
                 }
                 else {
+                  $att="error";
+                  header("location: ../Views/index.php?att");
                   echo "error";
                 }
               }

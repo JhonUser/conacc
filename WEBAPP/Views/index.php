@@ -14,7 +14,16 @@
       <script type="text/javascript" src="script/script.js"></script>
       <link rel="stylesheet" type="text/css" href="script/sweetalert.css">
     </head>
+
     <body style="background-color: #c5cae9;">
+      <?php
+  		$err= isset($_GET['att']);
+  				if($err=="error"){
+  					echo "<script type='text/javascript'>";
+  					echo "log();";
+  					echo "</script>";
+  				}
+            ?>
         <div class="container" style="width: 35%;">
           <div class="card" >
             <div class="card-action teal darken-2">
