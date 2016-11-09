@@ -32,10 +32,10 @@
                   <a href="dashboard.php?seccion=anuncios"class="collapsible-header" class="collapsible-header"><i class="material-icons left green-text">home</i>Inicio</a>
                   <div class="collapsible-body indigo-text text-lighten-5" style="background-color: #673AB7"><p>...</p></div>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="dashboard.php?seccion=rol" class="collapsible-header"><i class="material-icons left red-text">control_point</i>Rol</a>
 
-                </li>
+                </li> -->
                 <li>
                   <a href="dashboard.php?seccion=usuario" class="collapsible-header"><i class="material-icons left yellow-text">person_add</i>Usuarios</a>
                 </li>
@@ -47,9 +47,9 @@
                 <li>
                   <a href="dashboard.php?seccion=rr_producto"  class="collapsible-header"><i class="material-icons left">book</i>Asignar producto</a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="dashboard.php?seccion=r_accesorio"  class="collapsible-header"><i class="material-icons left">extension</i>Accesorio</a>
-                </li>
+                </li> -->
                  <li>
                   <a href="dashboard.php?seccion=c_entrada"  class="collapsible-header"><i class="material-icons left">compare_arrows</i>Entrada/Salida</a>
                 </li>
