@@ -17,6 +17,12 @@
             case 'producto':
               include("registro.producto.php");
               break;
+            case 'ced':
+              include("consul_ced.php");
+            break;
+            case 'm_r_producto':
+              include("modificar.registro_producto.php");
+              break;
             case 'usuario':
               include("Registro.usuario.php");
               break;
@@ -31,6 +37,9 @@
               break;
             case 'c.propietario':
               include 'consultar.propietario.php';
+              break;
+            case 'c_cedu':
+              include 'consulta.individual.php';
               break;
             case 'm.propietario':
               include 'modificar.propietario.php';

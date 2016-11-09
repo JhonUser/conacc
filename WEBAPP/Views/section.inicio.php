@@ -51,7 +51,10 @@
                   <a href="dashboard.php?seccion=r_accesorio"  class="collapsible-header"><i class="material-icons left">extension</i>Accesorio</a>
                 </li>
                  <li>
-                  <a href="dashboard.php?seccion=c_entrada"  class="collapsible-header"><i class="material-icons left">extension</i>Accesorio</a>
+                  <a href="dashboard.php?seccion=c_entrada"  class="collapsible-header"><i class="material-icons left">compare_arrows</i>Entrada/Salida</a>
+                </li>
+                <li>
+                  <a href="dashboard.php?seccion=c_cedu"  class="collapsible-header"><i class="material-icons left">compare_arrows</i>Con por cedula</a>
                 </li>
                 <!-- <li>
                   <a href="dashboard.php?seccion=r_permiso"  class="collapsible-header"><i class="material-icons left">pan_tool</i>Permisos</a>

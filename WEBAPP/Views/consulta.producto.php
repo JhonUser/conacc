@@ -44,6 +44,8 @@ function(isConfirm){
 });
 	}
 	</script>
+<div class="row">
+<div class="col s9 offset-s3">
 <input id="buscar" style="border: none; width: 80%; padding: 15px; background-color: blue; color: #fff; padding: 15px; width: 80%" type="text" placeholder="Buscar producto"></input>
 <table id="myTable" class="striped responsive-table">
 	<thead>
@@ -75,3 +77,5 @@ function(isConfirm){
 		?>
 	<br></tbody>
 </table>
+</div>
+</div>

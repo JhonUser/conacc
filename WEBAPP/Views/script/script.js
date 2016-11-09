@@ -20,3 +20,12 @@ function u(){
 function e(){
   swal("Error", "Algo va mal!", "warning");
 };
+function a(){
+  swal("Bien", "Registro la hora de salida!", "success");
+};
+function redir(){
+  var red="dashboard.php?seccion=rol";
+  window.location.href=red;
+// var URLsearch = window.location.search;
+// alert(URLsearch);
+};

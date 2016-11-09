@@ -1,6 +1,6 @@
 <!-- Andrea T. -->
 <?php require_once("../model/conexion.php");
-			require_once("../model/registro.producto.class.php");
+		require_once("../model/registro.producto.class.php");
 			$usuario=Gestion_producto::consultarUsu();
 			$producto=Gestion_producto::consultarprodu();
 			$propietario=Gestion_producto::consultarpropie();
@@ -18,13 +18,13 @@
 						<div class="input-field col s5">
 							<i class="material-icons prefix grey-text">people</i>
 							<select name="codigo_pro">
-								<option value="" disabled selected>Descripcion*</option>
-								<?php
-									foreach ($producto as $produc ) {
-										echo "<option value=".$produc["produ_cod"].">".$produc["produ_desc"]."</option>";
-									}
-								?>
-							</select>
+							<?php
+								foreach ($producto as $produc ) {
+									echo "<option value=".$produc["produ_cod"].">".$produc["tipopro_nombre"]."-".$produc["marca_nombre"]."</option>";
+								}
+							?>
+						</select>
+						<label>Producto</label>
 						</div>
 						<div class="input-field col s1">
 							<a href="dashboard.php?seccion=r_t_producto" class="btn-floating btn-large waves-effect waves-light red pull-s5"><i class="material-icons">add</i></a>
@@ -83,3 +83,8 @@
 	    </div>
 	  </div>
 	</div>
+<div class="row">
+	<div class="col s9 offset-s3">
+		<?php include'consulta.registro_producto.php'; ?>
+	</div>
+</div>

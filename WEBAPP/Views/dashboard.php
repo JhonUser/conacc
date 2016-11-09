@@ -26,14 +26,17 @@
 			$err= isset($_GET['e']);
 				if($err=="23000"){
 					echo "<script type='text/javascript'>";
-					echo "e()";
-					echo "</script>";
+					echo "e();";
+					echo "setTimeout('redir()',2000);";
+					echo "</script>";	
 				}
+
 			$try = isset($_GET['crt']);
 				if ($try=="c")
 				{
 					echo "<script type='text/javascript'>";
-					echo "c()";
+					echo "c();";
+					echo "setTimeout('redir()',2000)";
 					echo "</script>";	
 				
 				}
@@ -41,11 +44,21 @@
 				if ($try=="u")
 				{
 					echo "<script type='text/javascript'>";
-					echo "u()";
+					echo "u();";
+					echo "setTimeout('redir()',2000)";
 					echo "</script>";
 					
 				}
-
+			$try = isset($_GET['act']);
+				if ($try=="ac")
+				{
+					echo "<script type='text/javascript'>";
+					echo "a();";
+					echo "setTimeout('redir()',2000)";
+					echo "</script>";
+					
+				}	
+			
 		 ?>
 
 

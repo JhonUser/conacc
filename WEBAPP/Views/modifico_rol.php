@@ -9,7 +9,7 @@
  	    <div class="card">
  				<div class="card-action red darken-4">
  					<a href="dashboard.php?seccion=rol" class="btn-floating z-depth-0 red darken-4"><i class="material-icons">keyboard_backspace</i></a>
- 					<button type="button" class="btn red darken-4 z-depth-0 white-text thin" style="margin-left:25%">Modificar Accesorio</button>
+ 					<button type="button" class="btn red darken-4 z-depth-0 white-text thin" style="margin-left:25%">Modificar Rol</button>
  				</div>
  	      <div class="card-content">
   <form action="../Controller/guardarrol.php" method="post"><br>
@@ -23,7 +23,7 @@
       <button name="action" class="btn teal thin" value="Update">Modificar</button>
   </form>
 
-</div>
-</div>
-</div>
+      </div>
+    </div>
+  </div>
 </div>

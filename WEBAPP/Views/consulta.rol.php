@@ -42,7 +42,6 @@ function(isConfirm){
 });
 	}
 	</script>
-<input id="buscar" style="border: none; width: 80%; padding: 15px; background-color: blue; color: #fff; padding: 15px; width: 80%" type="text" placeholder="Buscar rol"></input>
 <table id="myTable">
 	<thead>
 		<tr>

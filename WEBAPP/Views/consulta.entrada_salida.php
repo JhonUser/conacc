@@ -7,7 +7,7 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 
 ?>
 
-	 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
     	$('#myTable').DataTable();
@@ -18,7 +18,8 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 	}
 	</script>
 
-
+<div class="row">
+<div class="col s9 offset-s3">
 <table id="myTable">
 	<thead>
 		<tr>
@@ -53,3 +54,5 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 		?>
 	</tbody>
 </table>
+</div>
+</div>

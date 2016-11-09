@@ -32,7 +32,7 @@
 				<button type="button" class="btn red darken-4 z-depth-0 white-text thin" style="margin-left:25%">Registro de Rol</button>
 			</div>
 				 <div class="card-content">
-					<form action="../Controller/guardarrol.php" method="post" onsubmit="algo()">
+					<form action="../Controller/guardarrol.php" method="post">
 							<div class="row">
 							  	<div class="input-field col s10">
 									<i class="material-icons prefix grey-text">control_point_duplicate</i>

@@ -8,10 +8,12 @@ require_once("../Model/marca.class.php");
   $marca=Gestion_Marca::Cargar_marca();
   $codigo = Gestion_Producto::Consultarporcodigo($_GET["codigo_pro"]);
  ?><br>
+ <div class="row">
+ <div class="col s9 offset-s3"
  <section>
    <a href="dashboard.php?seccion=producto" class="btn-floating indigo"><i class="material-icons">keyboard_backspace</i></a>
   <!-- Formulario de modificar usuarios: Vigilantes o Administradores -->
-  <form action="../Controller/producto.controller.php" method="post"><br>
+  <form action="../Controller/controller.registro.producto.php" method="post"><br>
     <center><h4 class="thin">Modificar producto</h4></center>
         <input type="hidden" name="txt_codpro" readonly value="<?php echo $codigo["produ_cod"]; ?>">
         
@@ -51,3 +53,5 @@ require_once("../Model/marca.class.php");
   </form>
 
 </section>
+</div>
+</div>
