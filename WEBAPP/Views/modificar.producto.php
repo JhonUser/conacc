@@ -13,7 +13,7 @@ require_once("../Model/marca.class.php");
  <section>
    <a href="dashboard.php?seccion=producto" class="btn-floating indigo"><i class="material-icons">keyboard_backspace</i></a>
   <!-- Formulario de modificar usuarios: Vigilantes o Administradores -->
-  <form action="../Controller/controller.registro.producto.php" method="post"><br>
+  <form action="../Controller/producto.controller.php" method="post"><br>
     <center><h4 class="thin">Modificar producto</h4></center>
         <input type="hidden" name="txt_codpro" readonly value="<?php echo $codigo["produ_cod"]; ?>">
         

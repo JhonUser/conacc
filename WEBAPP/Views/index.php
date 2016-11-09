@@ -10,11 +10,20 @@
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.js"></script>
       <script src="hhttps://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.css"></script>
+       <script src="script/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="script/sweetalert.css">
+      <script type="text/javascript" src="script/script.js"></script>
       <link rel="stylesheet" href="styles/estilos.css" charset="utf-8">
     </head>
     <body>
       <?php
-          include 'form.login.php';
+         include 'form.login.php';
+          $err= isset($_GET['attp']);
+          if($err=="log_error"){
+            echo "<script type='text/javascript'>";
+            echo "log();";
+            echo "</script>";
+          }
         ?>
 
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

@@ -9,15 +9,15 @@ $produ =Gestion_Producto::Consultar();
 ?>
 <script type="text/javascript">
 
-$(document).ready(function(){
-			$("#buscar").keyup(function(){
-				var nom = $(this).val();
-				var mod = "producto";
-				$.post("prueba.php", {name1: nom, mdl: mod}, function(data){
-					$("#listados").html(data);
-				});
-			});
-		});
+// $(document).ready(function(){
+// 			$("#buscar").keyup(function(){
+// 				var nom = $(this).val();
+// 				var mod = "producto";
+// 				$.post("prueba.php", {name1: nom, mdl: mod}, function(data){
+// 					$("#listados").html(data);
+// 				});
+// 			});
+// 		});
 
 function d(c){
 swal({
